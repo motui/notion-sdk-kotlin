@@ -6,18 +6,14 @@ package com.mt.notion.http
  * @author it.motui
  * @since 0.1
  */
-class NotionHttpRequest
+data class NotionHttpRequest
 constructor(
     val url: String,
-    val token: String,
     val content: NotionHttpRequestContent,
     val header: Map<String, String>?
 ) {
     constructor(
         url: String,
-        token: String,
         content: NotionHttpRequestContent,
-    ) : this(url, token, content, null)
-
-
+    ) : this(url, content, null)
 }

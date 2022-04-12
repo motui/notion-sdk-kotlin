@@ -1,5 +1,9 @@
 package com.mt.notion
 
+import com.mt.notion.api.oauth.OAuthNotionApi
+import com.mt.notion.http.NotionHttpClient
+import com.mt.notion.http.impl.OkHttpNotionHttpClientImpl
+
 /**
  * notion client
  *
@@ -9,7 +13,7 @@ package com.mt.notion
 object NotionClient {
 
     const val BASE_URL: String = "https://api.notion.com/api/v1"
-    const val VERSION: String = "2022-10-15"
+    const val VERSION: String = "2022-02-22"
 
     /**
      * internal integrations config
@@ -74,8 +78,20 @@ object NotionClient {
          * internal notion config
          */
         private val config: InternalNotionConfig,
+        /**
+         * 自定义NotionHttpClient
+         */
+        notionHttpClient: NotionHttpClient?
     ) {
+        private val httpClient: NotionHttpClient
 
+        init {
+            if (notionHttpClient != null) {
+                this.httpClient = notionHttpClient
+            } else {
+                this.httpClient = OkHttpNotionHttpClientImpl()
+            }
+        }
     }
 
     /**
@@ -88,20 +104,30 @@ object NotionClient {
          * public notion config
          */
         private val config: PublicNotionConfig,
+        /**
+         * 自定义NotionHttpClient
+         */
+        notionHttpClient: NotionHttpClient?
     ) {
+        private val oauth: OAuthNotionApi
+        private val httpClient: NotionHttpClient
+
+        init {
+            if (notionHttpClient != null) {
+                this.httpClient = notionHttpClient
+            } else {
+                this.httpClient = OkHttpNotionHttpClientImpl()
+            }
+            this.oauth = OAuthNotionApi(this.config, this.httpClient)
+        }
 
         /**
-         * authorize url
+         * 认证授权
          *
-         * eg:https://api.notion.com/v1/oauth/authorize?owner=user&client_id=463558a3-725e-4f37-b6d3-0889894f68de&
-         * redirect_uri=https%3A%2F%2Fexample.com%2Fauth%2Fnotion%2Fcallback&response_type=code
+         * @since 0.1
          */
-        fun authorizeUrl(): String {
-            return "%s/oauth/authorize/?owner=user&response_type=code&client_id=%s&redirect_uri=%s".format(
-                this.config.baseUrl,
-                this.config.clientId,
-                this.config.redirectUri
-            )
+        fun oauth(): OAuthNotionApi {
+            return this.oauth
         }
     }
 }

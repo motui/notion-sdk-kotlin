@@ -11,10 +11,6 @@ internal class NotionClientTest {
 
     @Test
     fun init() {
-        val internalNotionClient = NotionClient.InternalNotionClient(
-            NotionClient.InternalNotionConfig(
-                NotionClient.BASE_URL, NotionClient.VERSION, ""
-            )
-        )
+
     }
 }
