@@ -1,8 +1,7 @@
 package com.mt.notion.http.impl
 
-import com.fasterxml.jackson.core.type.TypeReference
 import com.mt.notion.http.NotionHttpClient
-import com.mt.notion.http.NotionHttpRequest
+import com.mt.notion.http.NotionHttpRequestContent
 import com.mt.notion.util.JsonUtil
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
@@ -10,6 +9,7 @@ import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.slf4j.LoggerFactory
 import java.util.concurrent.TimeUnit
+
 
 /**
  * [NotionHttpClient]的OKHTTP实现
@@ -31,61 +31,84 @@ class OkHttpNotionHttpClientImpl : NotionHttpClient {
         this.client = client.build()
     }
 
-    override fun <T> get(request: NotionHttpRequest): T {
-        val httpRequest = Request.Builder().url(request.url).get()
-        request.header?.forEach { (name, value) -> httpRequest.header(name, value) }
+    override fun <T> get(
+        url: String,
+        query: Map<String, String>,
+        headers: Map<String, String>,
+        responseClass: Class<T>
+    ): T {
+        val requestUrl = super.buildRequestUrl(url, query)
+        val httpRequest = Request.Builder().url(requestUrl).get()
+        headers.forEach { (name, value) -> httpRequest.header(name, value) }
         val response = client.newCall(httpRequest.build()).execute()
         val body = response.body?.string() ?: ""
         if (response.isSuccessful && body.isNotBlank()) {
-            return JsonUtil.instance().readValue(body, object : TypeReference<T>() {})
+            return JsonUtil.instance().readValue(body, responseClass)
         }
         // TODO 自定义异常
-        throw RuntimeException("get http error. url: ${request.url}, httpCode: ${response.code}, body: $body")
+        throw RuntimeException("get http error. url: $requestUrl, httpCode: ${response.code}, body: $body")
     }
 
-    override fun <T> post(request: NotionHttpRequest): T {
-        val requestContent: String = JsonUtil.instance().writeValueAsString(request.content)
-        val httpRequest = Request.Builder().url(request.url).post(
-            requestContent.toRequestBody(this.contentTypeJson.toMediaType())
+    override fun <T> post(
+        url: String,
+        query: Map<String, String>,
+        body: NotionHttpRequestContent,
+        headers: Map<String, String>,
+        responseClass: Class<T>
+    ): T {
+        val requestUrl = super.buildRequestUrl(url, query)
+        val requestBody: String = JsonUtil.instance().writeValueAsString(body)
+        val httpRequest = Request.Builder().url(requestUrl).post(
+            requestBody.toRequestBody(this.contentTypeJson.toMediaType())
         )
-        request.header?.forEach { (name, value) -> httpRequest.header(name, value) }
+        headers.forEach { (name, value) -> httpRequest.header(name, value) }
         val response = client.newCall(httpRequest.build()).execute()
-        val body = response.body?.string() ?: ""
-        if (response.isSuccessful && body.isNotBlank()) {
-            return JsonUtil.instance().readValue(body, object : TypeReference<T>() {})
+        val bodyString = response.body?.string() ?: ""
+        if (response.isSuccessful && bodyString.isNotBlank()) {
+            return JsonUtil.instance().readValue(bodyString, responseClass)
         }
         // TODO 自定义异常
-        throw RuntimeException("post http error. url: ${request.url}, httpCode: ${response.code}, body: $body")
+        throw RuntimeException("post http error. url: $requestUrl, httpCode: ${response.code}, body: $body")
     }
 
-    override fun <T> patch(request: NotionHttpRequest): T {
-        val requestContent: String = JsonUtil.instance().writeValueAsString(request.content)
-        val httpRequest = Request.Builder().url(request.url).patch(
-            requestContent.toRequestBody(this.contentTypeJson.toMediaType())
+    override fun <T> patch(
+        url: String,
+        query: Map<String, String>,
+        body: NotionHttpRequestContent,
+        headers: Map<String, String>,
+        responseClass: Class<T>
+    ): T {
+        val requestUrl = super.buildRequestUrl(url, query)
+        val requestBody: String = JsonUtil.instance().writeValueAsString(body)
+        val httpRequest = Request.Builder().url(requestUrl).patch(
+            requestBody.toRequestBody(this.contentTypeJson.toMediaType())
         )
-        request.header?.forEach { (name, value) -> httpRequest.header(name, value) }
+        headers.forEach { (name, value) -> httpRequest.header(name, value) }
         val response = client.newCall(httpRequest.build()).execute()
-        val body = response.body?.string() ?: ""
-        if (response.isSuccessful && body.isNotBlank()) {
-            return JsonUtil.instance().readValue(body, object : TypeReference<T>() {})
+        val bodyString = response.body?.string() ?: ""
+        if (response.isSuccessful && bodyString.isNotBlank()) {
+            return JsonUtil.instance().readValue(bodyString, responseClass)
         }
         // TODO 自定义异常
-        throw RuntimeException("put http error. url: ${request.url}, httpCode: ${response.code}, body: $body")
+        throw RuntimeException("patch http error. url: $requestUrl, httpCode: ${response.code}, body: $body")
     }
 
-    override fun <T> delete(request: NotionHttpRequest): T {
-        val requestContent: String = JsonUtil.instance().writeValueAsString(request.content)
-        val httpRequest = Request.Builder().url(request.url).delete(
-            requestContent.toRequestBody(this.contentTypeJson.toMediaType())
-        )
-        request.header?.forEach { (name, value) -> httpRequest.header(name, value) }
+    override fun <T> delete(
+        url: String,
+        query: Map<String, String>,
+        headers: Map<String, String>,
+        responseClass: Class<T>
+    ): T {
+        val requestUrl = super.buildRequestUrl(url, query)
+        val httpRequest = Request.Builder().url(requestUrl).delete()
+        headers.forEach { (name, value) -> httpRequest.header(name, value) }
         val response = client.newCall(httpRequest.build()).execute()
         val body = response.body?.string() ?: ""
         if (response.isSuccessful && body.isNotBlank()) {
-            return JsonUtil.instance().readValue(body, object : TypeReference<T>() {})
+            return JsonUtil.instance().readValue(body, responseClass)
         }
         // TODO 自定义异常
-        throw RuntimeException("delete http error. url: ${request.url}, httpCode: ${response.code}, body: $body")
+        throw RuntimeException("delete http error. url: $requestUrl, httpCode: ${response.code}, body: $body")
     }
 
     override fun close() {

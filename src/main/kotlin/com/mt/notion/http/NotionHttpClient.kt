@@ -1,5 +1,7 @@
 package com.mt.notion.http
 
+import java.net.URLEncoder
+
 /**
  * notion http client
  *
@@ -64,39 +66,96 @@ interface NotionHttpClient : AutoCloseable, Cloneable {
     }
 
     /**
+     * 参数编码
+     *
+     * @since 0.1
+     */
+    fun urlEncode(value: String): String = URLEncoder.encode(value, "UTF-8")
+
+    /**
+     * 构建请求参数
+     *
+     * eg:?a=123&b=456
+     * @since 0.1
+     */
+    fun buildQueryParams(query: Map<String, String>): String =
+        query.map { "${urlEncode(it.key)}=${urlEncode(it.value)}" }
+            .joinToString(prefix = "?", separator = "&")
+
+    /**
+     * 构建请求url
+     *
+     * eg:https://api.notion.com/api/v1/test?a=123&b=456
+     * @since 0.1
+     */
+    fun buildRequestUrl(url: String, queryParams: String): String = url + if (queryParams != "?") queryParams else ""
+
+    /**
+     * 构建请求url
+     *
+     * eg:https://api.notion.com/api/v1/test?a=123&b=456
+     * @since 0.1
+     */
+    fun buildRequestUrl(url: String, query: Map<String, String>): String =
+        this.buildRequestUrl(url, this.buildQueryParams(query))
+
+
+    /**
      * GET请求
      *
-     * 根据[request]发送HTTP请求,返回response#body反序列化类[T]
+     * 根据[url]/[query]/[headers]发送HTTP请求,返回response#body反序列化类[responseClass]
      * 该方法实现类需要自行控制异常码和异常解析
      * @since 0.1
      */
-    fun <T> get(request: NotionHttpRequest): T
+    fun <T> get(
+        url: String,
+        query: Map<String, String> = emptyMap(),
+        headers: Map<String, String>,
+        responseClass: Class<T>
+    ): T
 
     /**
      * POST请求
      *
-     * 根据[request]发送HTTP请求,返回response#body反序列化类[T]
+     * 根据[url]/[query]/[body]/[headers]发送HTTP请求,返回response#body反序列化类[responseClass]
      * 该方法实现类需要自行控制异常码和异常解析
      * @since 0.1
      */
-    fun <T> post(request: NotionHttpRequest): T
+    fun <T> post(
+        url: String,
+        query: Map<String, String> = emptyMap(),
+        body: NotionHttpRequestContent,
+        headers: Map<String, String>,
+        responseClass: Class<T>
+    ): T
 
     /**
      * PATCH请求
      *
-     * 根据[request]发送HTTP请求,返回response#body反序列化类[T]
+     * 根据[url]/[query]/[body]/[headers]发送HTTP请求,返回response#body反序列化类[responseClass]
      * 该方法实现类需要自行控制异常码和异常解析
      * @since 0.1
      */
-    fun <T> patch(request: NotionHttpRequest): T
+    fun <T> patch(
+        url: String,
+        query: Map<String, String> = emptyMap(),
+        body: NotionHttpRequestContent,
+        headers: Map<String, String>,
+        responseClass: Class<T>
+    ): T
 
     /**
      * delete请求
      *
-     * 根据[request]发送HTTP请求,返回response#body反序列化类[T]
+     * 根据[url]/[query]/[headers]发送HTTP请求,返回response#body反序列化类[responseClass]
      * 该方法实现类需要自行控制异常码和异常解析
      * @since 0.1
      */
-    fun <T> delete(request: NotionHttpRequest): T
+    fun <T> delete(
+        url: String,
+        query: Map<String, String> = emptyMap(),
+        headers: Map<String, String>,
+        responseClass: Class<T>
+    ): T
 
 }

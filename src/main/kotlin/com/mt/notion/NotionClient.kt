@@ -12,7 +12,7 @@ import com.mt.notion.http.impl.OkHttpNotionHttpClientImpl
  */
 object NotionClient {
 
-    const val BASE_URL: String = "https://api.notion.com/api/v1"
+    const val BASE_URL: String = "https://api.notion.com/v1"
     const val VERSION: String = "2022-02-22"
 
     /**

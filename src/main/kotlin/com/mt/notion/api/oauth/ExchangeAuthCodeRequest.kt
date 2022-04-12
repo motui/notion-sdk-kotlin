@@ -25,5 +25,6 @@ data class ExchangeAuthCodeRequest(
     /**
      * The "redirect_uri" that was provided in the Authorization step
      */
+    @JsonProperty("redirect_uri")
     val redirectUri: String,
 ) : NotionHttpRequestContent

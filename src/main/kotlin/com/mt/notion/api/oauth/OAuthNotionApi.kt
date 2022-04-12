@@ -2,16 +2,15 @@ package com.mt.notion.api.oauth
 
 import com.mt.notion.NotionClient
 import com.mt.notion.http.NotionHttpClient
-import com.mt.notion.http.NotionHttpRequest
 import java.util.*
 
 /**
  * oauth api
  *
- * @see <a href="https://developers.notion.com/docs/authorization#exchanging-the-grant-for-an-access-token">
- *     authorization#exchanging-the-grant-for-an-access-token</a>
  * @author it.motui
  * @since 0.1
+ * @see <a href="https://developers.notion.com/docs/authorization#exchanging-the-grant-for-an-access-token">
+ *     authorization#exchanging-the-grant-for-an-access-token</a>
  */
 class OAuthNotionApi(
     private val config: NotionClient.PublicNotionConfig,
@@ -44,14 +43,13 @@ class OAuthNotionApi(
                 Charsets.UTF_8
             )
         return notionHttpClient.post(
-            NotionHttpRequest(
-                "${this.config.baseUrl}/oauth/token",
-                request,
-                this.notionHttpClient.buildHeader(
-                    this.notionHttpClient.basicAuthorization(base64Value),
-                    this.config.notionVersion
-                )
-            )
+            url = "${this.config.baseUrl}/oauth/token",
+            body = request,
+            headers = this.notionHttpClient.buildHeader(
+                this.notionHttpClient.basicAuthorization(base64Value),
+                this.config.notionVersion
+            ),
+            responseClass = ExchangeAuthCodeResponse::class.java
         )
     }
 }
