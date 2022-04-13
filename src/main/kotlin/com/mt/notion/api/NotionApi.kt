@@ -9,8 +9,6 @@ import com.mt.notion.http.NotionHttpClient
  * @since 0.1
  */
 interface NotionApi {
-    val token: String
     val config: NotionApiConfig
     val notionHttpClient: NotionHttpClient
-
 }

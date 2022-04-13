@@ -1,6 +1,8 @@
 package com.mt.notion
 
+import com.mt.notion.api.NotionApiConfig
 import com.mt.notion.api.oauth.OAuthNotionApi
+import com.mt.notion.api.user.UserNotionApi
 import com.mt.notion.http.NotionHttpClient
 import com.mt.notion.http.impl.OkHttpNotionHttpClientImpl
 
@@ -77,13 +79,14 @@ object NotionClient {
         /**
          * internal notion config
          */
-        private val config: InternalNotionConfig,
+        config: InternalNotionConfig,
         /**
          * 自定义NotionHttpClient
          */
         notionHttpClient: NotionHttpClient?
     ) {
         private val httpClient: NotionHttpClient
+        private val userNotionApi: UserNotionApi
 
         init {
             if (notionHttpClient != null) {
@@ -91,7 +94,12 @@ object NotionClient {
             } else {
                 this.httpClient = OkHttpNotionHttpClientImpl()
             }
+            this.userNotionApi = UserNotionApi(
+                NotionApiConfig(config.token, config.baseUrl, config.notionVersion), this.httpClient
+            )
         }
+
+        fun user(): UserNotionApi = this.userNotionApi
     }
 
     /**

@@ -7,6 +7,7 @@ package com.mt.notion.api
  * @since 0.1
  */
 data class NotionApiConfig(
+    val token: String,
     /**
      * notion base request url
      */
