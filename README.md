@@ -8,4 +8,8 @@
 </div>
 <!-- markdownlint-enable -->
 
+[![MIT License](https://img.shields.io/github/license/motui/notion-sdk-kotlin)](https://github.com/motui/notion-sdk-kotlin/blob/main/LICENSE)
+
+
+
 ## Getting Started
