@@ -14,7 +14,7 @@ internal class PersonTest {
     @Test
     fun serialization() {
         val person = Person(
-            ObjectType.USER,
+            ObjectType.User,
             UserType.PERSON,
             "6794760a-1f15-45cd-9c65-0dfe42f5135a",
             "Aman Gupta",
@@ -45,7 +45,7 @@ internal class PersonTest {
             }
         """.trimIndent()
         val person: Person = JsonUtil.instance().readValue(json, Person::class.java)
-        assertEquals(ObjectType.USER, person.objectType)
+        assertEquals(ObjectType.User, person.objectType)
         assertEquals(UserType.PERSON, person.type)
         assertEquals("6794760a-1f15-45cd-9c65-0dfe42f5135a", person.id)
         assertEquals("Aman Gupta", person.name)

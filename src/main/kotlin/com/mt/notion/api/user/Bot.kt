@@ -13,16 +13,15 @@ import com.mt.notion.common.ObjectType
 data class Bot(
     override val objectType: ObjectType,
     override val type: UserType,
-    val id: String,
+    override val id: String,
     /**
      * User's name, as displayed in Notion.
      */
-    val name: String? = null,
+    override val name: String? = null,
     /**
      * Chosen avatar image.
      */
-    @JsonProperty("avatar_url")
-    val avatarUrl: String? = null,
+    override val avatarUrl: String? = null,
     /**
      * Properties only present for bot users.
      */

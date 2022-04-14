@@ -1,5 +1,6 @@
 package com.mt.notion.api.user
 
+import com.fasterxml.jackson.annotation.JsonProperty
 import com.fasterxml.jackson.annotation.JsonSubTypes
 import com.fasterxml.jackson.annotation.JsonTypeInfo
 import com.mt.notion.common.WithObjectType
@@ -23,6 +24,19 @@ interface WithUserType : WithObjectType {
      * Type of the user. Possible values are "person" and "bot".
      */
     val type: UserType
+
+    val id: String
+
+    /**
+     * User's name, as displayed in Notion.
+     */
+    val name: String?
+
+    /**
+     * Chosen avatar image.
+     */
+    @get:JsonProperty("avatar_url")
+    val avatarUrl: String?
 
     fun toPerson(): Person {
         if (this.type == UserType.PERSON) {

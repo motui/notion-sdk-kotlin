@@ -13,7 +13,7 @@ internal class BotTest {
     @Test
     fun serialization() {
         val bot = Bot(
-            ObjectType.USER,
+            ObjectType.User,
             UserType.BOT,
             "6794760a-1f15-45cd-9c65-0dfe42f5135a",
             "Aman Gupta",
@@ -49,7 +49,7 @@ internal class BotTest {
             }
         """.trimIndent()
         val bot: Bot = JsonUtil.instance().readValue(json, Bot::class.java)
-        assertEquals(ObjectType.USER, bot.objectType)
+        assertEquals(ObjectType.User, bot.objectType)
         assertEquals(UserType.BOT, bot.type)
         assertEquals("92a680bb-6970-4726-952b-4f4c03bff617", bot.id)
         assertEquals("Leotastic", bot.name)

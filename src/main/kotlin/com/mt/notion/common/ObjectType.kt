@@ -10,10 +10,13 @@ import com.fasterxml.jackson.annotation.JsonProperty
  */
 enum class ObjectType constructor(private val value: String) {
     @JsonProperty("user")
-    USER("user"),
+    User("user"),
 
     @JsonProperty("list")
-    LIST("list"),
+    List("list"),
+
+    @JsonProperty("database")
+    Database("database"),
     ;
 
     override fun toString(): String = value

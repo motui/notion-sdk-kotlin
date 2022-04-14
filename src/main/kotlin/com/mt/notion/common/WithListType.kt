@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName
 import com.mt.notion.api.user.Users
 
 /**
+ * list type
  *
  * @author it.motui
  */
