@@ -1,7 +1,10 @@
 package com.mt.notion.api.database
 
 import com.fasterxml.jackson.annotation.JsonProperty
+import com.mt.notion.api.database.property.DatabaseProperty
 import com.mt.notion.api.user.WithUserType
+import com.mt.notion.common.Cover
+import com.mt.notion.common.Icon
 import com.mt.notion.common.ObjectType
 import com.mt.notion.common.WithObjectType
 import com.mt.notion.common.richText.RichText
@@ -25,7 +28,7 @@ data class Database(
     /**
      * User who created the database.
      */
-    val user: WithUserType,
+    val user: User,
     /**
      * Date and time when this database was updated. Formatted as an ISO 8601 date time string.
      *
@@ -35,15 +38,55 @@ data class Database(
     val lastEditedTime: String,
     /**
      * User who last edited the database.
-     *
      */
     @JsonProperty("last_edited_by")
-    val lastEditedBy: WithUserType,
+    val lastEditedBy: User,
 
     /**
      * Name of the database as it appears in Notion.
      * See rich text object) for a breakdown of the properties.
      */
-    val title: List<RichText>
+    val title: List<RichText>,
 
-) : WithObjectType
+    /**
+     * Page icon.
+     *
+     * File Object or Emoji object
+     */
+//    val icon: Icon?,
+
+    /**
+     * Page cover image.
+     *
+     * File object (only type of "external" is supported currently)
+     */
+//    val cover: Cover?,
+
+    /**
+     * Schema of properties for the database as they appear in Notion.
+     */
+    val properties: Map<String, DatabaseProperty>,
+
+    /**
+     * The parent of this page. Can be a page or workspace. Parent types are defined below.
+     */
+    val parent: WorkspaceParent,
+
+    /**
+     * The URL of the Notion database.
+     */
+    val url: String,
+
+    /**
+     * The archived status of the database.
+     */
+    val archived: Boolean
+
+) : WithObjectType {
+
+    data class User(
+        @JsonProperty("object")
+        val objectType: String,
+        val id: String
+    )
+}

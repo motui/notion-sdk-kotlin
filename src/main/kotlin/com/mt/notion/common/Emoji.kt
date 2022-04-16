@@ -16,4 +16,4 @@ data class Emoji(
      * Emoji character.
      */
     var emoji: String
-)
+) : Icon
