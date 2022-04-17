@@ -53,14 +53,14 @@ data class Database(
      *
      * File Object or Emoji object
      */
-//    val icon: Icon?,
+    val icon: Icon?,
 
     /**
      * Page cover image.
      *
      * File object (only type of "external" is supported currently)
      */
-//    val cover: Cover?,
+    val cover: Cover?,
 
     /**
      * Schema of properties for the database as they appear in Notion.

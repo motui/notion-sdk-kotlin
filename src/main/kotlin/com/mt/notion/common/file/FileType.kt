@@ -16,6 +16,9 @@ enum class FileType constructor(private val value: String) {
     @JsonProperty("file")
     File("file"),
 
+    @JsonProperty("emoji")
+    Emoji("emoji"),
+
     ;
 
     override fun toString(): String = value

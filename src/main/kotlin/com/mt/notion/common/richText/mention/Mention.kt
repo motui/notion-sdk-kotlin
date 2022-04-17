@@ -3,6 +3,7 @@ package com.mt.notion.common.richText.mention
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.fasterxml.jackson.annotation.JsonSubTypes
 import com.fasterxml.jackson.annotation.JsonTypeInfo
+import com.mt.notion.common.richText.RichText
 
 /**
  * Mention

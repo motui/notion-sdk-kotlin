@@ -1,5 +1,7 @@
 package com.mt.notion.common
 
+import com.mt.notion.common.file.FileType
+
 /**
  * Emoji
  *
@@ -11,7 +13,7 @@ data class Emoji(
     /**
      * Type of page icon. Possible values are: "emoji".
      */
-    var type: String,
+    override var type: FileType,
     /**
      * Emoji character.
      */

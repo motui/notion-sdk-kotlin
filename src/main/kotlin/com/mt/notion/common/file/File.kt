@@ -23,7 +23,7 @@ import com.mt.notion.common.Icon
     JsonSubTypes.Type(FileDetails::class, name = "file"),
 )
 interface File : Icon, Cover {
-    val type: FileType
+    override val type: FileType
 
     companion object {
 

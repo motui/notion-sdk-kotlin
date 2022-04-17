@@ -20,7 +20,8 @@ import com.mt.notion.common.richText.mention.Mention
 )
 @JsonSubTypes(
     JsonSubTypes.Type(Text::class, name = "text"),
-    JsonSubTypes.Type(Mention::class, name = "mention"),
+//    JsonSubTypes.Type(Mention::class, name = "mention"),
+    JsonSubTypes.Type(Equation::class, name = "equation"),
 )
 interface RichText {
     /**
