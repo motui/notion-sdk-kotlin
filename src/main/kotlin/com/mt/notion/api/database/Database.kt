@@ -2,7 +2,7 @@ package com.mt.notion.api.database
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.mt.notion.api.database.property.DatabaseProperty
-import com.mt.notion.api.user.WithUserType
+import com.mt.notion.api.user.BaseUser
 import com.mt.notion.common.Cover
 import com.mt.notion.common.Icon
 import com.mt.notion.common.ObjectType
@@ -28,7 +28,8 @@ data class Database(
     /**
      * User who created the database.
      */
-    val user: User,
+    @JsonProperty("created_by")
+    val createdBy: BaseUser,
     /**
      * Date and time when this database was updated. Formatted as an ISO 8601 date time string.
      *
@@ -40,7 +41,7 @@ data class Database(
      * User who last edited the database.
      */
     @JsonProperty("last_edited_by")
-    val lastEditedBy: User,
+    val lastEditedBy: BaseUser,
 
     /**
      * Name of the database as it appears in Notion.
@@ -70,7 +71,7 @@ data class Database(
     /**
      * The parent of this page. Can be a page or workspace. Parent types are defined below.
      */
-    val parent: WorkspaceParent,
+    val parent: WithDatabaseParent,
 
     /**
      * The URL of the Notion database.
@@ -82,11 +83,4 @@ data class Database(
      */
     val archived: Boolean
 
-) : WithObjectType {
-
-    data class User(
-        @JsonProperty("object")
-        val objectType: String,
-        val id: String
-    )
-}
+) : WithObjectType

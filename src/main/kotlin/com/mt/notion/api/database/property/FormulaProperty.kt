@@ -13,5 +13,7 @@ data class FormulaProperty(
     override val id: String,
     override val type: PropertyType,
     override val name: String,
-    val expression: String
-) : DatabaseProperty
+    val formula: Formula
+) : DatabaseProperty {
+    data class Formula(val expression: String)
+}

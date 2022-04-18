@@ -1,17 +1,18 @@
 package com.mt.notion.common.richText.mention
 
-import com.mt.notion.api.user.BaseUser
+import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
- * User mentions
- *
- * User mentions contain a user object within the user property.
+ * Date mentions
  *
  * @author it.motui
  * @since 0.1
  * @see <a href="https://developers.notion.com/reference/rich-text">Rich text object</a>
  */
-data class UserMention(
+data class DateMention(
     override val type: MentionType,
-    val user: BaseUser
+    val start: String,
+    val end: String?,
+    @JsonProperty("time_zone")
+    val timeZone: String?,
 ) : WithMention

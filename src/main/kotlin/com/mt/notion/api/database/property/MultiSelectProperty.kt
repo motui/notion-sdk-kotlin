@@ -1,5 +1,6 @@
 package com.mt.notion.api.database.property
 
+import com.fasterxml.jackson.annotation.JsonProperty
 import com.mt.notion.common.OptionColor
 import com.mt.notion.common.PropertyType
 
@@ -14,8 +15,13 @@ data class MultiSelectProperty(
     override val id: String,
     override val type: PropertyType,
     override val name: String,
-    val options: List<Option>
+    @JsonProperty("multi_select")
+    val multiSelect: MultiSelect
 ) : DatabaseProperty {
+
+    data class MultiSelect(
+        val options: List<Option>
+    )
 
     data class Option(
         /**

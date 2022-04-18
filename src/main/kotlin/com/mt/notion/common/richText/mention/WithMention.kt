@@ -3,9 +3,6 @@ package com.mt.notion.common.richText.mention
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.fasterxml.jackson.annotation.JsonSubTypes
 import com.fasterxml.jackson.annotation.JsonTypeInfo
-import com.mt.notion.common.richText.Annotations
-import com.mt.notion.common.richText.RichText
-import com.mt.notion.common.richText.RichTextType
 
 /**
  * Mention
@@ -21,10 +18,24 @@ import com.mt.notion.common.richText.RichTextType
  * @since 0.1
  * @see <a href="https://developers.notion.com/reference/rich-text">Rich text object</a>
  */
-data class Mention(
-    override val plainText: String,
-    override val href: String?,
-    override val annotations: Annotations,
-    override val type: RichTextType,
-    val mention: WithMention
-) : RichText
+@JsonTypeInfo(
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
+    property = "type",
+    visible = true
+)
+@JsonSubTypes(
+    JsonSubTypes.Type(UserMention::class, name = "user"),
+    JsonSubTypes.Type(LinkPreviewMention::class, name = "link_preview"),
+    JsonSubTypes.Type(DateMention::class, name = "date"),
+    JsonSubTypes.Type(TemplateMention::class, name = "template_mention"),
+    JsonSubTypes.Type(PageMention::class, name = "page"),
+    JsonSubTypes.Type(DatabaseMention::class, name = "database"),
+)
+interface WithMention {
+    /**
+     * Type of the inline mention
+     */
+    @get:JsonProperty("type")
+    val type: MentionType
+}

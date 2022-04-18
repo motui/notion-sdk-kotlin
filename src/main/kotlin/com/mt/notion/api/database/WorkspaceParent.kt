@@ -9,5 +9,5 @@ package com.mt.notion.api.database
  */
 data class WorkspaceParent(
     override val type: DatabaseParentType,
-    val workspace: Boolean
+    val workspace: Boolean = true
 ) : WithDatabaseParent

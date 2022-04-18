@@ -1,7 +1,5 @@
 package com.mt.notion.api.user
 
-import com.fasterxml.jackson.annotation.JsonProperty
-import com.fasterxml.jackson.annotation.JsonTypeName
 import com.mt.notion.common.ObjectType
 
 /**
@@ -10,7 +8,6 @@ import com.mt.notion.common.ObjectType
  * @see <a href="https://developers.notion.com/reference/user">user</a>
  * @author it.motui
  */
-//@JsonTypeName(value = "person")
 data class Person(
     override val objectType: ObjectType,
     override val type: UserType,
@@ -24,7 +21,7 @@ data class Person(
      */
     override val avatarUrl: String? = null,
     val person: People? = null,
-) : WithUserType {
+) : WithUserType(objectType, id, type, name, avatarUrl) {
 
     data class People(val email: String)
 }

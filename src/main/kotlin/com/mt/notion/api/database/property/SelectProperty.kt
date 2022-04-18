@@ -15,8 +15,12 @@ data class SelectProperty(
     override val id: String,
     override val type: PropertyType,
     override val name: String,
-    val options: List<Option>
+    val select: Select
 ) : DatabaseProperty {
+
+    data class Select(
+        val options: List<Option>
+    )
 
     data class Option(
         /**

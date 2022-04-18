@@ -19,7 +19,7 @@ import com.mt.notion.common.PropertyType
 )
 @JsonSubTypes(
     JsonSubTypes.Type(TitleProperty::class, name = "title"),
-    JsonSubTypes.Type(TextProperty::class, name = "rich_text"),
+    JsonSubTypes.Type(RichTextProperty::class, name = "rich_text"),
     JsonSubTypes.Type(NumberProperty::class, name = "number"),
     JsonSubTypes.Type(SelectProperty::class, name = "select"),
     JsonSubTypes.Type(MultiSelectProperty::class, name = "multi_select"),

@@ -14,8 +14,10 @@ data class NumberProperty(
     override val id: String,
     override val type: PropertyType,
     override val name: String,
-    val format: NumberType
+    val number: Number
 ) : DatabaseProperty {
+
+    data class Number(val format: NumberType)
 
     enum class NumberType constructor(private val value: String) {
         @JsonProperty("number")

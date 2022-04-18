@@ -1,7 +1,5 @@
 package com.mt.notion.api.user
 
-import com.fasterxml.jackson.annotation.JsonProperty
-import com.fasterxml.jackson.annotation.JsonTypeName
 import com.mt.notion.common.ObjectType
 
 /**
@@ -27,7 +25,7 @@ data class Bot(
      */
     val bot: InternalBot? = null
 
-) : WithUserType {
+) : WithUserType(objectType, id, type, name, avatarUrl) {
 
     data class InternalBot constructor(
         /**

@@ -14,25 +14,30 @@ data class RelationProperty(
     override val id: String,
     override val type: PropertyType,
     override val name: String,
-    /**
-     * The database this relation refers to. New linked pages must belong to this database in order to be valid.
-     */
-    @JsonProperty("database_id")
-    val databaseId: String,
+    val relation: Relation
+) : DatabaseProperty {
 
-    /**
-     * By default, relations are formed as two synced properties across databases: if you make a change to one property,
-     * it updates the synced property at the same time. synced_property_name refers to the name of
-     * the property in the related database.
-     */
-    @JsonProperty("synced_property_name")
-    val syncedPropertyName: String? = null,
+    data class Relation(
+        /**
+         * The database this relation refers to. New linked pages must belong to this database in order to be valid.
+         */
+        @JsonProperty("database_id")
+        val databaseId: String,
 
-    /**
-     * By default, relations are formed as two synced properties across databases: if you make a change to one property,
-     * it updates the synced property at the same time. synced_property_id refers to the id of the property in the
-     * related database. This is usually a short string of random letters and symbols.
-     */
-    @JsonProperty("synced_property_id")
-    val syncedPropertyId: String? = null
-) : DatabaseProperty
+        /**
+         * By default, relations are formed as two synced properties across databases: if you make a change to one property,
+         * it updates the synced property at the same time. synced_property_name refers to the name of
+         * the property in the related database.
+         */
+        @JsonProperty("synced_property_name")
+        val syncedPropertyName: String? = null,
+
+        /**
+         * By default, relations are formed as two synced properties across databases: if you make a change to one property,
+         * it updates the synced property at the same time. synced_property_id refers to the id of the property in the
+         * related database. This is usually a short string of random letters and symbols.
+         */
+        @JsonProperty("synced_property_id")
+        val syncedPropertyId: String? = null
+    )
+}

@@ -12,4 +12,4 @@ package com.mt.notion.common.richText.mention
 data class LinkPreviewMention(
     override val type: MentionType,
     val url: String
-) : Mention
+) : WithMention
