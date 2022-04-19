@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty
 /**
  * Template Mention Date
  *
-* @author it.motui
+ * @author it.motui
  * @see <a href="https://developers.notion.com/reference/rich-text">Rich text object</a>
  */
 data class TemplateMentionUserMention(

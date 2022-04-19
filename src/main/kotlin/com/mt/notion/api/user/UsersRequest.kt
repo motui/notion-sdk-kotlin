@@ -7,7 +7,7 @@ import com.mt.notion.http.NotionHttpRequestContent
 /**
  * List all users
  *
-* @author it.motui
+ * @author it.motui
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 data class UsersRequest(override var startCursor: String?, override var pageSize: Int?) :

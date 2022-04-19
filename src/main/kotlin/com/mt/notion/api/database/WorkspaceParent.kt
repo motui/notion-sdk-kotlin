@@ -3,7 +3,7 @@ package com.mt.notion.api.database
 /**
  * Workspace parent
  *
-* @author it.motui
+ * @author it.motui
  * @see <a href="https://developers.notion.com/reference/database">Database</a>
  */
 data class WorkspaceParent(

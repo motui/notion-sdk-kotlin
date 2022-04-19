@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit
  *
  * TODO:待完善HTTP功能
  *
-* @author it.motui
+ * @author it.motui
  */
 class OkHttpNotionHttpClientImpl : NotionHttpClient {
     private val logger = LoggerFactory.getLogger(OkHttpNotionHttpClientImpl::class.java)

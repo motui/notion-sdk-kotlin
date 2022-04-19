@@ -14,7 +14,7 @@ import com.mt.notion.common.richText.RichTextType
  * The value is an object containing type-specific configuration. The type-specific configurations are described in the
  * sections below.
  *
-* @author it.motui
+ * @author it.motui
  * @see <a href="https://developers.notion.com/reference/rich-text">Rich text object</a>
  */
 data class Mention(

@@ -5,7 +5,7 @@ package com.mt.notion.common.richText
  *
  * Style information which applies to the whole rich text object.
  *
-* @author it.motui
+ * @author it.motui
  * @see <a href="https://developers.notion.com/reference/rich-text">Rich text object</a>
  */
 data class Annotations(
@@ -34,4 +34,4 @@ data class Annotations(
      */
     val color: RichTextColor,
 
-)
+    )

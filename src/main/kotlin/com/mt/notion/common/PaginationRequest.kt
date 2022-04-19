@@ -6,7 +6,7 @@ import com.mt.notion.http.NotionHttpRequestContent
 /**
  * 分页参数
  *
-* @author it.motui
+ * @author it.motui
  * @see <a href="https://developers.notion.com/reference/pagination">Pagination</a>
  */
 interface PaginationRequest : NotionHttpRequestContent {

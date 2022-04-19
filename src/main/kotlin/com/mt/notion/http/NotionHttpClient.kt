@@ -5,7 +5,7 @@ import java.net.URLEncoder
 /**
  * notion http client
  *
-* @author it.motui
+ * @author it.motui
  */
 interface NotionHttpClient : AutoCloseable, Cloneable {
     /**

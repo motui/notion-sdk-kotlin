@@ -5,7 +5,7 @@ import com.mt.notion.common.PropertyType
 /**
  * Formula
  *
-* @author it.motui
+ * @author it.motui
  * @see <a href="https://developers.notion.com/reference/property-object">Property object</a>
  */
 data class FormulaProperty(

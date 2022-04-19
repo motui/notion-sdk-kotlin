@@ -9,7 +9,7 @@ import com.mt.notion.http.impl.OkHttpNotionHttpClientImpl
 /**
  * notion client
  *
-* @author it.motui
+ * @author it.motui
  */
 object NotionClient {
 

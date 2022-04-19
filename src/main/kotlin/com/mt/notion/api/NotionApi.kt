@@ -5,7 +5,7 @@ import com.mt.notion.http.NotionHttpClient
 /**
  * notion http api
  *
-* @author it.motui
+ * @author it.motui
  */
 interface NotionApi {
     val config: NotionApiConfig

@@ -7,7 +7,7 @@ import com.mt.notion.common.PropertyType
 /**
  * Property object
  *
-* @author it.motui
+ * @author it.motui
  * @see <a href="https://developers.notion.com/reference/property-object">Property object</a>
  */
 @JsonTypeInfo(

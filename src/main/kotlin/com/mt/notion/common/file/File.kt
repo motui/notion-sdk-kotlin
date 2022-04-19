@@ -8,7 +8,7 @@ import com.mt.notion.common.Icon
 /**
  * File
  *
-* @author it.motui
+ * @author it.motui
  * @see <a href="https://developers.notion.com/reference/file-object">File object</a>
  */
 @JsonTypeInfo(

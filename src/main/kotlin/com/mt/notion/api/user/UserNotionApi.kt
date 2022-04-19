@@ -7,7 +7,7 @@ import com.mt.notion.http.NotionHttpClient
 /**
  * user api
  *
-* @author it.motui
+ * @author it.motui
  * @see <a href="https://developers.notion.com/reference/user">user</a>
  */
 class UserNotionApi(

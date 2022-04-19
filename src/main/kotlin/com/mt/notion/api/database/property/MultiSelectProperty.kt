@@ -7,7 +7,7 @@ import com.mt.notion.common.PropertyType
 /**
  * Multi-select
  *
-* @author it.motui
+ * @author it.motui
  * @see <a href="https://developers.notion.com/reference/property-object#multi-select-options">Multi-select </a>
  */
 data class MultiSelectProperty(

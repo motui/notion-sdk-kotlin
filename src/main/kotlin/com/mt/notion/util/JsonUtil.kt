@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory
 /**
  * json util for jackson
  *
-* @author it.motui
+ * @author it.motui
  */
 object JsonUtil {
     private val logger = LoggerFactory.getLogger(JsonUtil.javaClass)

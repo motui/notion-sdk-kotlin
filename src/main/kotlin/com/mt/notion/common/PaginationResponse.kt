@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty
 /**
  * 响应分页参数
  *
-* @author it.motui
+ * @author it.motui
  */
 interface PaginationResponse {
     @get:JsonProperty("next_cursor")

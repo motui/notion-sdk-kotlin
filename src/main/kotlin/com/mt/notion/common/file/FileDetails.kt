@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty
 /**
  * File object
  *
-* @author it.motui
+ * @author it.motui
  * @see <a href="https://developers.notion.com/reference/file-object">File object</a>
  */
 data class FileDetails(

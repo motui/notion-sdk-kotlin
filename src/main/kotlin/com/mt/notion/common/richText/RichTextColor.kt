@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty
 /**
  * Color
  *
-* @author it.motui
+ * @author it.motui
  * @see <a href="https://developers.notion.com/reference/rich-text">Rich text object</a>
  */
 enum class RichTextColor constructor(private val value: String) {

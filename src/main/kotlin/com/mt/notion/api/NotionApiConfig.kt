@@ -3,7 +3,7 @@ package com.mt.notion.api
 /**
  * notion api config
  *
-* @author it.motui
+ * @author it.motui
  */
 data class NotionApiConfig(
     val token: String,

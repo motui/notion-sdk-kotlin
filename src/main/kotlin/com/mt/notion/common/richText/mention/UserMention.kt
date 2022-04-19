@@ -7,7 +7,7 @@ import com.mt.notion.api.user.User
  *
  * User mentions contain a user object within the user property.
  *
-* @author it.motui
+ * @author it.motui
  * @see <a href="https://developers.notion.com/reference/rich-text">Rich text object</a>
  */
 data class UserMention(

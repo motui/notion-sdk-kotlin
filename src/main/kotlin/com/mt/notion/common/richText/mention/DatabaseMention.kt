@@ -3,7 +3,7 @@ package com.mt.notion.common.richText.mention
 /**
  * Database mentions
  *
-* @author it.motui
+ * @author it.motui
  * @see <a href="https://developers.notion.com/reference/rich-text">Rich text object</a>
  */
 data class DatabaseMention(

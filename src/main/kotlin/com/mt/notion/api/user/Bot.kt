@@ -5,7 +5,7 @@ import com.mt.notion.common.ObjectType
 /**
  * bot
  *
-* @author it.motui
+ * @author it.motui
  */
 data class Bot(
     override val objectType: ObjectType,

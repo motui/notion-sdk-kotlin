@@ -9,7 +9,7 @@ import com.mt.notion.common.file.FileType
 /**
  * Cover
  *
-* @author it.motui
+ * @author it.motui
  */
 @JsonTypeInfo(
     use = JsonTypeInfo.Id.NAME,

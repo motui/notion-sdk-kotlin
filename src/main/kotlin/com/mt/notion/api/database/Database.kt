@@ -12,7 +12,7 @@ import com.mt.notion.common.richText.RichText
 /**
  * database
  *
-* @author it.motui
+ * @author it.motui
  */
 data class Database(
     override val objectType: ObjectType,

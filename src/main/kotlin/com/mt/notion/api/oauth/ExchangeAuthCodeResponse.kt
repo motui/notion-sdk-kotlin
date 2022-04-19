@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * exchanging the grant for an access token http response
-* @author it.motui
+ * @author it.motui
  */
 data class ExchangeAuthCodeResponse(
     /**
