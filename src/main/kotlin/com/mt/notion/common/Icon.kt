@@ -9,8 +9,7 @@ import com.mt.notion.common.file.FileType
 /**
  * Icon
  *
- * @author it.motui
- * @since 0.1
+* @author it.motui
  */
 @JsonTypeInfo(
     use = JsonTypeInfo.Id.NAME,

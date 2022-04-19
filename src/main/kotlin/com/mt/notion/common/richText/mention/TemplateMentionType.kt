@@ -1,14 +1,11 @@
 package com.mt.notion.common.richText.mention
 
 import com.fasterxml.jackson.annotation.JsonProperty
-import com.fasterxml.jackson.annotation.JsonSubTypes
-import com.fasterxml.jackson.annotation.JsonTypeInfo
 
 /**
  * template mention
  *
- * @author it.motui
- * @since 0.1
+* @author it.motui
  * @see <a href="https://developers.notion.com/reference/rich-text">Rich text object</a>
  */
 enum class TemplateMentionType constructor(private val value: String) {

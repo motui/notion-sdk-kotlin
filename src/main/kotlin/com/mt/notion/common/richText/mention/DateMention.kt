@@ -5,8 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty
 /**
  * Date mentions
  *
- * @author it.motui
- * @since 0.1
+* @author it.motui
  * @see <a href="https://developers.notion.com/reference/rich-text">Rich text object</a>
  */
 data class DateMention(

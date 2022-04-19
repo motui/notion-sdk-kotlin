@@ -1,6 +1,5 @@
 package com.mt.notion
 
-import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 
 /**
@@ -11,6 +10,5 @@ internal class NotionClientTest {
 
     @Test
     fun init() {
-
     }
 }

@@ -10,14 +10,12 @@ import okhttp3.RequestBody.Companion.toRequestBody
 import org.slf4j.LoggerFactory
 import java.util.concurrent.TimeUnit
 
-
 /**
  * [NotionHttpClient]的OKHTTP实现
  *
  * TODO:待完善HTTP功能
  *
- * @author it.motui
- * @since 0.1
+* @author it.motui
  */
 class OkHttpNotionHttpClientImpl : NotionHttpClient {
     private val logger = LoggerFactory.getLogger(OkHttpNotionHttpClientImpl::class.java)

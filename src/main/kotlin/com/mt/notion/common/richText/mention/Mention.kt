@@ -1,8 +1,5 @@
 package com.mt.notion.common.richText.mention
 
-import com.fasterxml.jackson.annotation.JsonProperty
-import com.fasterxml.jackson.annotation.JsonSubTypes
-import com.fasterxml.jackson.annotation.JsonTypeInfo
 import com.mt.notion.common.richText.Annotations
 import com.mt.notion.common.richText.RichText
 import com.mt.notion.common.richText.RichTextType
@@ -17,8 +14,7 @@ import com.mt.notion.common.richText.RichTextType
  * The value is an object containing type-specific configuration. The type-specific configurations are described in the
  * sections below.
  *
- * @author it.motui
- * @since 0.1
+* @author it.motui
  * @see <a href="https://developers.notion.com/reference/rich-text">Rich text object</a>
  */
 data class Mention(

@@ -5,8 +5,7 @@ import com.mt.notion.common.file.FileType
 /**
  * Emoji
  *
- * @author it.motui
- * @since 0.1
+* @author it.motui
  * @see <a href="https://developers.notion.com/reference/emoji-object">emoji-object</a>
  */
 data class Emoji(

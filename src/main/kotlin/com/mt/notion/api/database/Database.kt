@@ -2,7 +2,7 @@ package com.mt.notion.api.database
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.mt.notion.api.database.property.DatabaseProperty
-import com.mt.notion.api.user.BaseUser
+import com.mt.notion.api.user.User
 import com.mt.notion.common.Cover
 import com.mt.notion.common.Icon
 import com.mt.notion.common.ObjectType
@@ -12,8 +12,7 @@ import com.mt.notion.common.richText.RichText
 /**
  * database
  *
- * @author it.motui
- * @since 0.1
+* @author it.motui
  */
 data class Database(
     override val objectType: ObjectType,
@@ -29,7 +28,7 @@ data class Database(
      * User who created the database.
      */
     @JsonProperty("created_by")
-    val createdBy: BaseUser,
+    val createdBy: User,
     /**
      * Date and time when this database was updated. Formatted as an ISO 8601 date time string.
      *
@@ -41,7 +40,7 @@ data class Database(
      * User who last edited the database.
      */
     @JsonProperty("last_edited_by")
-    val lastEditedBy: BaseUser,
+    val lastEditedBy: User,
 
     /**
      * Name of the database as it appears in Notion.

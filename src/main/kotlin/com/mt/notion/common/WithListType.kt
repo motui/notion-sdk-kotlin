@@ -19,7 +19,8 @@ import com.mt.notion.api.user.Users
 @JsonSubTypes(
     JsonSubTypes.Type(Users::class, name = "user")
 )
-interface WithListType : WithObjectType {
-    @get:JsonProperty("type")
+interface WithListType {
+    @get:JsonProperty("object")
+    val objectType: ObjectType
     val type: String
 }

@@ -17,6 +17,4 @@ data class Users(
      */
     override val type: String,
     val results: List<WithUserType>
-) : WithListType, PaginationResponse {
-
-}
+) : WithListType, PaginationResponse

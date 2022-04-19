@@ -26,7 +26,7 @@ internal class BotTest {
         assertEquals(
             """
            {"object":"user","type":"bot","id":"6794760a-1f15-45cd-9c65-0dfe42f5135a","name":"Aman Gupta","avatar_url":null,"bot":{"owner":{"type":"workspace","workspace":true,"user":null}}}
-           """.trimIndent(),
+            """.trimIndent(),
             str
         )
     }

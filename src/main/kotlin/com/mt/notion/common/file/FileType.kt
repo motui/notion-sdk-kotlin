@@ -5,8 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty
 /**
  * File object
  *
- * @author it.motui
- * @since 0.1
+* @author it.motui
  * @see <a href="https://developers.notion.com/reference/file-object">File object</a>
  */
 enum class FileType constructor(private val value: String) {

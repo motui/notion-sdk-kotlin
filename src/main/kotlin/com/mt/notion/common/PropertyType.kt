@@ -5,8 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty
 /**
  * Property Type
  *
- * @author it.motui
- * @since 0.1
+* @author it.motui
  * @see <a href="https://developers.notion.com/reference/property-object">Property object</a>
  */
 enum class PropertyType constructor(val value: String) {

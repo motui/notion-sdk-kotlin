@@ -48,5 +48,13 @@ internal class UsersTest {
         """.trimIndent()
         val users: Users = JsonUtil.instance().readValue(json, Users::class.java)
         assertNotNull(users)
+        assertEquals(2, users.results.size)
+        assertTrue(users.results[0] is Person)
+        assertTrue(users.results[1] is Bot)
+        assertNotNull(users.hasMore)
+        users.hasMore?.let { assertFalse(it) }
+        assertNull(users.nextCursor)
+        assertEquals(ObjectType.List, users.objectType)
+        assertEquals("user", users.type)
     }
 }

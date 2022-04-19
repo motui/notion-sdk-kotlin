@@ -5,8 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty
 /**
  * object type
  *
- * @author it.motui
- * @since 0.1
+* @author it.motui
  */
 enum class ObjectType constructor(private val value: String) {
     @JsonProperty("user")

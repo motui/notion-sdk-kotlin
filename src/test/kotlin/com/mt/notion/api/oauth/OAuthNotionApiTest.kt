@@ -2,9 +2,8 @@ package com.mt.notion.api.oauth
 
 import com.mt.notion.NotionClient
 import com.mt.notion.http.impl.OkHttpNotionHttpClientImpl
-import org.junit.jupiter.api.Test
-
 import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Test
 
 /**
  *

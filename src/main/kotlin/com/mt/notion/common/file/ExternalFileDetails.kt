@@ -3,8 +3,7 @@ package com.mt.notion.common.file
 /**
  * External file object
  *
- * @author it.motui
- * @since 0.1
+* @author it.motui
  * @see <a href="https://developers.notion.com/reference/file-object">File object</a>
  */
 data class ExternalFileDetails(

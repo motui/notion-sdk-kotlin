@@ -5,8 +5,7 @@ package com.mt.notion.common.richText
  *
  * Equation objects contain the following information within the equation property:
  *
- * @author it.motui
- * @since 0.1
+* @author it.motui
  * @see <a href="https://developers.notion.com/reference/rich-text">Rich text object</a>
  */
 data class Equation(

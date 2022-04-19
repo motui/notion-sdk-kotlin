@@ -5,8 +5,7 @@ package com.mt.notion.common.richText.mention
  *
  * Link preview mentions contain the originally pasted url.
  *
- * @author it.motui
- * @since 0.1
+* @author it.motui
  * @see <a href="https://developers.notion.com/reference/rich-text">Rich text object</a>
  */
 data class LinkPreviewMention(

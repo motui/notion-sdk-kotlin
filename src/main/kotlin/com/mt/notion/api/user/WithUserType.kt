@@ -7,7 +7,7 @@ import com.mt.notion.common.ObjectType
 
 /**
  *
- * @author it.motui
+* @author it.motui
  */
 @JsonTypeInfo(
     use = JsonTypeInfo.Id.NAME,
@@ -38,7 +38,7 @@ open class WithUserType(
     @get:JsonProperty("avatar_url")
     open val avatarUrl: String?
 
-) : BaseUser(objectType, id) {
+) : User(objectType, id) {
     fun toPerson(): Person {
         if (this.type == UserType.PERSON) {
             return this as Person
@@ -53,5 +53,3 @@ open class WithUserType(
         throw RuntimeException("当前类型不是bot")
     }
 }
-
-

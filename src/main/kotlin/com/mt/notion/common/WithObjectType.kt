@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty
 import com.fasterxml.jackson.annotation.JsonSubTypes
 import com.fasterxml.jackson.annotation.JsonTypeInfo
 import com.mt.notion.api.database.Database
-import com.mt.notion.api.user.BaseUser
+import com.mt.notion.api.user.User
 
 /**
  *
@@ -17,8 +17,7 @@ import com.mt.notion.api.user.BaseUser
     visible = true
 )
 @JsonSubTypes(
-    JsonSubTypes.Type(BaseUser::class, name = "user"),
-    JsonSubTypes.Type(WithListType::class, name = "list"),
+    JsonSubTypes.Type(User::class, name = "user"),
     JsonSubTypes.Type(Database::class, name = "database")
 )
 interface WithObjectType {

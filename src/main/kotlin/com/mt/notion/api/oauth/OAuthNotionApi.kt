@@ -2,13 +2,12 @@ package com.mt.notion.api.oauth
 
 import com.mt.notion.NotionClient
 import com.mt.notion.http.NotionHttpClient
-import java.util.*
+import java.util.Base64
 
 /**
  * oauth api
  *
  * @author it.motui
- * @since 0.1
  * @see <a href="https://developers.notion.com/docs/authorization#exchanging-the-grant-for-an-access-token">
  *     authorization#exchanging-the-grant-for-an-access-token</a>
  */

@@ -1,12 +1,10 @@
 package com.mt.notion.api.oauth
 
 import com.fasterxml.jackson.annotation.JsonProperty
-import com.mt.notion.http.NotionHttpRequestContent
 
 /**
  * exchanging the grant for an access token http response
- * @author it.motui
- * @since 0.1
+* @author it.motui
  */
 data class ExchangeAuthCodeResponse(
     /**

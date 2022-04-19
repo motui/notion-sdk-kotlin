@@ -9,8 +9,7 @@ import com.mt.notion.http.impl.OkHttpNotionHttpClientImpl
 /**
  * notion client
  *
- * @author it.motui
- * @since 0.1
+* @author it.motui
  */
 object NotionClient {
 
@@ -35,10 +34,7 @@ object NotionClient {
          * internal integrations token
          */
         val token: String
-    ) {
-
-
-    }
+    )
 
     /**
      * public integrations config
@@ -66,9 +62,7 @@ object NotionClient {
          * redirect url: callback url after authorization
          */
         val redirectUri: String,
-    ) {
-
-    }
+    )
 
     /**
      * internal integrations

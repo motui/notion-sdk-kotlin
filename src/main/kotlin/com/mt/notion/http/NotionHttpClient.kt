@@ -5,8 +5,7 @@ import java.net.URLEncoder
 /**
  * notion http client
  *
- * @author it.motui
- * @since 0.1
+* @author it.motui
  */
 interface NotionHttpClient : AutoCloseable, Cloneable {
     /**
@@ -99,7 +98,6 @@ interface NotionHttpClient : AutoCloseable, Cloneable {
     fun buildRequestUrl(url: String, query: Map<String, String>): String =
         this.buildRequestUrl(url, this.buildQueryParams(query))
 
-
     /**
      * GET请求
      *
@@ -157,5 +155,4 @@ interface NotionHttpClient : AutoCloseable, Cloneable {
         headers: Map<String, String>,
         responseClass: Class<T>
     ): T
-
 }

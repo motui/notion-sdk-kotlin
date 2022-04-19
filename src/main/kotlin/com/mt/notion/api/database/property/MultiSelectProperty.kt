@@ -7,8 +7,7 @@ import com.mt.notion.common.PropertyType
 /**
  * Multi-select
  *
- * @author it.motui
- * @since 0.1
+* @author it.motui
  * @see <a href="https://developers.notion.com/reference/property-object#multi-select-options">Multi-select </a>
  */
 data class MultiSelectProperty(
@@ -39,5 +38,4 @@ data class MultiSelectProperty(
          */
         val color: OptionColor,
     )
-
 }

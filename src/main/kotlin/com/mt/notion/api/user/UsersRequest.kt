@@ -7,9 +7,9 @@ import com.mt.notion.http.NotionHttpRequestContent
 /**
  * List all users
  *
- * @author it.motui
- * @since 0.1
+* @author it.motui
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-data class UsersRequest(override var startCursor: String?, override var pageSize: Int?) : PaginationRequest,
+data class UsersRequest(override var startCursor: String?, override var pageSize: Int?) :
+    PaginationRequest,
     NotionHttpRequestContent

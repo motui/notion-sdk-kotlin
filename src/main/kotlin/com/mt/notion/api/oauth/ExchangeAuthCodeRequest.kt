@@ -5,8 +5,7 @@ import com.mt.notion.http.NotionHttpRequestContent
 
 /**
  * exchanging the grant for an access token http request params
- * @author it.motui
- * @since 0.1
+* @author it.motui
  */
 data class ExchangeAuthCodeRequest(
     /**
