@@ -18,7 +18,6 @@ class UserNotionApi(
     /**
      * Retrieve your token's bot user
      *
-     * @since 0.1
      * @see <a href="https://developers.notion.com/reference/get-self">Retrieve your token's bot user</a>
      */
     fun me(): Bot {
@@ -35,22 +34,11 @@ class UserNotionApi(
     /**
      * Retrieve a user
      *
-     * @since 0.1
      * @see <a href="https://developers.notion.com/reference/get-user">Retrieve a user</a>
      */
-    fun user(userId: String): WithUserType {
-        return this.user(RetrieveUserRequest(userId))
-    }
-
-    /**
-     * Retrieve a user
-     *
-     * @since 0.1
-     * @see <a href="https://developers.notion.com/reference/get-user">Retrieve a user</a>
-     */
-    fun user(request: RetrieveUserRequest): WithUserType {
+    fun retrieve(userId: String): WithUserType {
         return notionHttpClient.get(
-            url = "${this.config.baseUrl}/users/${request.userId}",
+            url = "${this.config.baseUrl}/users/${userId}",
             headers = this.notionHttpClient.buildHeader(
                 this.notionHttpClient.bearerAuthorization(this.config.token),
                 this.config.notionVersion
@@ -62,7 +50,6 @@ class UserNotionApi(
     /**
      * List all users
      *
-     * @since 0.1
      * @see <a href="https://developers.notion.com/reference/get-users">List all users</a>
      */
     fun list(request: UsersRequest): Users {

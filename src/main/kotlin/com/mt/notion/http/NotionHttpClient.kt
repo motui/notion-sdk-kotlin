@@ -67,7 +67,6 @@ interface NotionHttpClient : AutoCloseable, Cloneable {
     /**
      * 参数编码
      *
-     * @since 0.1
      */
     fun urlEncode(value: String): String = URLEncoder.encode(value, "UTF-8")
 
