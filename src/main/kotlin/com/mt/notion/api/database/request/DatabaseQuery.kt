@@ -7,12 +7,11 @@ import com.mt.notion.api.database.request.sort.Sort
 /**
  * database query
  *
- * @author it.mtui
+ * @author it.motui
  */
 data class DatabaseQuery(
     val sorts: List<Sort>?,
     val files: List<Filter>?,
-
     @JsonProperty("start_cursor")
     val startCursor: String?,
     @JsonProperty("page_size")
