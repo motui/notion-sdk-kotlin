@@ -6,4 +6,4 @@ package com.mt.notion.api.database.request.filter.property.condition.checkbox
  */
 data class EqualsCondition(
     val equals: Boolean
-) : com.mt.notion.api.database.request.filter.property.condition.checkbox.CheckboxCondition
+) : CheckboxCondition

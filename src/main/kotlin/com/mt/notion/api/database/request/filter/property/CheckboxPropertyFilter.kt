@@ -1,5 +1,7 @@
 package com.mt.notion.api.database.request.filter.property
 
+import com.mt.notion.api.database.request.filter.property.condition.checkbox.CheckboxCondition
+
 /**
  *
  * @author it.motui
@@ -7,5 +9,5 @@ package com.mt.notion.api.database.request.filter.property
 data class CheckboxPropertyFilter(
     override val property: String,
     override val type: PropertyFilterType? = PropertyFilterType.Checkbox,
-    val checkbox: com.mt.notion.api.database.request.filter.property.condition.checkbox.CheckboxCondition,
+    val checkbox: CheckboxCondition,
 ) : PropertyFilter

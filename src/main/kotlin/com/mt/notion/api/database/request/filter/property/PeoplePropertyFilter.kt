@@ -1,5 +1,7 @@
 package com.mt.notion.api.database.request.filter.property
 
+import com.mt.notion.api.database.request.filter.property.condition.PeopleCondition
+
 /**
  *
  * @author it.motui
@@ -7,5 +9,5 @@ package com.mt.notion.api.database.request.filter.property
 data class PeoplePropertyFilter(
     override val property: String,
     override val type: PropertyFilterType? = PropertyFilterType.People,
-    val people: com.mt.notion.api.database.request.filter.property.condition.PeopleCondition,
+    val people: PeopleCondition,
 ) : PropertyFilter

@@ -1,9 +1,11 @@
 package com.mt.notion.api.database.request.filter.property.condition.rollup
 
+import com.mt.notion.api.database.request.filter.property.condition.date.DateCondition
+
 /**
  *
  * @author it.motui
  */
 data class RollupDateCondition(
-    val date: com.mt.notion.api.database.request.filter.property.condition.date.DateCondition
-) : com.mt.notion.api.database.request.filter.property.condition.rollup.RollupCondition
+    val date: DateCondition
+) : RollupCondition

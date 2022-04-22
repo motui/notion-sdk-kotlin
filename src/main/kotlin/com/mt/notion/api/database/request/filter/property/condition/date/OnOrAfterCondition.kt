@@ -9,4 +9,4 @@ import com.fasterxml.jackson.annotation.JsonProperty
 data class OnOrAfterCondition(
     @JsonProperty("on_or_before")
     val onOrBefore: String
-) : com.mt.notion.api.database.request.filter.property.condition.date.DateCondition
+) : DateCondition

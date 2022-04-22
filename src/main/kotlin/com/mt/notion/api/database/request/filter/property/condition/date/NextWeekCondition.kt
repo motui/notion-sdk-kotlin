@@ -10,4 +10,4 @@ import com.mt.notion.common.EmptyObject
 data class NextWeekCondition(
     @JsonProperty("next_week")
     val nextWeek: EmptyObject
-) : com.mt.notion.api.database.request.filter.property.condition.date.DateCondition
+) : DateCondition

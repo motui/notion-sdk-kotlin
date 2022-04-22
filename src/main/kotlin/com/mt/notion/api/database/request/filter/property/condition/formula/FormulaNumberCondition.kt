@@ -1,9 +1,11 @@
 package com.mt.notion.api.database.request.filter.property.condition.formula
 
+import com.mt.notion.api.database.request.filter.property.condition.number.NumberCondition
+
 /**
  *
  * @author it.motui
  */
 data class FormulaNumberCondition(
-    val number: com.mt.notion.api.database.request.filter.property.condition.number.NumberCondition
-) : com.mt.notion.api.database.request.filter.property.condition.formula.FormulaCondition
+    val number: NumberCondition
+) : FormulaCondition

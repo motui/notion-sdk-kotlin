@@ -6,4 +6,4 @@ package com.mt.notion.api.database.request.filter.property.condition.date
  */
 data class BeforeCondition(
     val before: String
-) : com.mt.notion.api.database.request.filter.property.condition.date.DateCondition
+) : DateCondition

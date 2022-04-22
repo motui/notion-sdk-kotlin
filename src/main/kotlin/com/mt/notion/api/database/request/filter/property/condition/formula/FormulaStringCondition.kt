@@ -1,9 +1,11 @@
 package com.mt.notion.api.database.request.filter.property.condition.formula
 
+import com.mt.notion.api.database.request.filter.property.condition.text.TextCondition
+
 /**
  *
  * @author it.motui
  */
 data class FormulaStringCondition(
-    val string: com.mt.notion.api.database.request.filter.property.condition.text.TextCondition
-) : com.mt.notion.api.database.request.filter.property.condition.formula.FormulaCondition
+    val string: TextCondition
+) : FormulaCondition

@@ -9,4 +9,4 @@ import com.fasterxml.jackson.annotation.JsonProperty
 data class LessThanOrEqualToCondition(
     @JsonProperty("less_than_or_equal_to")
     val lessThanOrEqualTo: Number
-) : com.mt.notion.api.database.request.filter.property.condition.number.NumberCondition
+) : NumberCondition

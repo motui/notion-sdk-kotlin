@@ -1,6 +1,7 @@
 package com.mt.notion.api.database.request.filter.property
 
-import java.util.logging.Filter
+import com.mt.notion.api.database.request.filter.Filter
+
 
 /**
  *

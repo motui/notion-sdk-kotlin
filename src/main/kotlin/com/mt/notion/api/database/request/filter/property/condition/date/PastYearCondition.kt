@@ -10,4 +10,4 @@ import com.mt.notion.common.EmptyObject
 data class PastYearCondition(
     @JsonProperty("past_year")
     val pastYear: EmptyObject
-) : com.mt.notion.api.database.request.filter.property.condition.date.DateCondition
+) : DateCondition

@@ -1,9 +1,11 @@
 package com.mt.notion.api.database.request.filter.property.condition.formula
 
+import com.mt.notion.api.database.request.filter.property.condition.date.DateCondition
+
 /**
  *
  * @author it.motui
  */
 data class FormulaDateCondition(
-    val date: com.mt.notion.api.database.request.filter.property.condition.date.DateCondition
-) : com.mt.notion.api.database.request.filter.property.condition.formula.FormulaCondition
+    val date: DateCondition
+) : FormulaCondition

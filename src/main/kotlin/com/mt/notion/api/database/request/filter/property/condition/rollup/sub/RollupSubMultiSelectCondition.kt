@@ -1,6 +1,7 @@
 package com.mt.notion.api.database.request.filter.property.condition.rollup.sub
 
 import com.fasterxml.jackson.annotation.JsonProperty
+import com.mt.notion.api.database.request.filter.property.condition.MultiSelectCondition
 
 /**
  *
@@ -8,5 +9,5 @@ import com.fasterxml.jackson.annotation.JsonProperty
  */
 data class RollupSubMultiSelectCondition(
     @JsonProperty("multi_select")
-    val multiSelect: com.mt.notion.api.database.request.filter.property.condition.MultiSelectCondition
-) : com.mt.notion.api.database.request.filter.property.condition.rollup.sub.RollupSubCondition
+    val multiSelect: MultiSelectCondition
+) : RollupSubCondition

@@ -9,4 +9,4 @@ import com.fasterxml.jackson.annotation.JsonProperty
 data class EndsWithCondition(
     @JsonProperty("ends_with")
     val endsWith: String
-) : com.mt.notion.api.database.request.filter.property.condition.text.TextCondition
+) : TextCondition

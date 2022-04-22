@@ -1,9 +1,11 @@
 package com.mt.notion.api.database.request.filter.property.condition.rollup
 
+import com.mt.notion.api.database.request.filter.property.condition.number.NumberCondition
+
 /**
  *
  * @author it.motui
  */
 data class RollupNumberCondition(
-    val number: com.mt.notion.api.database.request.filter.property.condition.number.NumberCondition
-) : com.mt.notion.api.database.request.filter.property.condition.rollup.RollupCondition
+    val number: NumberCondition
+) : RollupCondition

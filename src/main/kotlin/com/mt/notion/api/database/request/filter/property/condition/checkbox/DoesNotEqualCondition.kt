@@ -9,4 +9,4 @@ import com.fasterxml.jackson.annotation.JsonProperty
 data class DoesNotEqualCondition(
     @JsonProperty("does_not_equal")
     val doesNotEqual: Boolean
-) : com.mt.notion.api.database.request.filter.property.condition.checkbox.CheckboxCondition
+) : CheckboxCondition

@@ -1,5 +1,7 @@
 package com.mt.notion.api.database.request.filter.property
 
+import com.mt.notion.api.database.request.filter.property.condition.ExistenceCondition
+
 /**
  *
  * @author it.motui
@@ -7,5 +9,5 @@ package com.mt.notion.api.database.request.filter.property
 data class FilesPropertyFilter(
     override val property: String,
     override val type: PropertyFilterType? = PropertyFilterType.Files,
-    val files: com.mt.notion.api.database.request.filter.property.condition.ExistenceCondition,
+    val files: ExistenceCondition,
 ) : PropertyFilter

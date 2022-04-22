@@ -10,4 +10,4 @@ import com.mt.notion.common.EmptyObject
 data class NextYearCondition(
     @JsonProperty("next_year")
     val nextYear: EmptyObject
-) : com.mt.notion.api.database.request.filter.property.condition.date.DateCondition
+) : DateCondition
