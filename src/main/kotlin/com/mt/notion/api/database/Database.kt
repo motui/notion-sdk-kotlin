@@ -1,6 +1,7 @@
 package com.mt.notion.api.database
 
 import com.fasterxml.jackson.annotation.JsonProperty
+import com.mt.notion.api.database.parent.WithDatabaseParent
 import com.mt.notion.api.database.property.DatabaseProperty
 import com.mt.notion.api.user.User
 import com.mt.notion.common.Cover

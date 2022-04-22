@@ -14,6 +14,9 @@ enum class DatabaseParentType constructor(private val value: String) {
 
     @JsonProperty("workspace")
     Workspace("workspace"),
+
+    @JsonProperty("database_id")
+    DatabaseId("database_id"),
     ;
 
     override fun toString(): String = value

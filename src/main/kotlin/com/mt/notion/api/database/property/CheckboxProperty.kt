@@ -4,7 +4,7 @@ import com.mt.notion.common.EmptyObject
 import com.mt.notion.common.PropertyType
 
 /**
- * Select
+ * checkbox
  *
  * @author it.motui
  * @see <a href="https://developers.notion.com/reference/property-object">Property object</a>

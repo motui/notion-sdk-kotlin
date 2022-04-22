@@ -1,19 +1,18 @@
-package com.mt.notion.api.database.property
+package com.mt.notion.api.database.query.property
 
 import com.fasterxml.jackson.annotation.JsonProperty
-import com.mt.notion.common.EmptyObject
+import com.mt.notion.api.user.User
 import com.mt.notion.common.PropertyType
 
 /**
- * lastEditedTime
+ * lastEditedBy
  *
  * @author it.motui
  * @see <a href="https://developers.notion.com/reference/property-object">Property object</a>
  */
-data class LastEditedTimeProperty(
+data class QueryLastEditedByProperty(
     override val id: String,
     override val type: PropertyType,
-    override val name: String,
-    @JsonProperty("last_edited_time")
-    val lastEditedTime: EmptyObject?
-) : DatabaseProperty
+    @JsonProperty("last_edited_by")
+    val lastEditedBy: User
+) : QueryDatabaseProperty

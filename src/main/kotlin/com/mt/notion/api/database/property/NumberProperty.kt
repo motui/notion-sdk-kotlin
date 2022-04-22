@@ -131,7 +131,7 @@ data class NumberProperty(
         ArgentinePeso("argentine_peso"),
 
         @JsonProperty("uruguayan_peso")
-        Uruguayan_Peso("uruguayan_peso"),
+        UruguayanPeso("uruguayan_peso"),
         ;
 
         override fun toString(): String = value

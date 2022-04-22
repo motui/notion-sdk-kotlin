@@ -1,5 +1,6 @@
 package com.mt.notion.api.database
 
+import com.mt.notion.api.database.parent.PageParent
 import com.mt.notion.common.Emoji
 import com.mt.notion.common.ObjectType
 import com.mt.notion.common.file.ExternalFileDetails

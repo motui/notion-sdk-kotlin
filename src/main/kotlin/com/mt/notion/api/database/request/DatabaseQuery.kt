@@ -10,6 +10,8 @@ import com.mt.notion.api.database.request.sort.Sort
  * @author it.motui
  */
 data class DatabaseQuery(
+    @JsonProperty("database_id")
+    val databaseId: String,
     val sorts: List<Sort>?,
     val files: List<Filter>?,
     @JsonProperty("start_cursor")

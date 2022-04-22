@@ -16,6 +16,9 @@ enum class ObjectType constructor(private val value: String) {
 
     @JsonProperty("database")
     Database("database"),
+
+    @JsonProperty("page")
+    Page("page"),
     ;
 
     override fun toString(): String = value

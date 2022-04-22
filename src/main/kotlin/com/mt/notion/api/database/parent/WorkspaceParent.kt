@@ -1,4 +1,6 @@
-package com.mt.notion.api.database
+package com.mt.notion.api.database.parent
+
+import com.mt.notion.api.database.DatabaseParentType
 
 /**
  * Workspace parent

@@ -1,7 +1,8 @@
-package com.mt.notion.api.database
+package com.mt.notion.api.database.parent
 
 import com.fasterxml.jackson.annotation.JsonSubTypes
 import com.fasterxml.jackson.annotation.JsonTypeInfo
+import com.mt.notion.api.database.DatabaseParentType
 
 /**
  * Database
@@ -18,6 +19,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo
 @JsonSubTypes(
     JsonSubTypes.Type(PageParent::class, name = "page_id"),
     JsonSubTypes.Type(WorkspaceParent::class, name = "workspace"),
+    JsonSubTypes.Type(DatabaseParent::class, name = "database_id"),
 )
 interface WithDatabaseParent {
     val type: DatabaseParentType
@@ -30,6 +32,10 @@ interface WithDatabaseParent {
 
         fun workspace(): WorkspaceParent {
             return WorkspaceParent(type = DatabaseParentType.Workspace, workspace = true)
+        }
+
+        fun database(databaseId: String): DatabaseParent {
+            return DatabaseParent(type = DatabaseParentType.DatabaseId, databaseId = databaseId)
         }
     }
 }

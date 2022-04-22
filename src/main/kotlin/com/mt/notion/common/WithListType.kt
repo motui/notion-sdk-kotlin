@@ -3,6 +3,7 @@ package com.mt.notion.common
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.fasterxml.jackson.annotation.JsonSubTypes
 import com.fasterxml.jackson.annotation.JsonTypeInfo
+import com.mt.notion.api.database.Databases
 import com.mt.notion.api.user.Users
 
 /**
@@ -17,7 +18,8 @@ import com.mt.notion.api.user.Users
     visible = true
 )
 @JsonSubTypes(
-    JsonSubTypes.Type(Users::class, name = "user")
+    JsonSubTypes.Type(Users::class, name = "user"),
+    JsonSubTypes.Type(Databases::class, name = "page")
 )
 interface WithListType {
     @get:JsonProperty("object")

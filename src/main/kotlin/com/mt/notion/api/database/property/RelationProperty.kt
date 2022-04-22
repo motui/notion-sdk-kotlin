@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty
 import com.mt.notion.common.PropertyType
 
 /**
- * Select
+ * relation
  *
  * @author it.motui
  * @see <a href="https://developers.notion.com/reference/property-object">Property object</a>
