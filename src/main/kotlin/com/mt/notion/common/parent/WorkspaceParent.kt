@@ -1,4 +1,4 @@
-package com.mt.notion.api.database.parent
+package com.mt.notion.common.parent
 
 import com.mt.notion.api.database.DatabaseParentType
 

@@ -1,16 +1,16 @@
-package com.mt.notion.api.database.parent
+package com.mt.notion.common.parent
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.mt.notion.api.database.DatabaseParentType
 
 /**
- * Page parent
+ * Workspace parent
  *
  * @author it.motui
  * @see <a href="https://developers.notion.com/reference/database">Database</a>
  */
-data class PageParent(
+data class DatabaseParent(
     override val type: DatabaseParentType,
-    @JsonProperty("page_id")
-    val pageId: String
+    @JsonProperty("database_id")
+    val databaseId: String
 ) : WithDatabaseParent

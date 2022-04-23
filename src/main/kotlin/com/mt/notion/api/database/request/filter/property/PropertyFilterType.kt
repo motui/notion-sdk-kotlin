@@ -2,7 +2,7 @@ package com.mt.notion.api.database.request.filter.property
 
 /**
  *
- * @author zhihaoguo
+ * @author it.motui
  */
 enum class PropertyFilterType constructor(private val value: String) {
     Title("title"),

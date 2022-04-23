@@ -1,4 +1,4 @@
-package com.mt.notion.api.database.parent
+package com.mt.notion.common.parent
 
 import com.fasterxml.jackson.annotation.JsonSubTypes
 import com.fasterxml.jackson.annotation.JsonTypeInfo

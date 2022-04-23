@@ -1,12 +1,12 @@
 package com.mt.notion.api.database.query
 
 import com.fasterxml.jackson.annotation.JsonProperty
-import com.mt.notion.api.database.parent.WithDatabaseParent
 import com.mt.notion.api.database.query.property.QueryDatabaseProperty
 import com.mt.notion.api.user.User
 import com.mt.notion.common.Cover
 import com.mt.notion.common.Icon
 import com.mt.notion.common.ObjectType
+import com.mt.notion.common.parent.WithDatabaseParent
 
 /**
  *
