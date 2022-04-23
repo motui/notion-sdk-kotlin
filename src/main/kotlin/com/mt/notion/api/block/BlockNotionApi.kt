@@ -3,6 +3,7 @@ package com.mt.notion.api.block
 import com.mt.notion.api.NotionApi
 import com.mt.notion.api.NotionApiConfig
 import com.mt.notion.api.block.objects.WithBlockObject
+import com.mt.notion.api.block.update.UpdateBlockRequest
 import com.mt.notion.http.NotionHttpClient
 
 /**
@@ -46,6 +47,23 @@ class BlockNotionApi(
                 this.config.notionVersion
             ),
             responseClass = Blocks::class.java
+        )
+    }
+
+    /**
+     * Update a block
+     *
+     * @see <a href="https://developers.notion.com/reference/update-a-block">Update a block</a>
+     */
+    fun update(blockId: String, request: UpdateBlockRequest): WithBlockObject {
+        return notionHttpClient.patch(
+            url = "${this.config.baseUrl}/blocks/${blockId}",
+            body = request,
+            headers = this.notionHttpClient.buildHeader(
+                this.notionHttpClient.bearerAuthorization(this.config.token),
+                this.config.notionVersion
+            ),
+            responseClass = WithBlockObject::class.java
         )
     }
 }

@@ -48,4 +48,21 @@ internal class BlockNotionApiTest : BaseNotionApi() {
         Assertions.assertEquals(2, blocks.results.size)
         Assertions.assertEquals("e27427c0-340e-4aab-935d-5c2b14c158a4", blocks.results[0].id)
     }
+
+    @Test
+    fun update() {
+        // to-do
+//        val blocks = blockNotionApi.update(
+//            "e27427c0-340e-4aab-935d-5c2b14c158a4",
+//            ToDoUpdateBlockRequest(
+//                archived = true,
+//                toDo = ToDoUpdateBlockRequest.ToDo(
+//
+//                )
+//            )
+//        )
+//        Assertions.assertNotNull(blocks)
+//        Assertions.assertNotNull(blocks.results)
+//        Assertions.assertEquals(23, blocks.results.size)
+    }
 }

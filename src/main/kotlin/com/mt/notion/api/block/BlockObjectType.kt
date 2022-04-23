@@ -1,4 +1,4 @@
-package com.mt.notion.api.block.objects
+package com.mt.notion.api.block
 
 import com.fasterxml.jackson.annotation.JsonProperty
 

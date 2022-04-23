@@ -1,5 +1,6 @@
 package com.mt.notion.api.block.objects
 
+import com.mt.notion.api.block.BlockObjectType
 import com.mt.notion.api.block.objects.file.BlockFile
 import com.mt.notion.api.user.User
 import com.mt.notion.common.ObjectType
