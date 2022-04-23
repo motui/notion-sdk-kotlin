@@ -2,7 +2,6 @@ package com.mt.notion.api.block.objects.file
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.mt.notion.common.file.FileType
-import com.mt.notion.common.richText.RichText
 
 /**
  * File object
@@ -11,7 +10,7 @@ import com.mt.notion.common.richText.RichText
  */
 data class BlockFileDetails(
     override val type: FileType,
-    override val caption: List<RichText>,
+    override val caption: List<com.mt.notion.common.response.richText.RichText>,
     var url: String,
     @JsonProperty("expiry_time")
     var expiryTime: String

@@ -1,7 +1,7 @@
 package com.mt.notion.api.block
 
 import com.fasterxml.jackson.annotation.JsonInclude
-import com.mt.notion.common.PaginationRequest
+import com.mt.notion.common.request.PaginationRequest
 import com.mt.notion.http.NotionHttpRequestContent
 
 /**

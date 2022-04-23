@@ -3,7 +3,6 @@ package com.mt.notion.api.block.objects
 import com.mt.notion.api.block.BlockObjectType
 import com.mt.notion.api.user.User
 import com.mt.notion.common.ObjectType
-import com.mt.notion.common.richText.RichText
 
 /**
  *
@@ -24,6 +23,6 @@ data class BookmarkBlockObject(
 
     data class Bookmark(
         val url: String,
-        val caption: List<RichText>
+        val caption: List<com.mt.notion.common.response.richText.RichText>
     )
 }

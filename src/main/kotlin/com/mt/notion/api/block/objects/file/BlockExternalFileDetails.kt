@@ -1,7 +1,6 @@
 package com.mt.notion.api.block.objects.file
 
 import com.mt.notion.common.file.FileType
-import com.mt.notion.common.richText.RichText
 
 /**
  * External file object
@@ -10,6 +9,6 @@ import com.mt.notion.common.richText.RichText
  */
 data class BlockExternalFileDetails(
     override val type: FileType,
-    override val caption: List<RichText>,
+    override val caption: List<com.mt.notion.common.response.richText.RichText>,
     var url: String? = null
 ) : BlockFile

@@ -1,7 +1,7 @@
 package com.mt.notion.api.database.query.property
 
-import com.mt.notion.common.DateResponse
 import com.mt.notion.common.PropertyType
+import com.mt.notion.common.request.DateRequest
 
 /**
  * Date
@@ -11,5 +11,5 @@ import com.mt.notion.common.PropertyType
 data class QueryDateProperty(
     override val id: String,
     override val type: PropertyType,
-    val date: DateResponse?,
+    val date: DateRequest?,
 ) : QueryDatabaseProperty

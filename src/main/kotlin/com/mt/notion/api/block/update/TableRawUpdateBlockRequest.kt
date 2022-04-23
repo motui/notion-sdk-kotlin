@@ -2,7 +2,7 @@ package com.mt.notion.api.block.update
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.mt.notion.api.block.BlockObjectType
-import com.mt.notion.common.richText.RichText
+import com.mt.notion.common.request.richText.RichTextRequest
 
 /**
  *
@@ -15,6 +15,6 @@ data class TableRawUpdateBlockRequest(
     val tableRow: TableRaw
 ) : UpdateBlockRequest {
     data class TableRaw(
-        val cells: List<List<RichText>>,
+        val cells: List<List<RichTextRequest>>,
     )
 }

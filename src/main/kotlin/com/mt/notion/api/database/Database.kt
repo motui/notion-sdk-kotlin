@@ -8,7 +8,6 @@ import com.mt.notion.common.Icon
 import com.mt.notion.common.ObjectType
 import com.mt.notion.common.WithObjectType
 import com.mt.notion.common.parent.WithDatabaseParent
-import com.mt.notion.common.richText.RichText
 
 /**
  * database
@@ -47,7 +46,7 @@ data class Database(
      * Name of the database as it appears in Notion.
      * See rich text object) for a breakdown of the properties.
      */
-    val title: List<RichText>,
+    val title: List<com.mt.notion.common.response.richText.RichText>,
 
     /**
      * Page icon.

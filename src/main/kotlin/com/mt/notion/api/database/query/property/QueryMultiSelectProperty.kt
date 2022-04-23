@@ -2,7 +2,7 @@ package com.mt.notion.api.database.query.property
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.mt.notion.common.PropertyType
-import com.mt.notion.common.SelectPropertyResponse
+import com.mt.notion.common.response.SelectPropertyResponse
 
 /**
  * Multi-select

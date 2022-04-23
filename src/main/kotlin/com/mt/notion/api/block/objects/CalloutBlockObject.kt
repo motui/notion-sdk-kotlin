@@ -6,7 +6,6 @@ import com.mt.notion.api.user.User
 import com.mt.notion.common.ApiColor
 import com.mt.notion.common.Icon
 import com.mt.notion.common.ObjectType
-import com.mt.notion.common.richText.RichText
 
 /**
  *
@@ -27,7 +26,7 @@ data class CalloutBlockObject(
 
     data class Callout(
         @JsonProperty("rich_text")
-        val richText: List<RichText>,
+        val richText: List<com.mt.notion.common.response.richText.RichText>,
         val color: ApiColor,
         val icon: Icon?
     )

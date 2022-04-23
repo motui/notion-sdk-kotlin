@@ -1,7 +1,7 @@
 package com.mt.notion.api.database.query.property
 
 import com.mt.notion.common.PropertyType
-import com.mt.notion.common.SelectPropertyResponse
+import com.mt.notion.common.response.SelectPropertyResponse
 
 /**
  * Select

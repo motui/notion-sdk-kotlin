@@ -4,11 +4,10 @@ import com.fasterxml.jackson.annotation.JsonProperty
 import com.fasterxml.jackson.annotation.JsonSubTypes
 import com.fasterxml.jackson.annotation.JsonTypeInfo
 import com.mt.notion.api.user.User
-import com.mt.notion.common.DateResponse
 import com.mt.notion.common.IdObject
 import com.mt.notion.common.PropertyType
 import com.mt.notion.common.RollupFunction
-import com.mt.notion.common.richText.RichText
+import com.mt.notion.common.request.DateRequest
 
 /**
  * Rollup
@@ -61,7 +60,7 @@ data class QueryRollupProperty(
     data class DateRollup(
         override val type: RollupType,
         override val function: RollupFunction,
-        val date: DateResponse?
+        val date: DateRequest?
     ) : WithRollup
 
     data class NumberRollup(

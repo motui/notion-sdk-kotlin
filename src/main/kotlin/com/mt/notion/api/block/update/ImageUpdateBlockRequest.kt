@@ -1,7 +1,7 @@
 package com.mt.notion.api.block.update
 
 import com.mt.notion.api.block.BlockObjectType
-import com.mt.notion.common.richText.RichText
+import com.mt.notion.common.request.richText.RichTextRequest
 
 /**
  *
@@ -13,7 +13,7 @@ data class ImageUpdateBlockRequest(
     val image: Image
 ) : UpdateBlockRequest {
     data class Image(
-        val caption: List<RichText>?,
+        val caption: List<RichTextRequest>?,
         val external: String?
     )
 }

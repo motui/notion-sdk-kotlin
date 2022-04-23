@@ -6,7 +6,7 @@ import com.mt.notion.common.ApiColor
 import com.mt.notion.common.Emoji
 import com.mt.notion.common.Icon
 import com.mt.notion.common.file.ExternalFileDetails
-import com.mt.notion.common.richText.RichText
+import com.mt.notion.common.request.richText.RichTextRequest
 
 /**
  *
@@ -19,7 +19,7 @@ data class CalloutUpdateBlockRequest(
 ) : UpdateBlockRequest {
     data class Callout(
         @JsonProperty("rich_text")
-        val richText: List<RichText>?,
+        val richText: List<RichTextRequest>?,
         /**
          * support [Emoji] and [ExternalFileDetails]
          */

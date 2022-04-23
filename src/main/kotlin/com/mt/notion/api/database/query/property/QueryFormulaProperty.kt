@@ -3,8 +3,8 @@ package com.mt.notion.api.database.query.property
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.fasterxml.jackson.annotation.JsonSubTypes
 import com.fasterxml.jackson.annotation.JsonTypeInfo
-import com.mt.notion.common.DateResponse
 import com.mt.notion.common.PropertyType
+import com.mt.notion.common.request.DateRequest
 
 /**
  * Formula
@@ -58,7 +58,7 @@ data class QueryFormulaProperty(
 
     data class DateFormula(
         override val type: FormulaType,
-        val date: DateResponse?
+        val date: DateRequest?
     ) : WithFormula
 
     data class NumberFormula(

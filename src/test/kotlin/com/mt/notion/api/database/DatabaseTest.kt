@@ -4,7 +4,6 @@ import com.mt.notion.common.Emoji
 import com.mt.notion.common.ObjectType
 import com.mt.notion.common.file.ExternalFileDetails
 import com.mt.notion.common.parent.PageParent
-import com.mt.notion.common.richText.Text
 import com.mt.notion.util.JsonUtil
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
@@ -452,7 +451,7 @@ internal class DatabaseTest {
         assertEquals("761813bc-498f-4d03-abbf-e66fd3cd98d7", database.lastEditedBy.id)
         assertEquals(ObjectType.User, database.lastEditedBy.objectType)
         assertEquals(1, database.title.size)
-        assertTrue(database.title[0] is Text)
+        assertTrue(database.title[0] is com.mt.notion.common.response.richText.Text)
         assertTrue(database.icon is Emoji)
         assertTrue(database.cover is ExternalFileDetails)
         assertEquals(21, database.properties.size)

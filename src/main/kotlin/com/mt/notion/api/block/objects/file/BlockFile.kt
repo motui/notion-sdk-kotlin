@@ -3,7 +3,6 @@ package com.mt.notion.api.block.objects.file
 import com.fasterxml.jackson.annotation.JsonSubTypes
 import com.fasterxml.jackson.annotation.JsonTypeInfo
 import com.mt.notion.common.file.FileType
-import com.mt.notion.common.richText.RichText
 
 /**
  * File
@@ -22,5 +21,5 @@ import com.mt.notion.common.richText.RichText
 )
 interface BlockFile {
     val type: FileType
-    val caption: List<RichText>
+    val caption: List<com.mt.notion.common.response.richText.RichText>
 }

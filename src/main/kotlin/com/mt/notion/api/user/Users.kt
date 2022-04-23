@@ -1,8 +1,8 @@
 package com.mt.notion.api.user
 
 import com.mt.notion.common.ObjectType
-import com.mt.notion.common.PaginationResponse
 import com.mt.notion.common.WithListType
+import com.mt.notion.common.response.PaginationResponse
 
 /**
  *

@@ -3,7 +3,7 @@ package com.mt.notion.api.block.update
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.mt.notion.api.block.BlockObjectType
 import com.mt.notion.common.ApiColor
-import com.mt.notion.common.richText.RichText
+import com.mt.notion.common.request.richText.RichTextRequest
 
 /**
  *
@@ -17,7 +17,7 @@ data class ToDoUpdateBlockRequest(
 ) : UpdateBlockRequest {
     data class ToDo(
         @JsonProperty("rich_text")
-        val richText: List<RichText>,
+        val richText: List<RichTextRequest>,
         val color: ApiColor?,
         val checked: Boolean?
     )
