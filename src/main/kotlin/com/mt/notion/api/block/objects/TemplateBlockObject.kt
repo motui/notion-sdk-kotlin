@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty
 import com.mt.notion.api.block.BlockObjectType
 import com.mt.notion.api.user.User
 import com.mt.notion.common.ObjectType
+import com.mt.notion.common.response.richText.RichText
 
 /**
  *
@@ -23,6 +24,6 @@ data class TemplateBlockObject(
 ) : WithBlockObject {
     data class TemplateRichText(
         @JsonProperty("rich_text")
-        val richText: List<com.mt.notion.common.response.richText.RichText>
+        val richText: List<RichText>
     )
 }

@@ -10,7 +10,7 @@ import com.mt.notion.common.request.richText.RichTextRequest
  * @author it.motui
  */
 data class MentionRequest(
-    override val annotations: AnnotationsRequest,
+    override val annotations: AnnotationsRequest?,
     override val type: RichTextType? = RichTextType.Mention,
     val mention: WithMentionRequest
 ) : RichTextRequest

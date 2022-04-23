@@ -10,7 +10,7 @@ import com.mt.notion.common.request.richText.RichTextRequest
  * @author it.motui
  */
 data class ToDoUpdateBlockRequest(
-    override val archived: Boolean?,
+    override val archived: Boolean? = false,
     val type: BlockObjectType? = BlockObjectType.ToDo,
     @JsonProperty("to_do")
     val toDo: ToDo
@@ -18,7 +18,7 @@ data class ToDoUpdateBlockRequest(
     data class ToDo(
         @JsonProperty("rich_text")
         val richText: List<RichTextRequest>,
-        val color: ApiColor?,
-        val checked: Boolean?
+        val color: ApiColor? = ApiColor.Default,
+        val checked: Boolean? = false
     )
 }

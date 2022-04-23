@@ -11,7 +11,7 @@ import com.mt.notion.common.parent.WorkspaceParent
  * @author it.motui
  */
 data class LinkToPageUpdateBlockRequest(
-    override val archived: Boolean?,
+    override val archived: Boolean? = false,
     val type: BlockObjectType? = BlockObjectType.LinkToPage,
     /**
      * support [WorkspaceParent] and [DatabaseParent]

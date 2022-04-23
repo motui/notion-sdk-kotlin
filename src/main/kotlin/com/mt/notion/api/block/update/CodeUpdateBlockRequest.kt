@@ -10,14 +10,14 @@ import com.mt.notion.common.request.richText.RichTextRequest
  * @author it.motui
  */
 data class CodeUpdateBlockRequest(
-    override val archived: Boolean?,
+    override val archived: Boolean? = false,
     val type: BlockObjectType? = BlockObjectType.Code,
     val code: Code
 ) : UpdateBlockRequest {
     data class Code(
         @JsonProperty("rich_text")
-        val richText: List<RichTextRequest>?,
-        val caption: List<RichTextRequest>?,
-        val language: Language?
+        val richText: List<RichTextRequest>? = null,
+        val caption: List<RichTextRequest>? = null,
+        val language: Language? = null
     )
 }

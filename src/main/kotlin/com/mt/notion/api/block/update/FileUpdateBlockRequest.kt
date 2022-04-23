@@ -8,12 +8,12 @@ import com.mt.notion.common.request.richText.RichTextRequest
  * @author it.motui
  */
 data class FileUpdateBlockRequest(
-    override val archived: Boolean?,
+    override val archived: Boolean? = false,
     val type: BlockObjectType? = BlockObjectType.File,
     val file: File
 ) : UpdateBlockRequest {
     data class File(
-        val caption: List<RichTextRequest>?,
-        val external: String?
+        val caption: List<RichTextRequest>? = null,
+        val external: String? = null
     )
 }

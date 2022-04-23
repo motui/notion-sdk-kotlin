@@ -8,7 +8,7 @@ import com.mt.notion.api.block.BlockObjectType
  * @author it.motui
  */
 data class SyncedBlockUpdateBlockRequest(
-    override val archived: Boolean?,
+    override val archived: Boolean? = false,
     val type: BlockObjectType? = BlockObjectType.SyncedBlock,
     @JsonProperty("synced_block")
     val syncedBlock: SyncedBlock

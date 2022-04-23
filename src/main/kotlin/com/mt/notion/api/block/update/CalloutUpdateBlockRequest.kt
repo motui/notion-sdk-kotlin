@@ -13,17 +13,17 @@ import com.mt.notion.common.request.richText.RichTextRequest
  * @author it.motui
  */
 data class CalloutUpdateBlockRequest(
-    override val archived: Boolean?,
+    override val archived: Boolean? = false,
     val type: BlockObjectType? = BlockObjectType.Callout,
     val callout: Callout
 ) : UpdateBlockRequest {
     data class Callout(
         @JsonProperty("rich_text")
-        val richText: List<RichTextRequest>?,
+        val richText: List<RichTextRequest>? = null,
         /**
          * support [Emoji] and [ExternalFileDetails]
          */
-        val icon: Icon?,
-        val color: ApiColor?
+        val icon: Icon? = null,
+        val color: ApiColor? = ApiColor.Default
     )
 }

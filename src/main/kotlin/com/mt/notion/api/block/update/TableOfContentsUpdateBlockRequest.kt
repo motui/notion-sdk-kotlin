@@ -9,12 +9,12 @@ import com.mt.notion.common.ApiColor
  * @author it.motui
  */
 data class TableOfContentsUpdateBlockRequest(
-    override val archived: Boolean?,
+    override val archived: Boolean? = false,
     val type: BlockObjectType? = BlockObjectType.TableOfContents,
     @JsonProperty("table_of_contents")
     val tableOfContents: TableOfContents
 ) : UpdateBlockRequest {
     data class TableOfContents(
-        val color: ApiColor?,
+        val color: ApiColor? = ApiColor.Default,
     )
 }

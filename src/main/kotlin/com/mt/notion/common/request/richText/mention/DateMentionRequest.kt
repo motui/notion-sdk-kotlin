@@ -8,5 +8,5 @@ import com.mt.notion.common.request.DateRequest
  * @author it.motui
  */
 data class DateMentionRequest(
-    val date: DateRequest?,
+    val date: DateRequest? = null,
 ) : WithMentionRequest

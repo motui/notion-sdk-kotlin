@@ -9,7 +9,7 @@ import com.mt.notion.common.EmptyObject
  */
 data class DividerUpdateBlockObject(
     val type: BlockObjectType? = BlockObjectType.Divider,
-    override val archived: Boolean,
+    override val archived: Boolean = false,
     val divider: EmptyObject,
 ) : UpdateBlockRequest {
 

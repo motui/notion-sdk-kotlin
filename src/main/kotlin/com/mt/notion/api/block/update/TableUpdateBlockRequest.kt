@@ -8,15 +8,15 @@ import com.mt.notion.api.block.BlockObjectType
  * @author it.motui
  */
 data class TableUpdateBlockRequest(
-    override val archived: Boolean?,
+    override val archived: Boolean? = false,
     val type: BlockObjectType? = BlockObjectType.Table,
     val table: Table
 ) : UpdateBlockRequest {
     data class Table(
         @JsonProperty("has_column_header")
-        val hasColumnHeader: Boolean?,
+        val hasColumnHeader: Boolean? = false,
         @JsonProperty("has_row_header")
-        val hasRowHeader: Boolean?,
+        val hasRowHeader: Boolean? = false,
     )
 
 }

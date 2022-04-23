@@ -2,6 +2,9 @@ package com.mt.notion.api.block
 
 import com.mt.notion.api.BaseNotionApi
 import com.mt.notion.api.block.objects.ParagraphBlockObject
+import com.mt.notion.api.block.update.ToDoUpdateBlockRequest
+import com.mt.notion.common.request.richText.AnnotationsRequest
+import com.mt.notion.common.request.richText.TextRequest
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
@@ -50,19 +53,22 @@ internal class BlockNotionApiTest : BaseNotionApi() {
     }
 
     @Test
+    @Disabled
     fun update() {
+        val edit = TextRequest(
+            annotations = AnnotationsRequest(),
+            text = TextRequest.TextInfo("B-api-edit", null)
+        )
         // to-do
-//        val blocks = blockNotionApi.update(
-//            "e27427c0-340e-4aab-935d-5c2b14c158a4",
-//            ToDoUpdateBlockRequest(
-//                archived = true,
-//                toDo = ToDoUpdateBlockRequest.ToDo(
-//
-//                )
-//            )
-//        )
-//        Assertions.assertNotNull(blocks)
-//        Assertions.assertNotNull(blocks.results)
-//        Assertions.assertEquals(23, blocks.results.size)
+        val blocks = blockNotionApi.update(
+            "e5249298-0366-432c-9482-c5e330794980",
+            ToDoUpdateBlockRequest(
+                toDo = ToDoUpdateBlockRequest.ToDo(
+                    richText = listOf(edit),
+                    checked = true
+                )
+            )
+        )
+        Assertions.assertNotNull(blocks)
     }
 }

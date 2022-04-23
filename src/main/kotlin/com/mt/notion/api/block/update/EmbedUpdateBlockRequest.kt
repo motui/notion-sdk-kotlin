@@ -8,12 +8,12 @@ import com.mt.notion.common.request.richText.RichTextRequest
  * @author it.motui
  */
 data class EmbedUpdateBlockRequest(
-    override val archived: Boolean?,
+    override val archived: Boolean? = false,
     val type: BlockObjectType? = BlockObjectType.Embed,
     val embed: Embed
 ) : UpdateBlockRequest {
     data class Embed(
-        val url: String?,
+        val url: String? = null,
         val caption: List<RichTextRequest>?
     )
 }

@@ -9,7 +9,7 @@ import com.mt.notion.common.request.richText.RichTextRequest
  * @author it.motui
  */
 data class TemplateUpdateBlockRequest(
-    override val archived: Boolean?,
+    override val archived: Boolean? = false,
     val type: BlockObjectType? = BlockObjectType.Template,
     val template: Template
 ) : UpdateBlockRequest {

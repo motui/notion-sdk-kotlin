@@ -3,6 +3,7 @@ package com.mt.notion.api.block.objects
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.mt.notion.api.block.BlockObjectType
 import com.mt.notion.api.user.User
+import com.mt.notion.common.Link
 import com.mt.notion.common.ObjectType
 
 /**
@@ -20,10 +21,6 @@ data class LinkPreviewBlockObject(
     override val hasChildren: Boolean,
     override val archived: Boolean,
     @JsonProperty("link_preview")
-    val linkPreview: LinkPreview,
+    val linkPreview: Link,
 ) : WithBlockObject {
-
-    data class LinkPreview(
-        val url: String
-    )
 }

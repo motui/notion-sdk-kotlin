@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty
 import com.mt.notion.api.block.BlockObjectType
 import com.mt.notion.api.user.User
 import com.mt.notion.common.ObjectType
+import com.mt.notion.common.response.richText.RichText
 
 /**
  *
@@ -24,6 +25,6 @@ data class TableRawBlockObject(
 ) : WithBlockObject {
 
     data class TableRaw(
-        val cells: List<List<com.mt.notion.common.response.richText.RichText>>
+        val cells: List<List<RichText>>
     )
 }

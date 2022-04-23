@@ -8,12 +8,12 @@ import com.mt.notion.common.request.richText.RichTextRequest
  * @author it.motui
  */
 data class VideoUpdateBlockRequest(
-    override val archived: Boolean?,
-    val type: BlockObjectType?,
+    override val archived: Boolean? = false,
+    val type: BlockObjectType? = BlockObjectType.Video,
     val video: Video
 ) : UpdateBlockRequest {
     data class Video(
-        val caption: List<RichTextRequest>?,
-        val external: String?
+        val caption: List<RichTextRequest>? = null,
+        val external: String? = null
     )
 }

@@ -9,7 +9,7 @@ import com.mt.notion.common.EmptyObject
  */
 data class BreadcrumbUpdateBlockObject(
     val type: BlockObjectType? = BlockObjectType.Breadcrumb,
-    override val archived: Boolean,
+    override val archived: Boolean = false,
     val breadcrumb: EmptyObject,
 ) : UpdateBlockRequest {
 

@@ -7,7 +7,7 @@ import com.mt.notion.api.block.BlockObjectType
  * @author it.motui
  */
 data class ParagraphUpdateBlockRequest(
-    override val archived: Boolean?,
+    override val archived: Boolean? = false,
     val type: BlockObjectType? = BlockObjectType.Paragraph,
     val paragraph: UpdateBlockRichText
 ) : UpdateBlockRequest {

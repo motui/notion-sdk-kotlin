@@ -11,5 +11,10 @@ import com.mt.notion.common.RichTextType
 data class TextRequest(
     override val annotations: AnnotationsRequest,
     override val type: RichTextType = RichTextType.Text,
-    val link: Link?
-) : RichTextRequest
+    val text: TextInfo
+) : RichTextRequest {
+    data class TextInfo(
+        val content: String,
+        val link: Link?
+    )
+}

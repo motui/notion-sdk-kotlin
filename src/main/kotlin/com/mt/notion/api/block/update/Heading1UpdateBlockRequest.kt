@@ -8,7 +8,7 @@ import com.mt.notion.api.block.BlockObjectType
  * @author it.motui
  */
 data class Heading1UpdateBlockRequest(
-    override val archived: Boolean?,
+    override val archived: Boolean? = false,
     val type: BlockObjectType? = BlockObjectType.Heading1,
     @JsonProperty("heading_1")
     val heading1: UpdateBlockRichText

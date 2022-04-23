@@ -8,7 +8,7 @@ import com.mt.notion.api.block.BlockObjectType
  * @author it.motui
  */
 data class NumberedListItemUpdateBlockRequest(
-    override val archived: Boolean?,
+    override val archived: Boolean? = false,
     val type: BlockObjectType? = BlockObjectType.NumberedListItem,
     @JsonProperty("numbered_list_item")
     val numberedListItem: UpdateBlockRichText

@@ -5,6 +5,7 @@ import com.mt.notion.api.block.BlockObjectType
 import com.mt.notion.api.user.User
 import com.mt.notion.common.ApiColor
 import com.mt.notion.common.ObjectType
+import com.mt.notion.common.response.richText.RichText
 
 /**
  *
@@ -26,7 +27,7 @@ data class ToDoBlockObject(
 
     data class ToDoRichText(
         @JsonProperty("rich_text")
-        val richText: List<com.mt.notion.common.response.richText.RichText>,
+        val richText: List<RichText>,
         val color: ApiColor,
         val checked: Boolean
     )

@@ -14,26 +14,25 @@ data class AnnotationsRequest(
     /**
      * Whether the text is bolded.
      */
-    val bold: Boolean?,
+    val bold: Boolean? = false,
     /**
      * Whether the text is italicized.
      */
-    val italic: Boolean?,
+    val italic: Boolean? = false,
     /**
      * Whether the text is struck through.
      */
-    val strikethrough: Boolean?,
+    val strikethrough: Boolean? = false,
     /**
      * Whether the text is underlined.
      */
-    val underline: Boolean?,
+    val underline: Boolean? = false,
     /**
      * Whether the text is code style.
      */
-    val code: Boolean?,
+    val code: Boolean? = false,
     /**
      * Color of the text.
      */
-    val color: RichTextColor?,
-
-    )
+    val color: RichTextColor? = RichTextColor.Default
+)
