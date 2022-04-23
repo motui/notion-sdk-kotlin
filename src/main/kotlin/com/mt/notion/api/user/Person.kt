@@ -21,7 +21,7 @@ data class Person(
      */
     override val avatarUrl: String? = null,
     val person: People? = null,
-) : WithUserType(objectType, id, type, name, avatarUrl) {
+) : WithUser(objectType, id, type, name, avatarUrl) {
 
     data class People(val email: String)
 }

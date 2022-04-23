@@ -3,6 +3,7 @@ package com.mt.notion.api.database.request
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.mt.notion.api.database.request.filter.Filter
 import com.mt.notion.api.database.request.sort.Sort
+import com.mt.notion.http.NotionHttpRequestContent
 
 /**
  * database query
@@ -19,4 +20,4 @@ data class DatabaseQuery(
     @JsonProperty("page_size")
     val pageSize: Number?,
     val archived: Boolean?
-)
+) : NotionHttpRequestContent

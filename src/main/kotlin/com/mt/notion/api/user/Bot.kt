@@ -24,7 +24,7 @@ data class Bot(
      */
     val bot: InternalBot? = null
 
-) : WithUserType(objectType, id, type, name, avatarUrl) {
+) : WithUser(objectType, id, type, name, avatarUrl) {
 
     data class InternalBot constructor(
         /**

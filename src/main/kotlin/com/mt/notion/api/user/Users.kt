@@ -16,5 +16,5 @@ data class Users(
      * Type of the objects in results. Possible values include "block", "page", "user", "database", "property_item", "page_or_database".
      */
     override val type: String,
-    val results: List<WithUserType>
+    val results: List<WithUser>
 ) : WithListType, PaginationResponse

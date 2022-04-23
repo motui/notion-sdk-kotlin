@@ -19,7 +19,7 @@ import com.mt.notion.common.ObjectType
     JsonSubTypes.Type(Person::class, name = "person"),
     JsonSubTypes.Type(Bot::class, name = "bot")
 )
-open class WithUserType(
+open class WithUser(
     override val objectType: ObjectType,
     override val id: String,
     /**

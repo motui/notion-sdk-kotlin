@@ -36,14 +36,14 @@ class UserNotionApi(
      *
      * @see <a href="https://developers.notion.com/reference/get-user">Retrieve a user</a>
      */
-    fun retrieve(userId: String): WithUserType {
+    fun retrieve(userId: String): WithUser {
         return notionHttpClient.get(
             url = "${this.config.baseUrl}/users/${userId}",
             headers = this.notionHttpClient.buildHeader(
                 this.notionHttpClient.bearerAuthorization(this.config.token),
                 this.config.notionVersion
             ),
-            responseClass = WithUserType::class.java
+            responseClass = WithUser::class.java
         )
     }
 

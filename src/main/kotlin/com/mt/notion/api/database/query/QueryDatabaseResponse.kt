@@ -30,4 +30,4 @@ data class QueryDatabaseResponse(
     val url: String,
     val archived: Boolean
 
-) : BaseQueryDatabaseResponse(objectType, id)
+) : ShortQueryDatabaseResponse(objectType, id)
