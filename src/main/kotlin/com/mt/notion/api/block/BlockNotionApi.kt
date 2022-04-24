@@ -66,4 +66,37 @@ class BlockNotionApi(
             responseClass = WithBlockObject::class.java
         )
     }
+
+    /**
+     * Delete a block
+     *
+     * @see <a href="https://developers.notion.com/reference/delete-a-block">Delete a block</a>
+     */
+    fun delete(blockId: String): WithBlockObject {
+        return notionHttpClient.delete(
+            url = "${this.config.baseUrl}/blocks/${blockId}",
+            headers = this.notionHttpClient.buildHeader(
+                this.notionHttpClient.bearerAuthorization(this.config.token),
+                this.config.notionVersion
+            ),
+            responseClass = WithBlockObject::class.java
+        )
+    }
+
+    /**
+     * Append block children
+     *
+     * @see <a href="https://developers.notion.com/reference/patch-block-children">Append block children</a>
+     */
+    fun append(blockId: String, request: UpdateBlockRequest): Blocks {
+        return notionHttpClient.patch(
+            url = "${this.config.baseUrl}/blocks/${blockId}",
+            body = request,
+            headers = this.notionHttpClient.buildHeader(
+                this.notionHttpClient.bearerAuthorization(this.config.token),
+                this.config.notionVersion
+            ),
+            responseClass = Blocks::class.java
+        )
+    }
 }
