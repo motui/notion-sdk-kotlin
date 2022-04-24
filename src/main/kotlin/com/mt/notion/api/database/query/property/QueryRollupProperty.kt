@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty
 import com.fasterxml.jackson.annotation.JsonSubTypes
 import com.fasterxml.jackson.annotation.JsonTypeInfo
 import com.mt.notion.api.user.User
-import com.mt.notion.common.IdObject
+import com.mt.notion.common.Id
 import com.mt.notion.common.PropertyType
 import com.mt.notion.common.RollupFunction
 import com.mt.notion.common.request.DateRequest
@@ -104,7 +104,7 @@ data class QueryRollupProperty(
 
     data class Relation(
         override val type: ArrayType,
-        val relation: List<IdObject>
+        val relation: List<Id>
     ) : WithArray
 
 

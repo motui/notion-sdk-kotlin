@@ -13,10 +13,10 @@ import com.mt.notion.common.RichTextType
 data class Equation(
     override val plainText: String,
     override val href: String?,
-    override val annotations: com.mt.notion.common.response.richText.Annotations,
+    override val annotations: Annotations,
     override val type: RichTextType,
     /**
      * The LaTeX string representing this inline equation.
      */
     val expression: String
-) : com.mt.notion.common.response.richText.RichText
+) : RichText
