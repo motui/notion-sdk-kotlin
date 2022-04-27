@@ -1,0 +1,22 @@
+package com.mt.notion.api.block.request.update
+
+import com.fasterxml.jackson.annotation.JsonProperty
+import com.mt.notion.api.block.BlockObjectType
+
+/**
+ *
+ * @author it.motui
+ */
+data class UpdateTableBlockRequest(
+    override val archived: Boolean? = false,
+    val type: BlockObjectType? = BlockObjectType.Table,
+    val table: com.mt.notion.api.block.request.update.UpdateTableBlockRequest.Table
+) : com.mt.notion.api.block.request.update.UpdateBlockRequest {
+    data class Table(
+        @JsonProperty("has_column_header")
+        val hasColumnHeader: Boolean? = false,
+        @JsonProperty("has_row_header")
+        val hasRowHeader: Boolean? = false,
+    )
+
+}

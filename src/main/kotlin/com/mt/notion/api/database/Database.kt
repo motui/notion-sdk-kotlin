@@ -7,7 +7,7 @@ import com.mt.notion.common.Cover
 import com.mt.notion.common.Icon
 import com.mt.notion.common.ObjectType
 import com.mt.notion.common.WithObjectType
-import com.mt.notion.common.parent.WithDatabaseParent
+import com.mt.notion.common.request.parent.WithDatabaseParentRequest
 
 /**
  * database
@@ -70,7 +70,7 @@ data class Database(
     /**
      * The parent of this page. Can be a page or workspace. Parent types are defined below.
      */
-    val parent: WithDatabaseParent,
+    val parent: WithDatabaseParentRequest,
 
     /**
      * The URL of the Notion database.

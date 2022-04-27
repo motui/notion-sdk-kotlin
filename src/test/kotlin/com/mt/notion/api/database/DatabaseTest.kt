@@ -3,7 +3,7 @@ package com.mt.notion.api.database
 import com.mt.notion.common.Emoji
 import com.mt.notion.common.ObjectType
 import com.mt.notion.common.file.ExternalFileDetails
-import com.mt.notion.common.parent.PageParent
+import com.mt.notion.common.request.parent.PageParentRequest
 import com.mt.notion.util.JsonUtil
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
@@ -454,9 +454,9 @@ internal class DatabaseTest {
         assertTrue(database.title[0] is com.mt.notion.common.response.richText.Text)
         assertTrue(database.icon is Emoji)
         assertTrue(database.cover is ExternalFileDetails)
-        assertEquals(21, database.properties.size)
-        assertTrue(database.parent is PageParent)
-        assertEquals("https://www.notion.so/e5212c12869c457695881632887fc5d3", database.url)
+            assertEquals(21, database.properties.size)
+            assertTrue(database.parent is PageParentRequest)
+            assertEquals("https://www.notion.so/e5212c12869c457695881632887fc5d3", database.url)
         assertFalse(database.archived)
     }
 }

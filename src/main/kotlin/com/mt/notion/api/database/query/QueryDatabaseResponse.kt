@@ -6,7 +6,7 @@ import com.mt.notion.api.user.User
 import com.mt.notion.common.Cover
 import com.mt.notion.common.Icon
 import com.mt.notion.common.ObjectType
-import com.mt.notion.common.parent.WithDatabaseParent
+import com.mt.notion.common.request.parent.WithDatabaseParentRequest
 
 /**
  *
@@ -15,7 +15,7 @@ import com.mt.notion.common.parent.WithDatabaseParent
 data class QueryDatabaseResponse(
     override val objectType: ObjectType,
     override val id: String,
-    val parent: WithDatabaseParent,
+    val parent: WithDatabaseParentRequest,
     val properties: Map<String, QueryDatabaseProperty>,
     val icon: Icon?,
     val cover: Cover?,

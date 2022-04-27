@@ -2,7 +2,6 @@ package com.mt.notion.api.block
 
 import com.mt.notion.api.BaseNotionApi
 import com.mt.notion.api.block.objects.ParagraphBlockObject
-import com.mt.notion.api.block.update.UpdateToDoBlockRequest
 import com.mt.notion.common.request.richText.AnnotationsRequest
 import com.mt.notion.common.request.richText.TextRequest
 import org.junit.jupiter.api.Assertions
@@ -62,8 +61,8 @@ internal class BlockNotionApiTest : BaseNotionApi() {
         // to-do
         val blocks = blockNotionApi.update(
             "e5249298-0366-432c-9482-c5e330794980",
-            UpdateToDoBlockRequest(
-                toDo = UpdateToDoBlockRequest.ToDo(
+            com.mt.notion.api.block.request.update.UpdateToDoBlockRequest(
+                toDo = com.mt.notion.api.block.request.update.UpdateToDoBlockRequest.ToDo(
                     richText = listOf(edit),
                     checked = true
                 )

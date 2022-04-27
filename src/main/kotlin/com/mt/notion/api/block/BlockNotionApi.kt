@@ -3,7 +3,7 @@ package com.mt.notion.api.block
 import com.mt.notion.api.NotionApi
 import com.mt.notion.api.NotionApiConfig
 import com.mt.notion.api.block.objects.WithBlockObject
-import com.mt.notion.api.block.update.UpdateBlockRequest
+import com.mt.notion.api.block.request.update.UpdateBlockRequest
 import com.mt.notion.http.NotionHttpClient
 
 /**
