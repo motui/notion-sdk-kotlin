@@ -17,6 +17,4 @@ data class UpdateLinkToPageBlockRequest(
      */
     @JsonProperty("link_to_page")
     val linkToPage: WithDatabaseParentRequest
-) : com.mt.notion.api.block.request.update.UpdateBlockRequest {
-
-}
+) : UpdateBlockRequest

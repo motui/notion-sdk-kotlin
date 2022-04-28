@@ -13,9 +13,9 @@ data class AppendTableRawBlockRequest(
     override val objectType: ObjectType = ObjectType.Block,
     override val type: BlockObjectType? = BlockObjectType.TableRow,
     @JsonProperty("table_row")
-    val tableRow: com.mt.notion.api.block.request.append.AppendTableRawBlockRequest.TableRaw
-) : com.mt.notion.api.block.request.append.WithAppendBlockRequest,
-    com.mt.notion.api.block.request.append.BlockRequestWithoutChildren {
+    val tableRow: TableRaw
+) : WithAppendBlockRequest,
+    BlockRequestWithChildren {
     data class TableRaw(
         val cells: List<List<RichTextRequest>>,
     )

@@ -15,8 +15,8 @@ import com.mt.notion.common.request.richText.RichTextRequest
 data class UpdateCalloutBlockRequest(
     override val archived: Boolean? = false,
     val type: BlockObjectType? = BlockObjectType.Callout,
-    val callout: com.mt.notion.api.block.request.update.UpdateCalloutBlockRequest.Callout
-) : com.mt.notion.api.block.request.update.UpdateBlockRequest {
+    val callout: Callout
+) : UpdateBlockRequest {
     data class Callout(
         @JsonProperty("rich_text")
         val richText: List<RichTextRequest>? = null,

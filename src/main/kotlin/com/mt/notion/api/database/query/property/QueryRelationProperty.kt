@@ -12,6 +12,4 @@ data class QueryRelationProperty(
     override val id: String,
     override val type: PropertyType,
     val relation: List<Id>
-) : QueryDatabaseProperty {
-
-}
+) : QueryDatabaseProperty

@@ -9,7 +9,5 @@ import com.mt.notion.api.block.BlockObjectType
 data class UpdateParagraphBlockRequest(
     override val archived: Boolean? = false,
     val type: BlockObjectType? = BlockObjectType.Paragraph,
-    val paragraph: com.mt.notion.api.block.request.update.UpdateBlockRichText
-) : com.mt.notion.api.block.request.update.UpdateBlockRequest {
-
-}
+    val paragraph: UpdateBlockRichText
+) : UpdateBlockRequest

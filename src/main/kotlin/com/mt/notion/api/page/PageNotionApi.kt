@@ -13,6 +13,4 @@ import com.mt.notion.http.NotionHttpClient
 class PageNotionApi(
     override val config: NotionApiConfig,
     override val notionHttpClient: NotionHttpClient
-) : NotionApi {
-
-}
+) : NotionApi

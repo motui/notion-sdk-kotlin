@@ -12,6 +12,4 @@ data class AppendParagraphBlockRequest(
     override val type: BlockObjectType? = BlockObjectType.Paragraph,
     // TODO: 2022/4/28 待补充
     val paragraph: AppendBlockRichText
-) : WithAppendBlockRequest {
-
-}
+) : WithAppendBlockRequest

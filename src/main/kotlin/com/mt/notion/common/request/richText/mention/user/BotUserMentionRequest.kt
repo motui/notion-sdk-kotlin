@@ -20,7 +20,7 @@ data class BotUserMentionRequest(
     val bot: Bot
 ) : WithUserMentionRequest {
 
-    interface Bot {}
+    interface Bot
 
     class EmptyObject : Bot
 

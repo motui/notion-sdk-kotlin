@@ -12,9 +12,9 @@ import com.mt.notion.common.request.richText.RichTextRequest
 data class AppendFileBlockRequest(
     override val objectType: ObjectType = ObjectType.Block,
     override val type: BlockObjectType? = BlockObjectType.File,
-    val file: com.mt.notion.api.block.request.append.AppendFileBlockRequest.File
-) : com.mt.notion.api.block.request.append.WithAppendBlockRequest,
-    com.mt.notion.api.block.request.append.BlockRequestWithoutChildren {
+    val file: File
+) : WithAppendBlockRequest,
+    BlockRequestWithChildren {
     data class File(
         val caption: List<RichTextRequest>? = null,
         val external: Link,

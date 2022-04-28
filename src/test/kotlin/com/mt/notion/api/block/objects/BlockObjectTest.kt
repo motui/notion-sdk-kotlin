@@ -55,7 +55,7 @@ internal class BlockObjectTest {
               }
             }
         """.trimIndent()
-        val readValue = JsonUtil.instance().readValue(json, WithBlockObject::class.java);
+        val readValue = JsonUtil.instance().readValue(json, WithBlockObject::class.java)
         assertTrue(readValue is ParagraphBlockObject)
         assertNotNull(readValue.id)
         assertNotNull(readValue.type)

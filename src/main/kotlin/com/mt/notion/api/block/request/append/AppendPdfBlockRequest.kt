@@ -12,9 +12,9 @@ import com.mt.notion.common.request.richText.RichTextRequest
 data class AppendPdfBlockRequest(
     override val objectType: ObjectType = ObjectType.Block,
     override val type: BlockObjectType? = BlockObjectType.Pdf,
-    val pdf: com.mt.notion.api.block.request.append.AppendPdfBlockRequest.Pdf
-) : com.mt.notion.api.block.request.append.WithAppendBlockRequest,
-    com.mt.notion.api.block.request.append.BlockRequestWithoutChildren {
+    val pdf: Pdf
+) : WithAppendBlockRequest,
+    BlockRequestWithChildren {
     data class Pdf(
         val caption: List<RichTextRequest>? = null,
         val external: Link,

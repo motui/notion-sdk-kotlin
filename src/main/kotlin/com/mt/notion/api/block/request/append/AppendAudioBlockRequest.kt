@@ -12,9 +12,9 @@ import com.mt.notion.common.request.richText.RichTextRequest
 data class AppendAudioBlockRequest(
     override val objectType: ObjectType = ObjectType.Block,
     override val type: BlockObjectType? = BlockObjectType.Audio,
-    val audio: com.mt.notion.api.block.request.append.AppendAudioBlockRequest.Audio,
-) : com.mt.notion.api.block.request.append.WithAppendBlockRequest,
-    com.mt.notion.api.block.request.append.BlockRequestWithoutChildren {
+    val audio: Audio,
+) : WithAppendBlockRequest,
+    BlockRequestWithChildren {
     data class Audio(
         val caption: List<RichTextRequest>? = null,
         val external: Link,

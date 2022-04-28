@@ -10,8 +10,8 @@ import com.mt.notion.common.request.richText.RichTextRequest
 data class UpdateImageBlockRequest(
     override val archived: Boolean? = false,
     val type: BlockObjectType? = BlockObjectType.Image,
-    val image: com.mt.notion.api.block.request.update.UpdateImageBlockRequest.Image
-) : com.mt.notion.api.block.request.update.UpdateBlockRequest {
+    val image: Image
+) : UpdateBlockRequest {
     data class Image(
         val caption: List<RichTextRequest>? = null,
         val external: String? = null

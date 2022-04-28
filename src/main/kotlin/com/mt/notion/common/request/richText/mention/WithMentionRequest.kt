@@ -6,6 +6,4 @@ package com.mt.notion.common.request.richText.mention
  * @author it.motui
  */
 
-interface WithMentionRequest {
-
-}
+interface WithMentionRequest

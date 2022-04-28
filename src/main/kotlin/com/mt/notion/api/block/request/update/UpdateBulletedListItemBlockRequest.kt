@@ -11,7 +11,5 @@ data class UpdateBulletedListItemBlockRequest(
     override val archived: Boolean? = false,
     val type: BlockObjectType? = BlockObjectType.BulletedListItem,
     @JsonProperty("bulleted_list_item")
-    val bulletedListItem: com.mt.notion.api.block.request.update.UpdateBlockRichText
-) : com.mt.notion.api.block.request.update.UpdateBlockRequest {
-
-}
+    val bulletedListItem: UpdateBlockRichText
+) : UpdateBlockRequest

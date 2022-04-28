@@ -12,6 +12,4 @@ data class AppendToggleBlockRequest(
     override val type: BlockObjectType? = BlockObjectType.Toggle,
     // TODO: 2022/4/28 待补充
     val toggle: AppendBlockRichText
-) : WithAppendBlockRequest {
-
-}
+) : WithAppendBlockRequest

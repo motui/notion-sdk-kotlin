@@ -11,5 +11,4 @@ import com.mt.notion.common.Id
 data class DatabaseMention(
     override val type: MentionType,
     val database: Id
-) : WithMention {
-}
+) : WithMention

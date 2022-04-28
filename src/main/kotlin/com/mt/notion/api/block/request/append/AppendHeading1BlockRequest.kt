@@ -14,6 +14,4 @@ data class AppendHeading1BlockRequest(
     // TODO: 2022/4/28 待补充
     @JsonProperty("heading_1")
     val heading1: String
-) : WithAppendBlockRequest {
-
-}
+) : WithAppendBlockRequest

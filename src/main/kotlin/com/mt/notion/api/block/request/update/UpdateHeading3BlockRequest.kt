@@ -11,7 +11,5 @@ data class UpdateHeading3BlockRequest(
     override val archived: Boolean? = false,
     val type: BlockObjectType? = BlockObjectType.Heading3,
     @JsonProperty("heading_3")
-    val heading3: com.mt.notion.api.block.request.update.UpdateBlockRichText
-) : com.mt.notion.api.block.request.update.UpdateBlockRequest {
-
-}
+    val heading3: UpdateBlockRichText
+) : UpdateBlockRequest

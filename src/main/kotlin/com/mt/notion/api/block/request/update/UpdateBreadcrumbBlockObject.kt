@@ -11,6 +11,4 @@ data class UpdateBreadcrumbBlockObject(
     val type: BlockObjectType? = BlockObjectType.Breadcrumb,
     override val archived: Boolean = false,
     val breadcrumb: EmptyObject,
-) : com.mt.notion.api.block.request.update.UpdateBlockRequest {
-
-}
+) : UpdateBlockRequest

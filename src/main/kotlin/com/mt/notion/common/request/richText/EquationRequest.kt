@@ -14,5 +14,4 @@ data class EquationRequest(
     override val annotations: AnnotationsRequest?,
     override val type: RichTextType = RichTextType.Equation,
     val equation: Expression
-) : RichTextRequest {
-}
+) : RichTextRequest

@@ -11,7 +11,5 @@ data class UpdateNumberedListItemBlockRequest(
     override val archived: Boolean? = false,
     val type: BlockObjectType? = BlockObjectType.NumberedListItem,
     @JsonProperty("numbered_list_item")
-    val numberedListItem: com.mt.notion.api.block.request.update.UpdateBlockRichText
-) : com.mt.notion.api.block.request.update.UpdateBlockRequest {
-
-}
+    val numberedListItem: UpdateBlockRichText
+) : UpdateBlockRequest

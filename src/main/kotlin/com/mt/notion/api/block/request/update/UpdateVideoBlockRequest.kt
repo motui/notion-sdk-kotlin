@@ -10,8 +10,8 @@ import com.mt.notion.common.request.richText.RichTextRequest
 data class UpdateVideoBlockRequest(
     override val archived: Boolean? = false,
     val type: BlockObjectType? = BlockObjectType.Video,
-    val video: com.mt.notion.api.block.request.update.UpdateVideoBlockRequest.Video
-) : com.mt.notion.api.block.request.update.UpdateBlockRequest {
+    val video: Video
+) : UpdateBlockRequest {
     data class Video(
         val caption: List<RichTextRequest>? = null,
         val external: String? = null

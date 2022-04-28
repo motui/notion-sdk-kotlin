@@ -11,5 +11,4 @@ data class QueryNumberProperty(
     override val id: String,
     override val type: PropertyType,
     val number: Number?
-) : QueryDatabaseProperty {
-}
+) : QueryDatabaseProperty

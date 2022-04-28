@@ -14,6 +14,6 @@ data class AppendColumnBlockRequest(
 ) : WithAppendBlockRequest {
     data class ColumnList(
         // TODO: 2022/4/28 待补充
-        val children: List<BlockRequestWithoutChildren>
+        val children: List<BlockRequestWithChildren>
     )
 }

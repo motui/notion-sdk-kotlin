@@ -10,8 +10,8 @@ import com.mt.notion.common.request.richText.RichTextRequest
 data class UpdateFileBlockRequest(
     override val archived: Boolean? = false,
     val type: BlockObjectType? = BlockObjectType.File,
-    val file: com.mt.notion.api.block.request.update.UpdateFileBlockRequest.File
-) : com.mt.notion.api.block.request.update.UpdateBlockRequest {
+    val file: File
+) : UpdateBlockRequest {
     data class File(
         val caption: List<RichTextRequest>? = null,
         val external: String? = null

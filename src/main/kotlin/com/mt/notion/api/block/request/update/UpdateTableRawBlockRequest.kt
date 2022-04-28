@@ -12,8 +12,8 @@ data class UpdateTableRawBlockRequest(
     override val archived: Boolean? = false,
     val type: BlockObjectType? = BlockObjectType.TableRow,
     @JsonProperty("table_row")
-    val tableRow: com.mt.notion.api.block.request.update.UpdateTableRawBlockRequest.TableRaw
-) : com.mt.notion.api.block.request.update.UpdateBlockRequest {
+    val tableRow: TableRaw
+) : UpdateBlockRequest {
     data class TableRaw(
         val cells: List<List<RichTextRequest>>,
     )

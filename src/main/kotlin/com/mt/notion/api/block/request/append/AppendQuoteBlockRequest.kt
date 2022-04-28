@@ -12,6 +12,4 @@ data class AppendQuoteBlockRequest(
     override val type: BlockObjectType? = BlockObjectType.Quote,
     // TODO: 2022/4/28 待补充
     val quote: AppendBlockRichText
-) : WithAppendBlockRequest {
-
-}
+) : WithAppendBlockRequest

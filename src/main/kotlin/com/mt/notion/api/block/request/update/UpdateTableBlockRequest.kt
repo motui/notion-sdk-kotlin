@@ -10,8 +10,8 @@ import com.mt.notion.api.block.BlockObjectType
 data class UpdateTableBlockRequest(
     override val archived: Boolean? = false,
     val type: BlockObjectType? = BlockObjectType.Table,
-    val table: com.mt.notion.api.block.request.update.UpdateTableBlockRequest.Table
-) : com.mt.notion.api.block.request.update.UpdateBlockRequest {
+    val table: Table
+) : UpdateBlockRequest {
     data class Table(
         @JsonProperty("has_column_header")
         val hasColumnHeader: Boolean? = false,

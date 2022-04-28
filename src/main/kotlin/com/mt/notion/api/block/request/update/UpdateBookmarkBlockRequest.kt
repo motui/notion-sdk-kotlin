@@ -10,8 +10,8 @@ import com.mt.notion.common.request.richText.RichTextRequest
 data class UpdateBookmarkBlockRequest(
     override val archived: Boolean? = false,
     val type: BlockObjectType? = BlockObjectType.Bookmark,
-    val bookmark: com.mt.notion.api.block.request.update.UpdateBookmarkBlockRequest.Bookmark
-) : com.mt.notion.api.block.request.update.UpdateBlockRequest {
+    val bookmark: Bookmark
+) : UpdateBlockRequest {
     data class Bookmark(
         val url: String? = null,
         val caption: List<RichTextRequest>? = null

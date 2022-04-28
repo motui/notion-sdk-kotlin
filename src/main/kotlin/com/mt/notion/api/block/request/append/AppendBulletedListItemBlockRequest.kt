@@ -14,6 +14,4 @@ data class AppendBulletedListItemBlockRequest(
     // TODO: 2022/4/28 待补充
     @JsonProperty("bulleted_list_item")
     val bulletedListItem: AppendBlockRichText
-) : WithAppendBlockRequest {
-
-}
+) : WithAppendBlockRequest

@@ -18,5 +18,4 @@ data class PersonUserMentionRequest(
     @JsonProperty("object")
     val objectType: String? = "user",
     val person: PersonInfo
-) : WithUserMentionRequest {
-}
+) : WithUserMentionRequest

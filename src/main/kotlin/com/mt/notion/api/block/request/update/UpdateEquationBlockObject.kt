@@ -9,8 +9,8 @@ import com.mt.notion.api.block.BlockObjectType
 data class UpdateEquationBlockObject(
     val type: BlockObjectType? = BlockObjectType.Equation,
     override val archived: Boolean = false,
-    val equation: com.mt.notion.api.block.request.update.UpdateEquationBlockObject.Equation,
-) : com.mt.notion.api.block.request.update.UpdateBlockRequest {
+    val equation: Equation,
+) : UpdateBlockRequest {
 
     data class Equation(
         val expression: String? = null

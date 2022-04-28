@@ -11,8 +11,8 @@ import com.mt.notion.common.request.richText.RichTextRequest
 data class UpdateTemplateBlockRequest(
     override val archived: Boolean? = false,
     val type: BlockObjectType? = BlockObjectType.Template,
-    val template: com.mt.notion.api.block.request.update.UpdateTemplateBlockRequest.Template
-) : com.mt.notion.api.block.request.update.UpdateBlockRequest {
+    val template: Template
+) : UpdateBlockRequest {
     data class Template(
         @JsonProperty("rich_text")
         val richText: List<RichTextRequest>,

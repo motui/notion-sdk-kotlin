@@ -24,6 +24,6 @@ data class AppendSyncedBlockBlockRequest(
         val blockId: String,
         val type: String = "block_id",
         // TODO: 2022/4/28 待补充
-        val children: BlockRequestWithoutChildren
+        val children: BlockRequestWithChildren
     )
 }

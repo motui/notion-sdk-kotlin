@@ -5,5 +5,4 @@ package com.mt.notion.api.database.request.sort
  *
  * @author it.motui
  */
-interface Sort {
-}
+interface Sort

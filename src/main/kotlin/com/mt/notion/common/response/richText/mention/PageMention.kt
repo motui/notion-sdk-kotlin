@@ -11,5 +11,4 @@ import com.mt.notion.common.Id
 data class PageMention(
     override val type: MentionType,
     val page: Id
-) : WithMention {
-}
+) : WithMention

@@ -11,11 +11,11 @@ data class UpdateSyncedBlockBlockRequest(
     override val archived: Boolean? = false,
     val type: BlockObjectType? = BlockObjectType.SyncedBlock,
     @JsonProperty("synced_block")
-    val syncedBlock: com.mt.notion.api.block.request.update.UpdateSyncedBlockBlockRequest.SyncedBlock
-) : com.mt.notion.api.block.request.update.UpdateBlockRequest {
+    val syncedBlock: SyncedBlock
+) : UpdateBlockRequest {
     data class SyncedBlock(
         @JsonProperty("synced_from")
-        val syncedFrom: com.mt.notion.api.block.request.update.UpdateSyncedBlockBlockRequest.SyncedFrom?,
+        val syncedFrom: SyncedFrom?,
     )
 
     data class SyncedFrom(

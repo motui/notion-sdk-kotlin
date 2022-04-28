@@ -27,6 +27,6 @@ data class AppendCalloutBlockRequest(
         val icon: Icon? = null,
         val color: ApiColor? = ApiColor.Default,
         // TODO: 2022/4/28 待补充
-        val children: BlockRequestWithoutChildren
+        val children: BlockRequestWithChildren
     )
 }

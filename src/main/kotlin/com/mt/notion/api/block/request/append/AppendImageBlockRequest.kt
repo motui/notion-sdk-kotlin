@@ -12,9 +12,9 @@ import com.mt.notion.common.request.richText.RichTextRequest
 data class AppendImageBlockRequest(
     override val objectType: ObjectType = ObjectType.Block,
     override val type: BlockObjectType? = BlockObjectType.Image,
-    val image: com.mt.notion.api.block.request.append.AppendImageBlockRequest.Image
-) : com.mt.notion.api.block.request.append.WithAppendBlockRequest,
-    com.mt.notion.api.block.request.append.BlockRequestWithoutChildren {
+    val image: Image
+) : WithAppendBlockRequest,
+    BlockRequestWithChildren {
     data class Image(
         val caption: List<RichTextRequest>? = null,
         val external: Link,

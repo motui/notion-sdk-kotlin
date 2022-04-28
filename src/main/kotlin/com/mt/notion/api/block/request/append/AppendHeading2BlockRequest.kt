@@ -14,6 +14,4 @@ data class AppendHeading2BlockRequest(
     // TODO: 2022/4/28 待补充
     @JsonProperty("heading_2")
     val heading2: AppendBlockRichText
-) : WithAppendBlockRequest {
-
-}
+) : WithAppendBlockRequest

@@ -10,5 +10,4 @@ import com.mt.notion.common.Id
  */
 data class DatabaseMentionRequest(
     val database: Id
-) : WithMentionRequest {
-}
+) : WithMentionRequest

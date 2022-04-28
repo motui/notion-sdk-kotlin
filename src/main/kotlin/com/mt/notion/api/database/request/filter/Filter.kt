@@ -5,5 +5,4 @@ package com.mt.notion.api.database.request.filter
  *
  * @author it.motui
  */
-interface Filter {
-}
+interface Filter

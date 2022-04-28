@@ -12,8 +12,8 @@ import com.mt.notion.common.request.richText.RichTextRequest
 data class UpdateCodeBlockRequest(
     override val archived: Boolean? = false,
     val type: BlockObjectType? = BlockObjectType.Code,
-    val code: com.mt.notion.api.block.request.update.UpdateCodeBlockRequest.Code
-) : com.mt.notion.api.block.request.update.UpdateBlockRequest {
+    val code: Code
+) : UpdateBlockRequest {
     data class Code(
         @JsonProperty("rich_text")
         val richText: List<RichTextRequest>? = null,

@@ -13,9 +13,9 @@ data class AppendTableOfContentsBlockRequest(
     override val objectType: ObjectType = ObjectType.Block,
     override val type: BlockObjectType? = BlockObjectType.TableOfContents,
     @JsonProperty("table_of_contents")
-    val tableOfContents: com.mt.notion.api.block.request.append.AppendTableOfContentsBlockRequest.TableOfContents
-) : com.mt.notion.api.block.request.append.WithAppendBlockRequest,
-    com.mt.notion.api.block.request.append.BlockRequestWithoutChildren {
+    val tableOfContents: TableOfContents
+) : WithAppendBlockRequest,
+    BlockRequestWithChildren {
     data class TableOfContents(
         val color: ApiColor? = ApiColor.Default,
     )

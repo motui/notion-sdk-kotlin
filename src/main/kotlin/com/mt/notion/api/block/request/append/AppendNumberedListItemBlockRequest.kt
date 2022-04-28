@@ -14,6 +14,4 @@ data class AppendNumberedListItemBlockRequest(
     // TODO: 2022/4/28 待补充
     @JsonProperty("numbered_list_item")
     val numberedListItem: AppendBlockRichText
-) : WithAppendBlockRequest {
-
-}
+) : WithAppendBlockRequest

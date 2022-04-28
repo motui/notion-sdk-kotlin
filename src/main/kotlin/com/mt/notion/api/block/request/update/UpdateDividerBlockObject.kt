@@ -11,6 +11,4 @@ data class UpdateDividerBlockObject(
     val type: BlockObjectType? = BlockObjectType.Divider,
     override val archived: Boolean = false,
     val divider: EmptyObject,
-) : com.mt.notion.api.block.request.update.UpdateBlockRequest {
-
-}
+) : UpdateBlockRequest

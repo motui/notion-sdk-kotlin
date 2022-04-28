@@ -9,5 +9,4 @@ import com.mt.notion.common.Id
  */
 data class PageMentionRequest(
     val page: Id
-) : WithMentionRequest {
-}
+) : WithMentionRequest

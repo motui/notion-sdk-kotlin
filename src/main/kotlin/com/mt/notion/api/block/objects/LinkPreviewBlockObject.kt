@@ -22,5 +22,4 @@ data class LinkPreviewBlockObject(
     override val archived: Boolean,
     @JsonProperty("link_preview")
     val linkPreview: Link,
-) : WithBlockObject {
-}
+) : WithBlockObject

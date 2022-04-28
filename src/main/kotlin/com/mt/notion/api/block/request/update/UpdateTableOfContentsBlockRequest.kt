@@ -12,8 +12,8 @@ data class UpdateTableOfContentsBlockRequest(
     override val archived: Boolean? = false,
     val type: BlockObjectType? = BlockObjectType.TableOfContents,
     @JsonProperty("table_of_contents")
-    val tableOfContents: com.mt.notion.api.block.request.update.UpdateTableOfContentsBlockRequest.TableOfContents
-) : com.mt.notion.api.block.request.update.UpdateBlockRequest {
+    val tableOfContents: TableOfContents
+) : UpdateBlockRequest {
     data class TableOfContents(
         val color: ApiColor? = ApiColor.Default,
     )

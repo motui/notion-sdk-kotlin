@@ -12,6 +12,4 @@ data class EquationBlockRequestWithoutChildren(
     override val type: BlockObjectType = BlockObjectType.Equation,
     override val objectType: ObjectType = ObjectType.Block,
     val equation: Expression,
-) : BlockObjectRequestWithoutChildren {
-
-}
+) : BlockObjectRequestWithoutChildren

@@ -2,6 +2,7 @@ package com.mt.notion.api.block.request.append
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.mt.notion.api.block.BlockObjectType
+import com.mt.notion.api.block.request.children.BlockObjectRequestWithoutChildren
 import com.mt.notion.common.ObjectType
 
 /**
@@ -20,7 +21,7 @@ data class AppendTableBlockRequest(
         val hasColumnHeader: Boolean? = false,
         @JsonProperty("has_row_header")
         val hasRowHeader: Boolean? = false,
-        val children: List<BlockRequestWithoutChildren>
+        val children: List<BlockObjectRequestWithoutChildren>
     )
 
 }

@@ -7,7 +7,5 @@ import com.mt.notion.http.NotionHttpRequestContent
  * @author it.motui
  */
 data class AppendBlockRequest(
-    val children: List<com.mt.notion.api.block.request.append.WithAppendBlockRequest>
-) : NotionHttpRequestContent {
-
-}
+    val children: List<WithAppendBlockRequest>
+) : NotionHttpRequestContent

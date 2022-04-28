@@ -10,8 +10,8 @@ import com.mt.notion.common.request.richText.RichTextRequest
 data class UpdateEmbedBlockRequest(
     override val archived: Boolean? = false,
     val type: BlockObjectType? = BlockObjectType.Embed,
-    val embed: com.mt.notion.api.block.request.update.UpdateEmbedBlockRequest.Embed
-) : com.mt.notion.api.block.request.update.UpdateBlockRequest {
+    val embed: Embed
+) : UpdateBlockRequest {
     data class Embed(
         val url: String? = null,
         val caption: List<RichTextRequest>?

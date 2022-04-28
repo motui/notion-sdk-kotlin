@@ -10,8 +10,8 @@ import com.mt.notion.common.request.richText.RichTextRequest
 data class UpdateAudioBlockRequest(
     override val archived: Boolean? = false,
     val type: BlockObjectType? = BlockObjectType.Audio,
-    val audio: com.mt.notion.api.block.request.update.UpdateAudioBlockRequest.Audio
-) : com.mt.notion.api.block.request.update.UpdateBlockRequest {
+    val audio: Audio
+) : UpdateBlockRequest {
     data class Audio(
         val caption: List<RichTextRequest>?,
         val external: String?

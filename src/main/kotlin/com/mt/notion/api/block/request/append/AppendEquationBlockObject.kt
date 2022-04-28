@@ -10,9 +10,9 @@ import com.mt.notion.common.ObjectType
 data class AppendEquationBlockObject(
     override val objectType: ObjectType = ObjectType.Block,
     override val type: BlockObjectType? = BlockObjectType.Equation,
-    val equation: com.mt.notion.api.block.request.append.AppendEquationBlockObject.Equation,
-) : com.mt.notion.api.block.request.append.WithAppendBlockRequest,
-    com.mt.notion.api.block.request.append.BlockRequestWithoutChildren {
+    val equation: Equation,
+) : WithAppendBlockRequest,
+    BlockRequestWithChildren {
 
     data class Equation(
         val expression: String

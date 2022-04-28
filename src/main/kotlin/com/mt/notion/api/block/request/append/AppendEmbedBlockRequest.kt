@@ -11,9 +11,9 @@ import com.mt.notion.common.request.richText.RichTextRequest
 data class AppendEmbedBlockRequest(
     override val objectType: ObjectType = ObjectType.Block,
     override val type: BlockObjectType? = BlockObjectType.Embed,
-    val embed: com.mt.notion.api.block.request.append.AppendEmbedBlockRequest.Embed
-) : com.mt.notion.api.block.request.append.WithAppendBlockRequest,
-    com.mt.notion.api.block.request.append.BlockRequestWithoutChildren {
+    val embed: Embed
+) : WithAppendBlockRequest,
+    BlockRequestWithChildren {
     data class Embed(
         val url: String,
         val caption: List<RichTextRequest>?
