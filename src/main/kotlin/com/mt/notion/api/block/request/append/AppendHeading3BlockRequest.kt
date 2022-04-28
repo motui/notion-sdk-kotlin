@@ -8,11 +8,12 @@ import com.mt.notion.common.ObjectType
  *
  * @author it.motui
  */
-data class Heading3AppendBlockRequest(
+data class AppendHeading3BlockRequest(
     override val objectType: ObjectType = ObjectType.Block,
     override val type: BlockObjectType? = BlockObjectType.Heading3,
+    // TODO: 2022/4/28 待补充
     @JsonProperty("heading_3")
-    val heading3: com.mt.notion.api.block.request.append.AppendBlockRichText
-) : com.mt.notion.api.block.request.append.WithAppendBlockRequest {
+    val heading3: AppendBlockRichText
+) : WithAppendBlockRequest {
 
 }

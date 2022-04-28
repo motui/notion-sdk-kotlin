@@ -15,7 +15,7 @@ data class AppendCodeBlockRequest(
     override val type: BlockObjectType? = BlockObjectType.Code,
     val code: com.mt.notion.api.block.request.append.AppendCodeBlockRequest.Code
 ) : com.mt.notion.api.block.request.append.WithAppendBlockRequest,
-    com.mt.notion.api.block.request.append.WithChildrenBlockRequest {
+    com.mt.notion.api.block.request.append.BlockRequestWithoutChildren {
     data class Code(
         @JsonProperty("rich_text")
         val richText: List<RichTextRequest>,

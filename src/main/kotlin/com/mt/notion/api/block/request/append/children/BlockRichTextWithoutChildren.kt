@@ -9,7 +9,7 @@ import com.mt.notion.common.request.richText.RichTextRequest
  *
  * @author it.motui
  */
-open class ChildrenBlockRichText(
+open class BlockRichTextWithoutChildren(
     @JsonProperty("rich_text")
     open val richText: List<RichTextRequest>,
     open val color: ApiColor? = ApiColor.Default,

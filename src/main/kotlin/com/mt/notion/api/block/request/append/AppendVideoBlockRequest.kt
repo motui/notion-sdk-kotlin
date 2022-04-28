@@ -14,7 +14,7 @@ data class AppendVideoBlockRequest(
     override val type: BlockObjectType? = BlockObjectType.Video,
     val video: com.mt.notion.api.block.request.append.AppendVideoBlockRequest.Video
 ) : com.mt.notion.api.block.request.append.WithAppendBlockRequest,
-    com.mt.notion.api.block.request.append.WithChildrenBlockRequest {
+    com.mt.notion.api.block.request.append.BlockRequestWithoutChildren {
     data class Video(
         val caption: List<RichTextRequest>? = null,
         val external: Link,

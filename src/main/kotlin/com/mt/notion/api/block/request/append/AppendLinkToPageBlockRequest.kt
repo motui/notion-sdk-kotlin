@@ -19,6 +19,6 @@ data class AppendLinkToPageBlockRequest(
     @JsonProperty("link_to_page")
     val linkToPage: WithDatabaseParentRequest
 ) : WithAppendBlockRequest,
-    WithChildrenBlockRequest {
+    BlockRequestWithoutChildren {
 
 }

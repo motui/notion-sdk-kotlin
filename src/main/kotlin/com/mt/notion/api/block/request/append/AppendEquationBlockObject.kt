@@ -12,7 +12,7 @@ data class AppendEquationBlockObject(
     override val type: BlockObjectType? = BlockObjectType.Equation,
     val equation: com.mt.notion.api.block.request.append.AppendEquationBlockObject.Equation,
 ) : com.mt.notion.api.block.request.append.WithAppendBlockRequest,
-    com.mt.notion.api.block.request.append.WithChildrenBlockRequest {
+    com.mt.notion.api.block.request.append.BlockRequestWithoutChildren {
 
     data class Equation(
         val expression: String

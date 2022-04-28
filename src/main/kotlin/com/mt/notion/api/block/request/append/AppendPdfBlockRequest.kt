@@ -14,7 +14,7 @@ data class AppendPdfBlockRequest(
     override val type: BlockObjectType? = BlockObjectType.Pdf,
     val pdf: com.mt.notion.api.block.request.append.AppendPdfBlockRequest.Pdf
 ) : com.mt.notion.api.block.request.append.WithAppendBlockRequest,
-    com.mt.notion.api.block.request.append.WithChildrenBlockRequest {
+    com.mt.notion.api.block.request.append.BlockRequestWithoutChildren {
     data class Pdf(
         val caption: List<RichTextRequest>? = null,
         val external: Link,

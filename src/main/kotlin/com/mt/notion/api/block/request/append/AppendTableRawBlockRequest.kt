@@ -15,7 +15,7 @@ data class AppendTableRawBlockRequest(
     @JsonProperty("table_row")
     val tableRow: com.mt.notion.api.block.request.append.AppendTableRawBlockRequest.TableRaw
 ) : com.mt.notion.api.block.request.append.WithAppendBlockRequest,
-    com.mt.notion.api.block.request.append.WithChildrenBlockRequest {
+    com.mt.notion.api.block.request.append.BlockRequestWithoutChildren {
     data class TableRaw(
         val cells: List<List<RichTextRequest>>,
     )

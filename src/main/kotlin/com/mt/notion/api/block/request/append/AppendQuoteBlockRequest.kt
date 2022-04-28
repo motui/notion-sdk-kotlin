@@ -7,10 +7,11 @@ import com.mt.notion.common.ObjectType
  *
  * @author it.motui
  */
-data class QuoteAppendBlockRequest(
+data class AppendQuoteBlockRequest(
     override val objectType: ObjectType = ObjectType.Block,
     override val type: BlockObjectType? = BlockObjectType.Quote,
-    val quote: com.mt.notion.api.block.request.append.AppendBlockRichText
-) : com.mt.notion.api.block.request.append.WithAppendBlockRequest {
+    // TODO: 2022/4/28 待补充
+    val quote: AppendBlockRichText
+) : WithAppendBlockRequest {
 
 }

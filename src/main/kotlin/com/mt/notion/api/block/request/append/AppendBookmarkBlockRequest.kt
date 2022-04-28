@@ -13,7 +13,7 @@ data class AppendBookmarkBlockRequest(
     override val type: BlockObjectType? = BlockObjectType.Bookmark,
     val bookmark: com.mt.notion.api.block.request.append.AppendBookmarkBlockRequest.Bookmark
 ) : com.mt.notion.api.block.request.append.WithAppendBlockRequest,
-    com.mt.notion.api.block.request.append.WithChildrenBlockRequest {
+    com.mt.notion.api.block.request.append.BlockRequestWithoutChildren {
     data class Bookmark(
         val url: String,
         val caption: List<RichTextRequest>? = null

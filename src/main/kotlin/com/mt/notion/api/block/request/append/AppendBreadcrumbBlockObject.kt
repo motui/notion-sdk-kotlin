@@ -13,6 +13,6 @@ data class AppendBreadcrumbBlockObject(
     override val type: BlockObjectType? = BlockObjectType.Breadcrumb,
     val breadcrumb: EmptyObject,
 ) : com.mt.notion.api.block.request.append.WithAppendBlockRequest,
-    com.mt.notion.api.block.request.append.WithChildrenBlockRequest {
+    com.mt.notion.api.block.request.append.BlockRequestWithoutChildren {
 
 }

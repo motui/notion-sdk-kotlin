@@ -14,7 +14,7 @@ data class AppendAudioBlockRequest(
     override val type: BlockObjectType? = BlockObjectType.Audio,
     val audio: com.mt.notion.api.block.request.append.AppendAudioBlockRequest.Audio,
 ) : com.mt.notion.api.block.request.append.WithAppendBlockRequest,
-    com.mt.notion.api.block.request.append.WithChildrenBlockRequest {
+    com.mt.notion.api.block.request.append.BlockRequestWithoutChildren {
     data class Audio(
         val caption: List<RichTextRequest>? = null,
         val external: Link,

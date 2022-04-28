@@ -8,14 +8,12 @@ import com.mt.notion.common.ObjectType
  *
  * @author it.motui
  */
-data class AppendColumnListBlockRequest(
+data class AppendHeading1BlockRequest(
     override val objectType: ObjectType = ObjectType.Block,
-    override val type: BlockObjectType? = BlockObjectType.ColumnList,
-    @JsonProperty("column_list")
-    val columnList: ColumnList
+    override val type: BlockObjectType? = BlockObjectType.Heading1,
+    // TODO: 2022/4/28 待补充
+    @JsonProperty("heading_1")
+    val heading1: String
 ) : WithAppendBlockRequest {
-    data class ColumnList(
-        // TODO: 2022/4/28 待补充
-        val children: List<AppendColumnBlockRequest>
-    )
+
 }

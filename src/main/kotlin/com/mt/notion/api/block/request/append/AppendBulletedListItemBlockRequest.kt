@@ -8,11 +8,12 @@ import com.mt.notion.common.ObjectType
  *
  * @author it.motui
  */
-data class BulletedListItemAppendBlockRequest(
+data class AppendBulletedListItemBlockRequest(
     override val objectType: ObjectType = ObjectType.Block,
     override val type: BlockObjectType? = BlockObjectType.BulletedListItem,
+    // TODO: 2022/4/28 待补充
     @JsonProperty("bulleted_list_item")
-    val bulletedListItem: com.mt.notion.api.block.request.append.AppendBlockRichText
-) : com.mt.notion.api.block.request.append.WithAppendBlockRequest {
+    val bulletedListItem: AppendBlockRichText
+) : WithAppendBlockRequest {
 
 }

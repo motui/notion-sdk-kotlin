@@ -13,11 +13,11 @@ import com.mt.notion.common.request.richText.RichTextRequest
  *
  * @author it.motui
  */
-data class CalloutAppendBlockRequest(
+data class AppendCalloutBlockRequest(
     override val objectType: ObjectType = ObjectType.Block,
     override val type: BlockObjectType? = BlockObjectType.Callout,
-    val callout: com.mt.notion.api.block.request.append.CalloutAppendBlockRequest.Callout
-) : com.mt.notion.api.block.request.append.WithAppendBlockRequest {
+    val callout: Callout
+) : WithAppendBlockRequest {
     data class Callout(
         @JsonProperty("rich_text")
         val richText: List<RichTextRequest>? = null,
@@ -25,6 +25,8 @@ data class CalloutAppendBlockRequest(
          * support [Emoji] and [ExternalFileDetails]
          */
         val icon: Icon? = null,
-        val color: ApiColor? = ApiColor.Default
+        val color: ApiColor? = ApiColor.Default,
+        // TODO: 2022/4/28 待补充
+        val children: BlockRequestWithoutChildren
     )
 }

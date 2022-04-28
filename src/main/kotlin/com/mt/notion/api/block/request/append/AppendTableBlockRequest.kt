@@ -11,13 +11,16 @@ import com.mt.notion.common.ObjectType
 data class AppendTableBlockRequest(
     override val objectType: ObjectType = ObjectType.Block,
     override val type: BlockObjectType? = BlockObjectType.Table,
-    val table: com.mt.notion.api.block.request.append.AppendTableBlockRequest.Table
-) : com.mt.notion.api.block.request.append.WithAppendBlockRequest {
+    val table: Table
+) : WithAppendBlockRequest {
     data class Table(
+        @JsonProperty("table_width")
+        val tableWidth: Number,
         @JsonProperty("has_column_header")
         val hasColumnHeader: Boolean? = false,
         @JsonProperty("has_row_header")
         val hasRowHeader: Boolean? = false,
+        val children: List<BlockRequestWithoutChildren>
     )
 
 }

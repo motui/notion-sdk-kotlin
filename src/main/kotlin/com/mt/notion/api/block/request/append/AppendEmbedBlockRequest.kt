@@ -13,7 +13,7 @@ data class AppendEmbedBlockRequest(
     override val type: BlockObjectType? = BlockObjectType.Embed,
     val embed: com.mt.notion.api.block.request.append.AppendEmbedBlockRequest.Embed
 ) : com.mt.notion.api.block.request.append.WithAppendBlockRequest,
-    com.mt.notion.api.block.request.append.WithChildrenBlockRequest {
+    com.mt.notion.api.block.request.append.BlockRequestWithoutChildren {
     data class Embed(
         val url: String,
         val caption: List<RichTextRequest>?

@@ -13,6 +13,6 @@ data class AppendDividerBlockObject(
     override val type: BlockObjectType? = BlockObjectType.Divider,
     val divider: EmptyObject,
 ) : com.mt.notion.api.block.request.append.WithAppendBlockRequest,
-    com.mt.notion.api.block.request.append.WithChildrenBlockRequest {
+    com.mt.notion.api.block.request.append.BlockRequestWithoutChildren {
 
 }

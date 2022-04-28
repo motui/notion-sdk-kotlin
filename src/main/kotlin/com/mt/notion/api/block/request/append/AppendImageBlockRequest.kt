@@ -14,7 +14,7 @@ data class AppendImageBlockRequest(
     override val type: BlockObjectType? = BlockObjectType.Image,
     val image: com.mt.notion.api.block.request.append.AppendImageBlockRequest.Image
 ) : com.mt.notion.api.block.request.append.WithAppendBlockRequest,
-    com.mt.notion.api.block.request.append.WithChildrenBlockRequest {
+    com.mt.notion.api.block.request.append.BlockRequestWithoutChildren {
     data class Image(
         val caption: List<RichTextRequest>? = null,
         val external: Link,

@@ -14,7 +14,7 @@ data class AppendFileBlockRequest(
     override val type: BlockObjectType? = BlockObjectType.File,
     val file: com.mt.notion.api.block.request.append.AppendFileBlockRequest.File
 ) : com.mt.notion.api.block.request.append.WithAppendBlockRequest,
-    com.mt.notion.api.block.request.append.WithChildrenBlockRequest {
+    com.mt.notion.api.block.request.append.BlockRequestWithoutChildren {
     data class File(
         val caption: List<RichTextRequest>? = null,
         val external: Link,
