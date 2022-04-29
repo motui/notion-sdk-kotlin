@@ -17,7 +17,6 @@ data class AppendTemplateBlockRequest(
     data class Template(
         @JsonProperty("rich_text")
         val richText: List<RichTextRequest>,
-        // TODO: 2022/4/28 待补充
-        val children: String
+        val children: List<BlockRequestWithChildren>? = null
     )
 }

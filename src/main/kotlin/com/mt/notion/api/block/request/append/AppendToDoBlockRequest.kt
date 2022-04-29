@@ -21,7 +21,6 @@ data class AppendToDoBlockRequest(
         val richText: List<RichTextRequest>,
         val color: ApiColor? = ApiColor.Default,
         val checked: Boolean? = false,
-        // TODO: 2022/4/28 待补充
-        val children: String?
+        val children: List<BlockRequestWithChildren>? = null
     )
 }

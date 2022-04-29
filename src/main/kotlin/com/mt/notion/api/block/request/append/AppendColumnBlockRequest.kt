@@ -10,10 +10,9 @@ import com.mt.notion.common.ObjectType
 data class AppendColumnBlockRequest(
     override val objectType: ObjectType = ObjectType.Block,
     override val type: BlockObjectType? = BlockObjectType.ColumnList,
-    val column_list: ColumnList
+    val column: Column
 ) : WithAppendBlockRequest {
-    data class ColumnList(
-        // TODO: 2022/4/28 待补充
+    data class Column(
         val children: List<BlockRequestWithChildren>
     )
 }

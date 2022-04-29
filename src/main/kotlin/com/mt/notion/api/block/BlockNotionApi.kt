@@ -3,6 +3,7 @@ package com.mt.notion.api.block
 import com.mt.notion.api.NotionApi
 import com.mt.notion.api.NotionApiConfig
 import com.mt.notion.api.block.objects.WithBlockObject
+import com.mt.notion.api.block.request.append.WithAppendBlockRequest
 import com.mt.notion.api.block.request.update.UpdateBlockRequest
 import com.mt.notion.http.NotionHttpClient
 
@@ -88,7 +89,7 @@ class BlockNotionApi(
      *
      * @see <a href="https://developers.notion.com/reference/patch-block-children">Append block children</a>
      */
-    fun append(blockId: String, request: UpdateBlockRequest): Blocks {
+    fun append(blockId: String, request: WithAppendBlockRequest): Blocks {
         return notionHttpClient.patch(
             url = "${this.config.baseUrl}/blocks/${blockId}",
             body = request,

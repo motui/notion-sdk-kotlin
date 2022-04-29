@@ -23,7 +23,6 @@ data class AppendSyncedBlockBlockRequest(
         @JsonProperty("block_id")
         val blockId: String,
         val type: String = "block_id",
-        // TODO: 2022/4/28 待补充
-        val children: BlockRequestWithChildren
+        val children: List<BlockRequestWithChildren>? = null
     )
 }
