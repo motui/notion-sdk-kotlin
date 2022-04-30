@@ -1,6 +1,6 @@
 package com.mt.notion.common.parent
 
-import com.mt.notion.api.database.DatabaseParentType
+import com.mt.notion.api.database.ParentType
 
 /**
  * Workspace parent
@@ -9,6 +9,6 @@ import com.mt.notion.api.database.DatabaseParentType
  * @see <a href="https://developers.notion.com/reference/database">Database</a>
  */
 data class WorkspaceParent(
-    override val type: DatabaseParentType,
+    override val type: ParentType,
     val workspace: Boolean = true
 ) : WithDatabaseParent

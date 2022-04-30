@@ -1,6 +1,7 @@
 package com.mt.notion
 
 import com.mt.notion.api.NotionApiConfig
+import com.mt.notion.api.block.BlockNotionApi
 import com.mt.notion.api.oauth.OAuthNotionApi
 import com.mt.notion.api.user.UserNotionApi
 import com.mt.notion.http.NotionHttpClient
@@ -81,6 +82,7 @@ object NotionClient {
     ) {
         private val httpClient: NotionHttpClient
         private val userNotionApi: UserNotionApi
+        private val blockNotionApi: BlockNotionApi
 
         init {
             if (notionHttpClient != null) {
@@ -91,9 +93,15 @@ object NotionClient {
             this.userNotionApi = UserNotionApi(
                 NotionApiConfig(config.token, config.baseUrl, config.notionVersion), this.httpClient
             )
+            this.blockNotionApi = BlockNotionApi(
+                NotionApiConfig(config.token, config.baseUrl, config.notionVersion), this.httpClient
+            )
         }
 
         fun user(): UserNotionApi = this.userNotionApi
+
+        fun block(): BlockNotionApi = this.blockNotionApi
+
     }
 
     /**

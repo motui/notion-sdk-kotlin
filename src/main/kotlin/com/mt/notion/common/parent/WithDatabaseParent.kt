@@ -2,7 +2,7 @@ package com.mt.notion.common.parent
 
 import com.fasterxml.jackson.annotation.JsonSubTypes
 import com.fasterxml.jackson.annotation.JsonTypeInfo
-import com.mt.notion.api.database.DatabaseParentType
+import com.mt.notion.api.database.ParentType
 
 /**
  * Database
@@ -22,20 +22,20 @@ import com.mt.notion.api.database.DatabaseParentType
     JsonSubTypes.Type(DatabaseParent::class, name = "database_id"),
 )
 interface WithDatabaseParent {
-    val type: DatabaseParentType
+    val type: ParentType
 
     companion object {
 
         fun page(pageId: String): PageParent {
-            return PageParent(type = DatabaseParentType.PageId, pageId = pageId)
+            return PageParent(type = ParentType.PageId, pageId = pageId)
         }
 
         fun workspace(): WorkspaceParent {
-            return WorkspaceParent(type = DatabaseParentType.Workspace, workspace = true)
+            return WorkspaceParent(type = ParentType.Workspace, workspace = true)
         }
 
         fun database(databaseId: String): DatabaseParent {
-            return DatabaseParent(type = DatabaseParentType.DatabaseId, databaseId = databaseId)
+            return DatabaseParent(type = ParentType.DatabaseId, databaseId = databaseId)
         }
     }
 }

@@ -10,4 +10,4 @@ import com.mt.notion.common.file.FileType
 data class ExternalRequest(
     override val type: FileType = FileType.External,
     val external: Link
-) : IconRequest
+) : IconRequest, CoverRequest

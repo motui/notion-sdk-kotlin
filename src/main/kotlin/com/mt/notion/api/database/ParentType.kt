@@ -3,12 +3,11 @@ package com.mt.notion.api.database
 import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
- * Database Parent Type
+ * Parent Type
  *
  * @author it.motui
- * @see <a href="https://developers.notion.com/reference/database">Database</a>
  */
-enum class DatabaseParentType constructor(private val value: String) {
+enum class ParentType constructor(private val value: String) {
     @JsonProperty("page_id")
     PageId("page_id"),
 

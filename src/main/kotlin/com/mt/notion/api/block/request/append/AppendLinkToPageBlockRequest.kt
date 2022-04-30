@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty
 import com.mt.notion.api.block.BlockObjectType
 import com.mt.notion.common.ObjectType
 import com.mt.notion.common.request.parent.DatabaseParentRequest
-import com.mt.notion.common.request.parent.WithDatabaseParentRequest
+import com.mt.notion.common.request.parent.WithParentRequest
 
 /**
  *
@@ -17,6 +17,6 @@ data class AppendLinkToPageBlockRequest(
      * support [WorkspaceParentRequest] and [DatabaseParentRequest]
      */
     @JsonProperty("link_to_page")
-    val linkToPage: WithDatabaseParentRequest
+    val linkToPage: WithParentRequest
 ) : WithAppendBlockRequest,
     BlockRequestWithChildren
