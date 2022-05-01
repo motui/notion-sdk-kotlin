@@ -13,4 +13,4 @@ data class DatabaseParent(
     override val type: ParentType,
     @JsonProperty("database_id")
     val databaseId: String
-) : WithDatabaseParent
+) : WithParent

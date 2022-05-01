@@ -5,7 +5,7 @@ import com.mt.notion.api.block.BlockObjectType
 import com.mt.notion.api.user.User
 import com.mt.notion.common.ObjectType
 import com.mt.notion.common.parent.PageParent
-import com.mt.notion.common.parent.WithDatabaseParent
+import com.mt.notion.common.parent.WithParent
 
 /**
  *
@@ -25,5 +25,5 @@ data class LinkToPageBlockObject(
      * support [PageParent] and [DatabaseParent]
      */
     @JsonProperty("link_to_page")
-    val linkToPage: WithDatabaseParent,
+    val linkToPage: WithParent,
 ) : WithBlockObject

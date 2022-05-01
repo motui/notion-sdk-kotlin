@@ -11,4 +11,4 @@ import com.mt.notion.api.database.ParentType
 data class WorkspaceParent(
     override val type: ParentType,
     val workspace: Boolean = true
-) : WithDatabaseParent
+) : WithParent

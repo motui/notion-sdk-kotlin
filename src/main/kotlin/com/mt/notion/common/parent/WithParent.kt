@@ -21,7 +21,7 @@ import com.mt.notion.api.database.ParentType
     JsonSubTypes.Type(WorkspaceParent::class, name = "workspace"),
     JsonSubTypes.Type(DatabaseParent::class, name = "database_id"),
 )
-interface WithDatabaseParent {
+interface WithParent {
     val type: ParentType
 
     companion object {

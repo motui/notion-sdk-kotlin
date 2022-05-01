@@ -13,4 +13,4 @@ data class PageParent(
     override val type: ParentType,
     @JsonProperty("page_id")
     val pageId: String
-) : WithDatabaseParent
+) : WithParent
