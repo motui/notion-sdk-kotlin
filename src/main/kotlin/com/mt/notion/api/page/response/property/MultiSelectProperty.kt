@@ -1,17 +1,16 @@
-package com.mt.notion.api.database.query.property
+package com.mt.notion.api.page.response.property
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.mt.notion.common.PropertyType
 import com.mt.notion.common.response.propertiy.SelectPropertyResponse
 
 /**
- * Multi-select
  *
  * @author it.motui
  */
-data class QueryMultiSelectProperty(
-    override val id: String,
+data class MultiSelectProperty(
     override val type: PropertyType,
+    override val id: String,
     @JsonProperty("multi_select")
-    val multiSelect: List<SelectPropertyResponse>
-) : QueryDatabaseProperty
+    val multiSelect: SelectPropertyResponse
+) : WithProperty

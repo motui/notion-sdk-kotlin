@@ -1,6 +1,7 @@
 package com.mt.notion.api.page.response
 
 import com.fasterxml.jackson.annotation.JsonProperty
+import com.mt.notion.api.page.response.property.WithProperty
 import com.mt.notion.api.user.User
 import com.mt.notion.common.Cover
 import com.mt.notion.common.Icon
@@ -15,8 +16,7 @@ data class Page(
     override val objectType: ObjectType,
     val id: String,
     val parent: WithParent,
-    // TODO: 2022/5/1 待补充
-    val properties: String,
+    val properties: List<WithProperty>,
     @JsonProperty("created_by")
     val createdBy: User,
     @JsonProperty("last_edited_by")

@@ -54,7 +54,7 @@ data class QueryRollupProperty(
     data class ArrayRollup(
         override val type: RollupType,
         override val function: RollupFunction,
-        val array: String?
+        val array: WithArray?
     ) : WithRollup
 
     data class DateRollup(

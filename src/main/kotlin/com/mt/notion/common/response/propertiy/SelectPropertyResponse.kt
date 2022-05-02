@@ -1,4 +1,4 @@
-package com.mt.notion.common.response
+package com.mt.notion.common.response.propertiy
 
 import com.mt.notion.common.OptionColor
 
