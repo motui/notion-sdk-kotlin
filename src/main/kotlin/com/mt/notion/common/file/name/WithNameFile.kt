@@ -1,9 +1,8 @@
-package com.mt.notion.common.file
+package com.mt.notion.common.file.name
 
 import com.fasterxml.jackson.annotation.JsonSubTypes
 import com.fasterxml.jackson.annotation.JsonTypeInfo
-import com.mt.notion.common.Cover
-import com.mt.notion.common.Icon
+import com.mt.notion.common.file.FileType
 
 /**
  * File
@@ -18,9 +17,10 @@ import com.mt.notion.common.Icon
     visible = true
 )
 @JsonSubTypes(
-    JsonSubTypes.Type(ExternalFileDetails::class, name = "external"),
-    JsonSubTypes.Type(FileDetails::class, name = "file"),
+    JsonSubTypes.Type(ExternalWithNameFileDetails::class, name = "external"),
+    JsonSubTypes.Type(FileWithNameDetails::class, name = "file"),
 )
-interface File : Icon, Cover {
-    override val type: FileType
+interface WithNameFile {
+    val type: FileType
+    val name: String
 }

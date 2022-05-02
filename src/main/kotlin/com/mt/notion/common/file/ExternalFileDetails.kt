@@ -1,5 +1,7 @@
 package com.mt.notion.common.file
 
+import com.mt.notion.common.Link
+
 /**
  * External file object
  *
@@ -8,8 +10,5 @@ package com.mt.notion.common.file
  */
 data class ExternalFileDetails(
     override val type: FileType,
-    /**
-     * Link to the externally hosted content.
-     */
-    var url: String? = null,
+    var external: Link,
 ) : File

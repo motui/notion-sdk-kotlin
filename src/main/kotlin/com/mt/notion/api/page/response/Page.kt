@@ -16,7 +16,7 @@ data class Page(
     override val objectType: ObjectType,
     val id: String,
     val parent: WithParent,
-    val properties: List<WithProperty>,
+    val properties: Map<String, WithProperty>,
     @JsonProperty("created_by")
     val createdBy: User,
     @JsonProperty("last_edited_by")

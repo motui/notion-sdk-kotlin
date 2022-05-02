@@ -12,5 +12,5 @@ data class MultiSelectProperty(
     override val type: PropertyType,
     override val id: String,
     @JsonProperty("multi_select")
-    val multiSelect: SelectPropertyResponse
+    val multiSelect: List<SelectPropertyResponse>
 ) : WithProperty

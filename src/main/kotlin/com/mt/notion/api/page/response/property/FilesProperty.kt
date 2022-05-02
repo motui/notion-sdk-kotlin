@@ -1,7 +1,7 @@
 package com.mt.notion.api.page.response.property
 
 import com.mt.notion.common.PropertyType
-import com.mt.notion.common.file.File
+import com.mt.notion.common.file.name.WithNameFile
 
 /**
  *
@@ -10,5 +10,5 @@ import com.mt.notion.common.file.File
 data class FilesProperty(
     override val type: PropertyType,
     override val id: String,
-    val files: List<File>
+    val files: List<WithNameFile>
 ) : WithProperty

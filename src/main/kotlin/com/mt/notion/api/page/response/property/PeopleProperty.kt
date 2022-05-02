@@ -1,6 +1,6 @@
 package com.mt.notion.api.page.response.property
 
-import com.mt.notion.api.user.User
+import com.mt.notion.api.user.WithUser
 import com.mt.notion.common.PropertyType
 
 /**
@@ -10,5 +10,5 @@ import com.mt.notion.common.PropertyType
 data class PeopleProperty(
     override val type: PropertyType,
     override val id: String,
-    val people: List<User>
+    val people: List<WithUser>
 ) : WithProperty
