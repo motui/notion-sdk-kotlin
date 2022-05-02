@@ -11,5 +11,5 @@ import com.mt.notion.api.database.ParentType
 data class PageParentRequest(
     override val type: ParentType = ParentType.PageId,
     @JsonProperty("page_id")
-    val pageId: String?
+    val pageId: String
 ) : WithParentRequest

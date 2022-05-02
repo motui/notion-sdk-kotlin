@@ -8,7 +8,7 @@ import com.fasterxml.jackson.annotation.JsonProperty
  * @author it.motui
  * @see <a href="https://developers.notion.com/reference/property-object#select-options">Select options</a>
  */
-enum class OptionColor constructor(val value: String) {
+enum class SelectColor constructor(val value: String) {
     @JsonProperty("default")
     Default("default"),
 

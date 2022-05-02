@@ -10,5 +10,8 @@ import com.mt.notion.common.file.FileType
  */
 data class EmojiRequest(
     override var type: FileType = FileType.Emoji,
+    /**
+     * todo 补充emoji枚举
+     */
     var emoji: String
 ) : IconRequest

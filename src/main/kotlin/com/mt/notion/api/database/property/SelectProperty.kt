@@ -1,7 +1,7 @@
 package com.mt.notion.api.database.property
 
-import com.mt.notion.common.OptionColor
 import com.mt.notion.common.PropertyType
+import com.mt.notion.common.SelectColor
 
 /**
  * Select
@@ -34,6 +34,6 @@ data class SelectProperty(
         /**
          * Color of the option.
          */
-        val color: OptionColor,
+        val color: SelectColor,
     )
 }

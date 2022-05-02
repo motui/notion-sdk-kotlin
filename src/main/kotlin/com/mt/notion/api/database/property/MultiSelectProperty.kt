@@ -1,8 +1,8 @@
 package com.mt.notion.api.database.property
 
 import com.fasterxml.jackson.annotation.JsonProperty
-import com.mt.notion.common.OptionColor
 import com.mt.notion.common.PropertyType
+import com.mt.notion.common.SelectColor
 
 /**
  * Multi-select
@@ -36,6 +36,6 @@ data class MultiSelectProperty(
         /**
          * Color of the option.
          */
-        val color: OptionColor,
+        val color: SelectColor,
     )
 }

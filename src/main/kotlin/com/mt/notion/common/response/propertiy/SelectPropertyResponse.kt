@@ -1,6 +1,6 @@
 package com.mt.notion.common.response.propertiy
 
-import com.mt.notion.common.OptionColor
+import com.mt.notion.common.SelectColor
 
 /**
  *
@@ -9,5 +9,5 @@ import com.mt.notion.common.OptionColor
 data class SelectPropertyResponse(
     val id: String,
     val name: String,
-    val color: OptionColor
+    val color: SelectColor
 )
