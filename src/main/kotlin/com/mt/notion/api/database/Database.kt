@@ -3,11 +3,12 @@ package com.mt.notion.api.database
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.mt.notion.api.database.property.DatabaseProperty
 import com.mt.notion.api.user.User
-import com.mt.notion.common.Cover
-import com.mt.notion.common.Icon
 import com.mt.notion.common.ObjectType
-import com.mt.notion.common.WithObjectType
 import com.mt.notion.common.request.parent.WithParentRequest
+import com.mt.notion.common.response.WithObjectType
+import com.mt.notion.common.response.file.Cover
+import com.mt.notion.common.response.file.Icon
+import com.mt.notion.common.response.richText.RichText
 
 /**
  * database
@@ -46,7 +47,7 @@ data class Database(
      * Name of the database as it appears in Notion.
      * See rich text object) for a breakdown of the properties.
      */
-    val title: List<com.mt.notion.common.response.richText.RichText>,
+    val title: List<RichText>,
 
     /**
      * Page icon.

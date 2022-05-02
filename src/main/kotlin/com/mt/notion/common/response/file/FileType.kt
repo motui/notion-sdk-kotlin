@@ -1,4 +1,4 @@
-package com.mt.notion.common.file
+package com.mt.notion.common.response.file
 
 import com.fasterxml.jackson.annotation.JsonProperty
 

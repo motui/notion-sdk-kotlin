@@ -1,6 +1,4 @@
-package com.mt.notion.common
-
-import com.mt.notion.common.file.FileType
+package com.mt.notion.common.response.file
 
 /**
  * Emoji

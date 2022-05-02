@@ -1,6 +1,6 @@
 package com.mt.notion.api.block.objects
 
-import com.mt.notion.common.WithObjectType
+import com.mt.notion.common.response.WithObjectType
 
 /**
  *

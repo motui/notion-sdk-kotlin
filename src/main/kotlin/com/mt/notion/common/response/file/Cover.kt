@@ -1,10 +1,7 @@
-package com.mt.notion.common
+package com.mt.notion.common.response.file
 
 import com.fasterxml.jackson.annotation.JsonSubTypes
 import com.fasterxml.jackson.annotation.JsonTypeInfo
-import com.mt.notion.common.file.ExternalFileDetails
-import com.mt.notion.common.file.FileDetails
-import com.mt.notion.common.file.FileType
 
 /**
  * Cover

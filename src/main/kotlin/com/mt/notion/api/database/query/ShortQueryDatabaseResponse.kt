@@ -1,7 +1,7 @@
 package com.mt.notion.api.database.query
 
 import com.mt.notion.common.ObjectType
-import com.mt.notion.common.WithObjectType
+import com.mt.notion.common.response.WithObjectType
 
 /**
  *

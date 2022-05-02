@@ -1,6 +1,6 @@
 package com.mt.notion.api.block.objects.file
 
-import com.mt.notion.common.file.FileType
+import com.mt.notion.common.response.file.FileType
 
 /**
  * External file object

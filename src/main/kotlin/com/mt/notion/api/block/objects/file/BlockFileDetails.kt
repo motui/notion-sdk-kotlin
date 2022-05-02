@@ -1,7 +1,7 @@
 package com.mt.notion.api.block.objects.file
 
 import com.fasterxml.jackson.annotation.JsonProperty
-import com.mt.notion.common.file.FileType
+import com.mt.notion.common.response.file.FileType
 
 /**
  * File object

@@ -1,4 +1,4 @@
-package com.mt.notion.common.parent
+package com.mt.notion.common.response.parent
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.mt.notion.api.database.ParentType

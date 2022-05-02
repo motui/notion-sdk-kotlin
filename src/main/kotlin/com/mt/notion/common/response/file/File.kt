@@ -1,9 +1,7 @@
-package com.mt.notion.common.file
+package com.mt.notion.common.response.file
 
 import com.fasterxml.jackson.annotation.JsonSubTypes
 import com.fasterxml.jackson.annotation.JsonTypeInfo
-import com.mt.notion.common.Cover
-import com.mt.notion.common.Icon
 
 /**
  * File

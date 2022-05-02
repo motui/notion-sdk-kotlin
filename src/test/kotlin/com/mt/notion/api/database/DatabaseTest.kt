@@ -1,9 +1,9 @@
 package com.mt.notion.api.database
 
-import com.mt.notion.common.Emoji
 import com.mt.notion.common.ObjectType
-import com.mt.notion.common.file.ExternalFileDetails
 import com.mt.notion.common.request.parent.PageParentRequest
+import com.mt.notion.common.response.file.Emoji
+import com.mt.notion.common.response.file.ExternalFileDetails
 import com.mt.notion.util.JsonUtil
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test

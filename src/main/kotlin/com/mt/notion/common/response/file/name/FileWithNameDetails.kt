@@ -1,7 +1,7 @@
-package com.mt.notion.common.file.name
+package com.mt.notion.common.response.file.name
 
-import com.mt.notion.common.file.FileInfo
-import com.mt.notion.common.file.FileType
+import com.mt.notion.common.response.file.FileInfo
+import com.mt.notion.common.response.file.FileType
 
 /**
  * File object

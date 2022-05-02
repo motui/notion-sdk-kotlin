@@ -1,5 +1,6 @@
-package com.mt.notion.common.parent
+package com.mt.notion.common.response.parent
 
+import com.fasterxml.jackson.annotation.JsonProperty
 import com.mt.notion.api.database.ParentType
 
 /**
@@ -8,7 +9,8 @@ import com.mt.notion.api.database.ParentType
  * @author it.motui
  * @see <a href="https://developers.notion.com/reference/database">Database</a>
  */
-data class WorkspaceParent(
+data class DatabaseParent(
     override val type: ParentType,
-    val workspace: Boolean = true
+    @JsonProperty("database_id")
+    val databaseId: String
 ) : WithParent

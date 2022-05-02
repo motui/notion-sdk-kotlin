@@ -3,10 +3,10 @@ package com.mt.notion.api.block.request.update
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.mt.notion.api.block.BlockObjectType
 import com.mt.notion.common.ApiColor
-import com.mt.notion.common.Emoji
-import com.mt.notion.common.Icon
-import com.mt.notion.common.file.ExternalFileDetails
 import com.mt.notion.common.request.richText.RichTextRequest
+import com.mt.notion.common.response.file.Emoji
+import com.mt.notion.common.response.file.ExternalFileDetails
+import com.mt.notion.common.response.file.Icon
 
 /**
  *

@@ -1,4 +1,4 @@
-package com.mt.notion.common
+package com.mt.notion.common.response
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.fasterxml.jackson.annotation.JsonSubTypes
@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo
 import com.mt.notion.api.block.Blocks
 import com.mt.notion.api.database.Databases
 import com.mt.notion.api.user.Users
+import com.mt.notion.common.ObjectType
 
 /**
  * list type

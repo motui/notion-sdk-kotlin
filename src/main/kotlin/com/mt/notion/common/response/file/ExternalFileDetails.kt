@@ -1,12 +1,14 @@
-package com.mt.notion.common.file
+package com.mt.notion.common.response.file
+
+import com.mt.notion.common.Link
 
 /**
- * File object
+ * External file object
  *
  * @author it.motui
  * @see <a href="https://developers.notion.com/reference/file-object">File object</a>
  */
-data class FileDetails(
+data class ExternalFileDetails(
     override val type: FileType,
-    val file: FileInfo
+    var external: Link,
 ) : File

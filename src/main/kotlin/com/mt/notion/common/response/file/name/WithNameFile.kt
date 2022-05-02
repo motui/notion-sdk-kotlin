@@ -1,8 +1,8 @@
-package com.mt.notion.common.file.name
+package com.mt.notion.common.response.file.name
 
 import com.fasterxml.jackson.annotation.JsonSubTypes
 import com.fasterxml.jackson.annotation.JsonTypeInfo
-import com.mt.notion.common.file.FileType
+import com.mt.notion.common.response.file.FileType
 
 /**
  * File

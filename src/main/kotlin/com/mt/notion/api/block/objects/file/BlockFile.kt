@@ -2,7 +2,7 @@ package com.mt.notion.api.block.objects.file
 
 import com.fasterxml.jackson.annotation.JsonSubTypes
 import com.fasterxml.jackson.annotation.JsonTypeInfo
-import com.mt.notion.common.file.FileType
+import com.mt.notion.common.response.file.FileType
 
 /**
  * File

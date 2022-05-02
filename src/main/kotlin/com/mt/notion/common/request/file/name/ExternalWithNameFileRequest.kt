@@ -1,7 +1,7 @@
 package com.mt.notion.common.request.file.name
 
 import com.mt.notion.common.Link
-import com.mt.notion.common.file.FileType
+import com.mt.notion.common.response.file.FileType
 
 /**
  * External file object
