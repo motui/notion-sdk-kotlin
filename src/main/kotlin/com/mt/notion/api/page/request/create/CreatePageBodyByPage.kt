@@ -1,7 +1,7 @@
 package com.mt.notion.api.page.request.create
 
 import com.mt.notion.api.block.objects.WithBlockObject
-import com.mt.notion.api.page.request.propertiy.CreateTitleProperty
+import com.mt.notion.api.page.request.propertiy.CreatePageTitleProperty
 import com.mt.notion.common.request.file.CoverRequest
 import com.mt.notion.common.request.file.IconRequest
 import com.mt.notion.common.request.parent.PageParentRequest
@@ -25,6 +25,6 @@ data class CreatePageBodyByPage(
      * ```
      */
     data class Properties(
-        val title: CreateTitleProperty? = null
+        val title: CreatePageTitleProperty? = null
     )
 }

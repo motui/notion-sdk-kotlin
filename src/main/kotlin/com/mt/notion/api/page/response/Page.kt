@@ -1,7 +1,7 @@
 package com.mt.notion.api.page.response
 
 import com.fasterxml.jackson.annotation.JsonProperty
-import com.mt.notion.api.page.response.property.WithProperty
+import com.mt.notion.api.page.response.property.WithPageProperty
 import com.mt.notion.api.user.User
 import com.mt.notion.common.ObjectType
 import com.mt.notion.common.response.file.Cover
@@ -16,7 +16,7 @@ data class Page(
     override val objectType: ObjectType,
     val id: String,
     val parent: WithParent,
-    val properties: Map<String, WithProperty>,
+    val properties: Map<String, WithPageProperty>,
     @JsonProperty("created_by")
     val createdBy: User,
     @JsonProperty("last_edited_by")

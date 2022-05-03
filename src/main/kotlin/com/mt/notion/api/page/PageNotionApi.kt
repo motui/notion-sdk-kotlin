@@ -6,7 +6,7 @@ import com.mt.notion.api.block.BlocksRequest
 import com.mt.notion.api.page.request.create.WithCreatePageBody
 import com.mt.notion.api.page.request.update.UpdatePageRequest
 import com.mt.notion.api.page.response.Page
-import com.mt.notion.api.page.response.property.objects.WithObjectProperty
+import com.mt.notion.api.page.response.property.objects.WithPageObjectProperty
 import com.mt.notion.http.NotionHttpClient
 
 /**
@@ -76,7 +76,7 @@ class PageNotionApi(
      * @see <a href="https://developers.notion.com/reference/retrieve-a-page-property">Retrieve a page property item</a>
      * @see <a href="https://developers.notion.com/reference/retrieving-property-value-limitations">Limitations</a>
      */
-    fun retrieveProperty(pageId: String, propertyId: String, request: BlocksRequest): WithObjectProperty {
+    fun retrieveProperty(pageId: String, propertyId: String, request: BlocksRequest): WithPageObjectProperty {
         return notionHttpClient.get(
             url = "${this.config.baseUrl}/pages/${pageId}/properties/${propertyId}",
             query = request.toMap(),
@@ -84,7 +84,7 @@ class PageNotionApi(
                 this.notionHttpClient.bearerAuthorization(this.config.token),
                 this.config.notionVersion
             ),
-            responseClass = WithObjectProperty::class.java
+            responseClass = WithPageObjectProperty::class.java
         )
     }
 

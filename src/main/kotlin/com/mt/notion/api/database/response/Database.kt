@@ -1,7 +1,7 @@
 package com.mt.notion.api.database.response
 
 import com.fasterxml.jackson.annotation.JsonProperty
-import com.mt.notion.api.database.response.property.DatabaseProperty
+import com.mt.notion.api.database.response.property.WithDatabaseProperty
 import com.mt.notion.api.user.User
 import com.mt.notion.common.ObjectType
 import com.mt.notion.common.request.parent.WithParentRequest
@@ -66,7 +66,7 @@ data class Database(
     /**
      * Schema of properties for the database as they appear in Notion.
      */
-    val properties: Map<String, DatabaseProperty>,
+    val properties: Map<String, WithDatabaseProperty>,
 
     /**
      * The parent of this page. Can be a page or workspace. Parent types are defined below.
