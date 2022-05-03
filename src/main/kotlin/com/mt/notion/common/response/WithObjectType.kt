@@ -3,8 +3,8 @@ package com.mt.notion.common.response
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.fasterxml.jackson.annotation.JsonSubTypes
 import com.fasterxml.jackson.annotation.JsonTypeInfo
-import com.mt.notion.api.database.Database
-import com.mt.notion.api.database.query.QueryDatabaseResponse
+import com.mt.notion.api.database.response.Database
+import com.mt.notion.api.database.response.QueryDatabaseResponse
 import com.mt.notion.api.user.User
 import com.mt.notion.common.ObjectType
 

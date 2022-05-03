@@ -3,6 +3,8 @@ package com.mt.notion.api.database
 import com.mt.notion.api.NotionApi
 import com.mt.notion.api.NotionApiConfig
 import com.mt.notion.api.database.request.DatabaseQuery
+import com.mt.notion.api.database.response.Database
+import com.mt.notion.api.database.response.Databases
 import com.mt.notion.http.NotionHttpClient
 
 /**

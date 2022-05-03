@@ -2,7 +2,7 @@ package com.mt.notion.common.response.parent
 
 import com.fasterxml.jackson.annotation.JsonSubTypes
 import com.fasterxml.jackson.annotation.JsonTypeInfo
-import com.mt.notion.api.database.ParentType
+import com.mt.notion.common.request.parent.ParentType
 
 /**
  * Database

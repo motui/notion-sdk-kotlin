@@ -1,6 +1,6 @@
 package com.mt.notion.common.response.parent
 
-import com.mt.notion.api.database.ParentType
+import com.mt.notion.common.request.parent.ParentType
 
 /**
  * Workspace parent

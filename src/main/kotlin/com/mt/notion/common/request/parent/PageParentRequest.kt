@@ -1,7 +1,6 @@
 package com.mt.notion.common.request.parent
 
 import com.fasterxml.jackson.annotation.JsonProperty
-import com.mt.notion.api.database.ParentType
 
 /**
  * Page parent
