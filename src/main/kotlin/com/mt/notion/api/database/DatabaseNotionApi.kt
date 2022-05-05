@@ -2,7 +2,7 @@ package com.mt.notion.api.database
 
 import com.mt.notion.api.NotionApi
 import com.mt.notion.api.NotionApiConfig
-import com.mt.notion.api.database.request.DatabaseQuery
+import com.mt.notion.api.database.request.query.QueryDatabaseRequest
 import com.mt.notion.api.database.response.Database
 import com.mt.notion.api.database.response.Databases
 import com.mt.notion.http.NotionHttpClient
@@ -39,7 +39,7 @@ class DatabaseNotionApi(
      *
      * @see <a href="https://developers.notion.com/reference/post-database-query">Query a database</a>
      */
-    fun query(databaseId: String, query: DatabaseQuery): Databases {
+    fun query(databaseId: String, query: QueryDatabaseRequest): Databases {
         return notionHttpClient.post(
             url = "${this.config.baseUrl}/databases/${databaseId}/query",
             headers = this.notionHttpClient.buildHeader(

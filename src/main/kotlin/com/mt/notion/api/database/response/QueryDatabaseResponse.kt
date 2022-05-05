@@ -1,7 +1,7 @@
 package com.mt.notion.api.database.response
 
 import com.fasterxml.jackson.annotation.JsonProperty
-import com.mt.notion.api.database.request.query.WithQueryDatabaseProperty
+import com.mt.notion.api.database.request.query.property.WithQueryDatabaseProperty
 import com.mt.notion.api.user.User
 import com.mt.notion.common.ObjectType
 import com.mt.notion.common.request.parent.WithParentRequest
