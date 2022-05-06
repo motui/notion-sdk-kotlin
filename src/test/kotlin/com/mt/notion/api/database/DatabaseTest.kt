@@ -1,6 +1,6 @@
 package com.mt.notion.api.database
 
-import com.mt.notion.api.database.response.Database
+import com.mt.notion.api.database.response.retrieve.Database
 import com.mt.notion.common.ObjectType
 import com.mt.notion.common.request.parent.PageParentRequest
 import com.mt.notion.common.response.file.Emoji

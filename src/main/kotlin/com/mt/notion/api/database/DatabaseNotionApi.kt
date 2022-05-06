@@ -2,9 +2,10 @@ package com.mt.notion.api.database
 
 import com.mt.notion.api.NotionApi
 import com.mt.notion.api.NotionApiConfig
+import com.mt.notion.api.database.request.create.CreateDatabaseRequest
 import com.mt.notion.api.database.request.query.QueryDatabaseRequest
-import com.mt.notion.api.database.response.Database
-import com.mt.notion.api.database.response.Databases
+import com.mt.notion.api.database.response.query.Databases
+import com.mt.notion.api.database.response.retrieve.Database
 import com.mt.notion.http.NotionHttpClient
 
 /**
@@ -48,6 +49,23 @@ class DatabaseNotionApi(
             ),
             body = query,
             responseClass = Databases::class.java
+        )
+    }
+
+    /**
+     * Create a database
+     *
+     * @see <a href="https://developers.notion.com/reference/create-a-database">Create a database</a>
+     */
+    fun create(query: CreateDatabaseRequest): Database {
+        return notionHttpClient.post(
+            url = "${this.config.baseUrl}/databases",
+            headers = this.notionHttpClient.buildHeader(
+                this.notionHttpClient.bearerAuthorization(this.config.token),
+                this.config.notionVersion
+            ),
+            body = query,
+            responseClass = Database::class.java
         )
     }
 }
