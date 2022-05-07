@@ -4,6 +4,7 @@ import com.mt.notion.api.NotionApi
 import com.mt.notion.api.NotionApiConfig
 import com.mt.notion.api.database.request.create.CreateDatabaseRequest
 import com.mt.notion.api.database.request.query.QueryDatabaseRequest
+import com.mt.notion.api.database.request.update.UpdateDatabaseRequest
 import com.mt.notion.api.database.response.query.Databases
 import com.mt.notion.api.database.response.retrieve.Database
 import com.mt.notion.http.NotionHttpClient
@@ -60,6 +61,23 @@ class DatabaseNotionApi(
     fun create(query: CreateDatabaseRequest): Database {
         return notionHttpClient.post(
             url = "${this.config.baseUrl}/databases",
+            headers = this.notionHttpClient.buildHeader(
+                this.notionHttpClient.bearerAuthorization(this.config.token),
+                this.config.notionVersion
+            ),
+            body = query,
+            responseClass = Database::class.java
+        )
+    }
+
+    /**
+     * Update database
+     *
+     * @see <a href="https://developers.notion.com/reference/update-a-database">Update database</a>
+     */
+    fun update(databaseId: String, query: UpdateDatabaseRequest): Database {
+        return notionHttpClient.patch(
+            url = "${this.config.baseUrl}/databases/${databaseId}",
             headers = this.notionHttpClient.buildHeader(
                 this.notionHttpClient.bearerAuthorization(this.config.token),
                 this.config.notionVersion

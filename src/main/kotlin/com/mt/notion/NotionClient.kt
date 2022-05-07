@@ -2,7 +2,9 @@ package com.mt.notion
 
 import com.mt.notion.api.NotionApiConfig
 import com.mt.notion.api.block.BlockNotionApi
+import com.mt.notion.api.database.DatabaseNotionApi
 import com.mt.notion.api.oauth.OAuthNotionApi
+import com.mt.notion.api.page.PageNotionApi
 import com.mt.notion.api.user.UserNotionApi
 import com.mt.notion.http.NotionHttpClient
 import com.mt.notion.http.impl.OkHttpNotionHttpClientImpl
@@ -78,30 +80,30 @@ object NotionClient {
         /**
          * 自定义NotionHttpClient
          */
-        notionHttpClient: NotionHttpClient?
+        notionHttpClient: NotionHttpClient? = null
     ) {
         private val httpClient: NotionHttpClient
         private val userNotionApi: UserNotionApi
         private val blockNotionApi: BlockNotionApi
+        private val databaseNotionApi: DatabaseNotionApi
+        private val pageNotionApi: PageNotionApi
 
         init {
-            if (notionHttpClient != null) {
-                this.httpClient = notionHttpClient
-            } else {
-                this.httpClient = OkHttpNotionHttpClientImpl()
-            }
-            this.userNotionApi = UserNotionApi(
-                NotionApiConfig(config.token, config.baseUrl, config.notionVersion), this.httpClient
-            )
-            this.blockNotionApi = BlockNotionApi(
-                NotionApiConfig(config.token, config.baseUrl, config.notionVersion), this.httpClient
-            )
+            this.httpClient = notionHttpClient ?: OkHttpNotionHttpClientImpl()
+            val notionConfig = NotionApiConfig(config.token, config.baseUrl, config.notionVersion)
+            this.userNotionApi = UserNotionApi(notionConfig, this.httpClient)
+            this.blockNotionApi = BlockNotionApi(notionConfig, this.httpClient)
+            this.databaseNotionApi = DatabaseNotionApi(notionConfig, this.httpClient)
+            this.pageNotionApi = PageNotionApi(notionConfig, this.httpClient)
         }
 
         fun user(): UserNotionApi = this.userNotionApi
 
         fun block(): BlockNotionApi = this.blockNotionApi
 
+        fun page(): PageNotionApi = this.pageNotionApi
+
+        fun database(): DatabaseNotionApi = this.databaseNotionApi
     }
 
     /**
@@ -123,11 +125,7 @@ object NotionClient {
         private val httpClient: NotionHttpClient
 
         init {
-            if (notionHttpClient != null) {
-                this.httpClient = notionHttpClient
-            } else {
-                this.httpClient = OkHttpNotionHttpClientImpl()
-            }
+            this.httpClient = notionHttpClient ?: OkHttpNotionHttpClientImpl()
             this.oauth = OAuthNotionApi(this.config, this.httpClient)
         }
 
