@@ -1,5 +1,7 @@
 package com.mt.notion.api.database.request.query.sort
 
+import com.mt.notion.common.request.Direction
+
 /**
  * timestamp
  *

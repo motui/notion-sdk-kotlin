@@ -1,4 +1,4 @@
-package com.mt.notion.api.database.request.query.sort
+package com.mt.notion.common.request
 
 /**
  * Direction

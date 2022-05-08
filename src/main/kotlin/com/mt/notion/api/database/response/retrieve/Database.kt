@@ -2,6 +2,7 @@ package com.mt.notion.api.database.response.retrieve
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.mt.notion.api.database.response.retrieve.property.WithDatabaseProperty
+import com.mt.notion.api.search.WithSearch
 import com.mt.notion.api.user.User
 import com.mt.notion.common.ObjectType
 import com.mt.notion.common.request.parent.WithParentRequest
@@ -83,4 +84,4 @@ data class Database(
      */
     val archived: Boolean
 
-) : WithObjectType
+) : WithObjectType, WithSearch

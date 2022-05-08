@@ -2,6 +2,7 @@ package com.mt.notion.api.page.response
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.mt.notion.api.page.response.property.WithPageProperty
+import com.mt.notion.api.search.WithSearch
 import com.mt.notion.api.user.User
 import com.mt.notion.common.ObjectType
 import com.mt.notion.common.response.file.Cover
@@ -29,4 +30,4 @@ data class Page(
     val cover: Cover?,
     val url: String,
     val archived: Boolean
-) : WithPage
+) : WithPage, WithSearch

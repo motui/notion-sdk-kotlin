@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonSubTypes
 import com.fasterxml.jackson.annotation.JsonTypeInfo
 import com.mt.notion.api.block.Blocks
 import com.mt.notion.api.database.response.query.Databases
+import com.mt.notion.api.search.Search
 import com.mt.notion.api.user.Users
 import com.mt.notion.common.ObjectType
 
@@ -22,7 +23,8 @@ import com.mt.notion.common.ObjectType
 @JsonSubTypes(
     JsonSubTypes.Type(Users::class, name = "user"),
     JsonSubTypes.Type(Databases::class, name = "page"),
-    JsonSubTypes.Type(Blocks::class, name = "block")
+    JsonSubTypes.Type(Blocks::class, name = "block"),
+    JsonSubTypes.Type(Search::class, name = "page_or_database")
 )
 interface WithListType {
     @get:JsonProperty("object")

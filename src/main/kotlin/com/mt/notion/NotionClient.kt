@@ -5,6 +5,7 @@ import com.mt.notion.api.block.BlockNotionApi
 import com.mt.notion.api.database.DatabaseNotionApi
 import com.mt.notion.api.oauth.OAuthNotionApi
 import com.mt.notion.api.page.PageNotionApi
+import com.mt.notion.api.search.SearchNotionApi
 import com.mt.notion.api.user.UserNotionApi
 import com.mt.notion.http.NotionHttpClient
 import com.mt.notion.http.impl.OkHttpNotionHttpClientImpl
@@ -87,6 +88,7 @@ object NotionClient {
         private val blockNotionApi: BlockNotionApi
         private val databaseNotionApi: DatabaseNotionApi
         private val pageNotionApi: PageNotionApi
+        private val searchNotionApi: SearchNotionApi
 
         init {
             this.httpClient = notionHttpClient ?: OkHttpNotionHttpClientImpl()
@@ -95,6 +97,7 @@ object NotionClient {
             this.blockNotionApi = BlockNotionApi(notionConfig, this.httpClient)
             this.databaseNotionApi = DatabaseNotionApi(notionConfig, this.httpClient)
             this.pageNotionApi = PageNotionApi(notionConfig, this.httpClient)
+            this.searchNotionApi = SearchNotionApi(notionConfig, this.httpClient)
         }
 
         fun user(): UserNotionApi = this.userNotionApi
@@ -104,6 +107,8 @@ object NotionClient {
         fun page(): PageNotionApi = this.pageNotionApi
 
         fun database(): DatabaseNotionApi = this.databaseNotionApi
+
+        fun search(): SearchNotionApi = this.searchNotionApi
     }
 
     /**
